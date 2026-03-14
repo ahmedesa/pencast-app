@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PenCast — S Pen Drawing Tablet for Mac & Windows</title>
+  <meta name="description" content="Turn your Samsung S Pen into a professional Wacom-style drawing tablet for Mac and Windows. WiFi, USB, and Bluetooth. No screen mirroring — raw pen data, zero latency." />
+  <meta property="og:title" content="PenCast — S Pen Drawing Tablet for Mac & Windows" />
+  <meta property="og:description" content="Turn your Samsung S Pen into a professional drawing tablet for Mac and Windows." />
+  <meta property="og:image" content="images/hero_mac_tablet.png" />
+  <link rel="icon" type="image/png" href="images/app_logo.png" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "PenCast",
+        "operatingSystem": "Android",
+        "applicationCategory": "UtilitiesApplication",
+        "description": "Turn your Samsung S Pen into a professional drawing tablet for Mac and Windows. PenCast streams raw stylus data — pressure, tilt, hover — directly into the OS. Works inside Photoshop, Clip Studio, Figma, and any professional app.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "ratingCount": "1"
+        },
+        "url": "https://pencastapp.com",
+        "downloadUrl": "https://play.google.com/store/apps/details?id=com.pencast.app",
+        "screenshot": "https://pencastapp.com/images/hero_mac_tablet.png",
+        "author": { "@type": "Person", "name": "Ahmed Essa" }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is PenCast?",
+            "acceptedAnswer": { "@type": "Answer", "text": "PenCast is an Android app that turns your Samsung S Pen into a professional drawing tablet for Mac and Windows. It streams raw pen data — pressure, tilt, hover — directly into the operating system so apps like Photoshop, Clip Studio, and Figma see it as a real Wacom tablet." }
+          },
+          {
+            "@type": "Question",
+            "name": "Does PenCast work with Photoshop?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. PenCast injects stylus events directly into macOS and Windows, so Photoshop, Clip Studio Paint, Figma, Procreate for Mac, and any other drawing app see the S Pen as a real Wacom tablet with full pressure and tilt support." }
+          },
+          {
+            "@type": "Question",
+            "name": "What Samsung devices work with PenCast?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Any Samsung Galaxy device with a built-in S Pen works with PenCast, including Galaxy S Ultra series, Galaxy Note series, Galaxy Z Fold series, and Galaxy Tab S series." }
+          },
+          {
+            "@type": "Question",
+            "name": "Is PenCast free?",
+            "acceptedAnswer": { "@type": "Answer", "text": "PenCast is free to download and use. A one-time Pro upgrade ($7.99) unlocks advanced features like Bluetooth connection, Hover Mode, Pressure Curve customization, Tilt data, Palm Rejection, and Multi-monitor selection." }
+          },
+          {
+            "@type": "Question",
+            "name": "How does PenCast connect to Mac or Windows?",
+            "acceptedAnswer": { "@type": "Answer", "text": "PenCast supports three connection modes: WiFi (auto-discovery via QR code or mDNS), USB via ADB reverse tunnel for ultra-low latency, and Bluetooth BLE for wireless use without WiFi (Pro feature)." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the latency of PenCast?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Over USB, PenCast achieves approximately 5ms latency. Over WiFi on a good local network, latency is typically under 20ms — comparable to professional wired drawing tablets." }
+          },
+          {
+            "@type": "Question",
+            "name": "Can teachers use PenCast for presentations?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. PenCast has a transparent overlay mode that lets you draw and annotate directly on top of any open window on your Mac or Windows screen — perfect for teachers, presenters, and online tutors. The laser pointer and highlighter tools are also included for free." }
+          },
+          {
+            "@type": "Question",
+            "name": "Is PenCast better than a Wacom tablet?",
+            "acceptedAnswer": { "@type": "Answer", "text": "PenCast turns a device you already own (your Samsung Galaxy) into a drawing tablet, saving you $80-$200 on a dedicated Wacom. It supports pressure sensitivity, tilt, hover, and palm rejection — the same features professional artists need — at a fraction of the cost." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #07071A;
+      --bg2:       #0D0D28;
+      --bg3:       #12122F;
+      --purple:    #7C3AED;
+      --blue:      #3B82F6;
+      --pink:      #EC4899;
+      --glow:      #8B5CF6;
+      --text:      #F1F1FF;
+      --muted:     #8888AA;
+      --border:    rgba(139,92,246,0.2);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px 5%;
+      background: rgba(7,7,26,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .nav-logo img { width: 36px; height: 36px; border-radius: 8px; }
+    .nav-logo span { font-size: 1.2rem; font-weight: 700; color: var(--text); }
+    .nav-cta {
+      background: linear-gradient(135deg, var(--purple), var(--blue));
+      color: white; border: none; border-radius: 10px;
+      padding: 10px 22px; font-size: 0.9rem; font-weight: 600;
+      cursor: pointer; text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .nav-cta:hover { opacity: 0.85; }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center;
+      padding: 120px 5% 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 50% 0%, rgba(124,58,237,0.25) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 40% at 80% 60%, rgba(59,130,246,0.15) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(124,58,237,0.15); border: 1px solid rgba(124,58,237,0.4);
+      border-radius: 20px; padding: 6px 16px;
+      font-size: 0.8rem; font-weight: 600; color: #A78BFA;
+      margin-bottom: 28px; letter-spacing: 0.05em;
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      font-weight: 800; line-height: 1.15;
+      max-width: 780px;
+      background: linear-gradient(135deg, #fff 0%, #C4B5FD 50%, #93C5FD 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: var(--muted); max-width: 560px; line-height: 1.7;
+      margin-bottom: 40px;
+    }
+    .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; margin-bottom: 60px; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: linear-gradient(135deg, var(--purple), var(--blue));
+      color: white; border: none; border-radius: 12px;
+      padding: 14px 28px; font-size: 1rem; font-weight: 700;
+      cursor: pointer; text-decoration: none;
+      box-shadow: 0 0 30px rgba(124,58,237,0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 45px rgba(124,58,237,0.6); }
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,0.05); border: 1px solid var(--border);
+      color: var(--text); border-radius: 12px;
+      padding: 14px 28px; font-size: 1rem; font-weight: 600;
+      cursor: pointer; text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn-secondary:hover { background: rgba(255,255,255,0.1); }
+    .hero-img {
+      width: 100%; max-width: 900px;
+      border-radius: 16px;
+      box-shadow: 0 0 60px rgba(124,58,237,0.3);
+    }
+
+    /* ── STATS ── */
+    .stats {
+      display: flex; justify-content: center; gap: 60px; flex-wrap: wrap;
+      padding: 48px 5%;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: var(--bg2);
+    }
+    .stat { text-align: center; }
+    .stat-num {
+      font-size: 2rem; font-weight: 800;
+      background: linear-gradient(135deg, var(--purple), var(--blue));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .stat-label { font-size: 0.85rem; color: var(--muted); margin-top: 4px; }
+
+    /* ── SECTIONS ── */
+    section { padding: 100px 5%; }
+    .section-label {
+      display: inline-block;
+      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em;
+      color: #A78BFA; text-transform: uppercase; margin-bottom: 14px;
+    }
+    h2 {
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 800; line-height: 1.2; margin-bottom: 16px;
+    }
+    .subtitle { font-size: 1.05rem; color: var(--muted); line-height: 1.7; max-width: 560px; }
+
+    /* ── HOW IT WORKS ── */
+    .how { background: var(--bg2); }
+    .how-inner { max-width: 1100px; margin: 0 auto; }
+    .how-header { text-align: center; margin-bottom: 70px; }
+    .how-header .subtitle { margin: 0 auto; }
+    .steps {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 32px;
+    }
+    .step {
+      background: var(--bg3); border: 1px solid var(--border);
+      border-radius: 20px; padding: 36px 28px;
+      position: relative; overflow: hidden;
+      transition: border-color 0.3s;
+    }
+    .step:hover { border-color: rgba(124,58,237,0.6); }
+    .step-num {
+      font-size: 3.5rem; font-weight: 900; line-height: 1;
+      background: linear-gradient(135deg, rgba(124,58,237,0.3), rgba(59,130,246,0.3));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 16px;
+    }
+    .step h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 10px; }
+    .step p { font-size: 0.9rem; color: var(--muted); line-height: 1.65; }
+
+    /* ── FEATURES ── */
+    .features-inner { max-width: 1100px; margin: 0 auto; }
+    .features-header { text-align: center; margin-bottom: 70px; }
+    .features-header .subtitle { margin: 0 auto; }
+    .features-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 28px;
+    }
+    .feat-card {
+      background: var(--bg2); border: 1px solid var(--border);
+      border-radius: 20px; overflow: hidden;
+      transition: transform 0.3s, border-color 0.3s;
+    }
+    .feat-card:hover { transform: translateY(-4px); border-color: rgba(124,58,237,0.5); }
+    .feat-card img { width: 100%; display: block; height: 320px; object-fit: contain; background: #0a0a1f; }
+    .feat-card-body { padding: 24px; }
+    .feat-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; }
+    .feat-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.6; }
+
+    /* ── HIGHLIGHT ── */
+    .highlight { background: var(--bg2); }
+    .highlight-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+    }
+    .highlight-img {
+      width: 100%; border-radius: 20px;
+      box-shadow: 0 0 50px rgba(124,58,237,0.25);
+    }
+    .highlight-text .section-label { display: block; }
+    .highlight-text h2 { margin-bottom: 20px; }
+    .highlight-text .subtitle { margin-bottom: 32px; }
+    .check-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+    .check-list li {
+      display: flex; align-items: flex-start; gap: 12px;
+      font-size: 0.95rem; color: var(--muted); line-height: 1.5;
+    }
+    .check-list li::before {
+      content: '✦'; color: #A78BFA; font-size: 0.75rem;
+      margin-top: 3px; flex-shrink: 0;
+    }
+
+    /* ── PRICING ── */
+    .pricing-inner { max-width: 860px; margin: 0 auto; text-align: center; }
+    .pricing-inner h2 { margin-bottom: 12px; }
+    .pricing-inner .subtitle { margin: 0 auto 60px; }
+    .pricing-cards {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 24px; text-align: left;
+    }
+    .pricing-card {
+      background: var(--bg2); border: 1px solid var(--border);
+      border-radius: 20px; padding: 36px;
+    }
+    .pricing-card.featured {
+      background: linear-gradient(145deg, rgba(124,58,237,0.15), rgba(59,130,246,0.1));
+      border-color: rgba(124,58,237,0.5);
+      position: relative;
+    }
+    .popular-badge {
+      position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
+      background: linear-gradient(135deg, var(--purple), var(--blue));
+      color: white; font-size: 0.72rem; font-weight: 700;
+      padding: 4px 16px; border-radius: 20px; white-space: nowrap;
+    }
+    .plan-name { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; color: var(--muted); text-transform: uppercase; margin-bottom: 12px; }
+    .plan-price { font-size: 2.2rem; font-weight: 800; margin-bottom: 6px; }
+    .plan-price span { font-size: 1rem; font-weight: 400; color: var(--muted); }
+    .plan-desc { font-size: 0.85rem; color: var(--muted); margin-bottom: 28px; line-height: 1.5; }
+    .plan-divider { border: none; border-top: 1px solid var(--border); margin-bottom: 24px; }
+    .plan-features { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px; }
+    .plan-features li { display: flex; align-items: center; gap: 10px; font-size: 0.9rem; }
+    .plan-features li .icon { font-size: 0.8rem; width: 20px; text-align: center; }
+    .plan-features li .icon.yes { color: #A78BFA; }
+    .plan-features li .icon.lock { color: #F59E0B; }
+    .plan-btn {
+      display: block; text-align: center; width: 100%;
+      padding: 13px; border-radius: 10px; font-weight: 700; font-size: 0.95rem;
+      text-decoration: none; cursor: pointer; border: none;
+      transition: opacity 0.2s;
+    }
+    .plan-btn:hover { opacity: 0.85; }
+    .plan-btn.filled { background: linear-gradient(135deg, var(--purple), var(--blue)); color: white; }
+    .plan-btn.outlined { background: transparent; border: 1px solid var(--border); color: var(--text); }
+
+    /* ── DOWNLOAD ── */
+    .download { background: var(--bg2); }
+    .download-inner { max-width: 860px; margin: 0 auto; text-align: center; }
+    .download-inner h2 { margin-bottom: 12px; }
+    .download-inner .subtitle { margin: 0 auto 48px; }
+    .download-cards {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px; text-align: left;
+    }
+    .dl-card {
+      background: var(--bg3); border: 1px solid var(--border);
+      border-radius: 16px; padding: 28px 24px;
+      display: flex; flex-direction: column; gap: 10px;
+      transition: border-color 0.3s;
+    }
+    .dl-card:hover { border-color: rgba(124,58,237,0.5); }
+    .dl-platform { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; color: var(--muted); text-transform: uppercase; }
+    .dl-title { font-size: 1.1rem; font-weight: 700; }
+    .dl-note { font-size: 0.8rem; color: var(--muted); flex: 1; }
+    .dl-btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      margin-top: 8px; padding: 11px 20px; border-radius: 10px;
+      font-weight: 600; font-size: 0.88rem; text-decoration: none;
+      background: linear-gradient(135deg, var(--purple), var(--blue)); color: white;
+      transition: opacity 0.2s;
+    }
+    .dl-btn:hover { opacity: 0.85; }
+    .dl-btn.ghost {
+      background: transparent; border: 1px solid var(--border); color: var(--text);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 48px 5% 32px;
+      border-top: 1px solid var(--border);
+      display: flex; flex-wrap: wrap; gap: 24px;
+      align-items: center; justify-content: space-between;
+    }
+    .footer-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .footer-logo img { width: 30px; height: 30px; border-radius: 6px; }
+    .footer-logo span { font-size: 1rem; font-weight: 700; color: var(--text); }
+    .footer-links { display: flex; gap: 28px; flex-wrap: wrap; }
+    .footer-links a { font-size: 0.85rem; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--text); }
+    .footer-copy { font-size: 0.8rem; color: var(--muted); width: 100%; text-align: center; margin-top: 12px; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .highlight-inner { grid-template-columns: 1fr; gap: 40px; }
+      .highlight-img { order: -1; }
+      .pricing-cards { grid-template-columns: 1fr; }
+      .stats { gap: 32px; }
+      nav { padding: 14px 4%; }
+      #usecases .features-inner > div:last-child { grid-template-columns: 1fr !important; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <img src="images/app_logo.png" alt="PenCast" />
+    <span>PenCast</span>
+  </a>
+  <a href="https://play.google.com/store/apps/details?id=com.pencast.app" class="nav-cta" target="_blank">
+    Download Free
+  </a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">✦ Works inside any Mac or Windows app</div>
+  <h1>Your S Pen.<br/>A Professional Drawing Tablet.</h1>
+  <p>PenCast streams raw stylus data — pressure, tilt, hover — directly into Mac and Windows. Every app sees a real Wacom tablet. No screen mirroring. No lag.</p>
+  <div class="hero-btns">
+    <a href="https://play.google.com/store/apps/details?id=com.pencast.app" class="btn-primary" target="_blank">
+      ▶ Download on Google Play
+    </a>
+    <a href="#how" class="btn-secondary">How it works →</a>
+  </div>
+  <img src="images/hero_mac_tablet.png" alt="PenCast in action" class="hero-img" />
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat">
+    <div class="stat-num">~5ms</div>
+    <div class="stat-label">USB Latency</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">3</div>
+    <div class="stat-label">Connection Modes</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">100%</div>
+    <div class="stat-label">Works in Photoshop, Figma & more</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">$7.99</div>
+    <div class="stat-label">One-time Pro unlock</div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section class="how" id="how">
+  <div class="how-inner">
+    <div class="how-header">
+      <span class="section-label">How it works</span>
+      <h2>Three steps to your drawing tablet</h2>
+      <p class="subtitle">No drivers. No cables required. Just install and draw.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>Install both apps</h3>
+        <p>Get PenCast on your Android phone from Google Play. Download the Mac or Windows receiver from this page.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>Connect in seconds</h3>
+        <p>Scan the QR code with your phone or connect via USB for ultra-low latency. Auto-discovery finds your Mac automatically on WiFi.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>Draw in any app</h3>
+        <p>Open Photoshop, Clip Studio, Figma, or any other app. Your S Pen works as a real Wacom tablet — pressure, tilt, hover included.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES GRID -->
+<section id="features">
+  <div class="features-inner">
+    <div class="features-header">
+      <span class="section-label">Features</span>
+      <h2>Everything a pro needs</h2>
+      <p class="subtitle">From casual sketching to professional illustration — PenCast covers every use case.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feat-card">
+        <img src="images/zero_lag_connection.png" alt="Zero-Lag Connection" />
+        <div class="feat-card-body">
+          <h3>Zero-Lag WiFi & USB</h3>
+          <p>Connect over WiFi for wireless freedom or USB for ultra-low latency. Auto-discovery finds your Mac — no manual IP needed.</p>
+        </div>
+      </div>
+      <div class="feat-card">
+        <img src="images/pressure_support_settings.png" alt="Pressure Support" />
+        <div class="feat-card-body">
+          <h3>Full S Pen Pressure</h3>
+          <p>4096 pressure levels transmitted in real-time. Customize the pressure curve from soft to firm to match your drawing style.</p>
+        </div>
+      </div>
+      <div class="feat-card">
+        <img src="images/pro_tools_precision.png" alt="Pro Tools" />
+        <div class="feat-card-body">
+          <h3>Precision Pro Tools</h3>
+          <p>Hover mode, palm rejection, tilt data, and aspect ratio lock — everything professional artists expect from a Wacom tablet.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HIGHLIGHT — UNIQUE FEATURE -->
+<section class="highlight">
+  <div class="highlight-inner">
+    <img src="images/feature_showcase_phones.png" alt="PenCast Features" class="highlight-img" />
+    <div class="highlight-text">
+      <span class="section-label">What makes PenCast different</span>
+      <h2>Works inside your apps.<br/>Not just on a canvas.</h2>
+      <p class="subtitle">Other apps mirror your screen or give you a drawing canvas. PenCast injects raw S Pen events directly into macOS and Windows — so Photoshop, Clip Studio, and Figma all see a real tablet.</p>
+      <ul class="check-list">
+        <li>No screen mirroring — pure pen data only</li>
+        <li>Works in every professional drawing app</li>
+        <li>Tilt angle for realistic brush effects</li>
+        <li>Hover tracking before pen touches screen</li>
+        <li>S Pen button maps to right-click</li>
+        <li>Multi-monitor support — draw on any screen</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- TWO USE CASES -->
+<section id="usecases">
+  <div class="features-inner">
+    <div class="features-header">
+      <span class="section-label">Who is PenCast for?</span>
+      <h2>One app. Two superpowers.</h2>
+      <p class="subtitle">Whether you design or teach — PenCast has a dedicated mode built for you.</p>
+    </div>
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 28px;">
+
+      <!-- DESIGNERS -->
+      <div style="background:var(--bg2); border:1px solid rgba(124,58,237,0.3); border-radius:24px; padding:40px 36px;">
+        <div style="font-size:2.5rem; margin-bottom:16px;">🎨</div>
+        <div style="font-size:0.75rem; font-weight:700; letter-spacing:0.12em; color:#A78BFA; text-transform:uppercase; margin-bottom:10px;">For Designers & Artists</div>
+        <h3 style="font-size:1.5rem; font-weight:800; margin-bottom:14px; line-height:1.2;">S Pen as a<br/>Wacom Tablet</h3>
+        <p style="font-size:0.9rem; color:var(--muted); line-height:1.7; margin-bottom:28px;">Open Photoshop, Clip Studio, or Figma on your Mac. PenCast injects your S Pen strokes directly into the app — with full pressure, tilt, and hover — exactly like a $200 Wacom tablet.</p>
+        <ul class="check-list">
+          <li>Works in Photoshop, Clip Studio, Figma & more</li>
+          <li>Pressure + tilt for realistic brush strokes</li>
+          <li>Hover mode for precise cursor positioning</li>
+          <li>Palm rejection for comfortable long sessions</li>
+          <li>S Pen button → right-click</li>
+        </ul>
+      </div>
+
+      <!-- TEACHERS -->
+      <div style="background:var(--bg2); border:1px solid rgba(59,130,246,0.3); border-radius:24px; padding:40px 36px;">
+        <div style="font-size:2.5rem; margin-bottom:16px;">📖</div>
+        <div style="font-size:0.75rem; font-weight:700; letter-spacing:0.12em; color:#93C5FD; text-transform:uppercase; margin-bottom:10px;">For Teachers & Presenters</div>
+        <h3 style="font-size:1.5rem; font-weight:800; margin-bottom:14px; line-height:1.2;">Annotate Directly<br/>on Your Screen</h3>
+        <p style="font-size:0.9rem; color:var(--muted); line-height:1.7; margin-bottom:28px;">Draw on top of your slides, browser, or any app on screen — completely transparent. Highlight, annotate, and use the laser pointer during live presentations without switching windows.</p>
+        <ul class="check-list">
+          <li>Transparent overlay — draw on any open window</li>
+          <li>Laser pointer for live presentations</li>
+          <li>Highlighter tool for emphasis</li>
+          <li>Instant clear between slides</li>
+          <li>Free — no Pro needed</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="pricing-inner">
+    <span class="section-label">Pricing</span>
+    <h2>Free to try. $7.99 to own forever.</h2>
+    <p class="subtitle">No subscriptions. No recurring fees. Pay once and use PenCast Pro on all your devices.</p>
+    <div class="pricing-cards">
+      <!-- FREE -->
+      <div class="pricing-card">
+        <div class="plan-name">Free</div>
+        <div class="plan-price">$0 <span>forever</span></div>
+        <div class="plan-desc">Everything you need to get started with WiFi and USB drawing.</div>
+        <hr class="plan-divider" />
+        <ul class="plan-features">
+          <li><span class="icon yes">✦</span> WiFi + USB connection</li>
+          <li><span class="icon yes">✦</span> Canvas mode — full drawing tools</li>
+          <li><span class="icon yes">✦</span> Cursor mode</li>
+          <li><span class="icon yes">✦</span> Laser pointer for presentations</li>
+          <li><span class="icon yes">✦</span> Transparent overlay mode</li>
+          <li><span class="icon yes">✦</span> Shapes, colors, undo, clear</li>
+          <li><span class="icon yes">✦</span> QR code pairing</li>
+          <li><span class="icon yes">✦</span> Auto-discovery (mDNS)</li>
+        </ul>
+        <a href="https://play.google.com/store/apps/details?id=com.pencast.app" class="plan-btn outlined" target="_blank">Download Free</a>
+      </div>
+      <!-- PRO -->
+      <div class="pricing-card featured">
+        <div class="popular-badge">BEST FOR DESIGNERS</div>
+        <div class="plan-name">Pro</div>
+        <div class="plan-price">$7.99 <span>one-time</span></div>
+        <div class="plan-desc">Professional-grade precision. Everything a designer or illustrator needs.</div>
+        <hr class="plan-divider" />
+        <ul class="plan-features">
+          <li><span class="icon yes">✦</span> Everything in Free</li>
+          <li><span class="icon lock">🔒</span> Bluetooth connection</li>
+          <li><span class="icon lock">🔒</span> Hover mode + FPS control</li>
+          <li><span class="icon lock">🔒</span> Pressure curve customization</li>
+          <li><span class="icon lock">🔒</span> Tilt data (brush angle)</li>
+          <li><span class="icon lock">🔒</span> Palm rejection</li>
+          <li><span class="icon lock">🔒</span> Multi-monitor selection</li>
+          <li><span class="icon lock">🔒</span> Custom global hotkeys</li>
+        </ul>
+        <a href="https://play.google.com/store/apps/details?id=com.pencast.app" class="plan-btn filled" target="_blank">Unlock Pro — $7.99</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="background: var(--bg2);">
+  <div style="max-width: 760px; margin: 0 auto;">
+    <div style="text-align:center; margin-bottom: 60px;">
+      <span class="section-label">FAQ</span>
+      <h2>Common questions</h2>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 16px;">
+
+      <details style="background:var(--bg3); border:1px solid var(--border); border-radius:14px; padding:24px; cursor:pointer;">
+        <summary style="font-weight:700; font-size:1rem; list-style:none; display:flex; justify-content:space-between; align-items:center;">
+          Does PenCast work with Photoshop and Clip Studio?
+          <span style="color:var(--glow); font-size:1.2rem;">+</span>
+        </summary>
+        <p style="margin-top:14px; color:var(--muted); font-size:0.9rem; line-height:1.7;">Yes. PenCast injects stylus events directly into macOS and Windows — so Photoshop, Clip Studio Paint, Figma, and any other drawing app see the S Pen as a real Wacom tablet with full pressure and tilt support.</p>
+      </details>
+
+      <details style="background:var(--bg3); border:1px solid var(--border); border-radius:14px; padding:24px; cursor:pointer;">
+        <summary style="font-weight:700; font-size:1rem; list-style:none; display:flex; justify-content:space-between; align-items:center;">
+          Which Samsung devices work with PenCast?
+          <span style="color:var(--glow); font-size:1.2rem;">+</span>
+        </summary>
+        <p style="margin-top:14px; color:var(--muted); font-size:0.9rem; line-height:1.7;">Any Samsung Galaxy with a built-in S Pen — Galaxy S Ultra series, Galaxy Note series, Galaxy Z Fold series, and Galaxy Tab S series.</p>
+      </details>
+
+      <details style="background:var(--bg3); border:1px solid var(--border); border-radius:14px; padding:24px; cursor:pointer;">
+        <summary style="font-weight:700; font-size:1rem; list-style:none; display:flex; justify-content:space-between; align-items:center;">
+          What is the latency?
+          <span style="color:var(--glow); font-size:1.2rem;">+</span>
+        </summary>
+        <p style="margin-top:14px; color:var(--muted); font-size:0.9rem; line-height:1.7;">Over USB, PenCast achieves approximately 5ms latency. Over WiFi on a good local network, typically under 20ms — comparable to professional wired drawing tablets.</p>
+      </details>
+
+      <details style="background:var(--bg3); border:1px solid var(--border); border-radius:14px; padding:24px; cursor:pointer;">
+        <summary style="font-weight:700; font-size:1rem; list-style:none; display:flex; justify-content:space-between; align-items:center;">
+          Can teachers use PenCast for presentations?
+          <span style="color:var(--glow); font-size:1.2rem;">+</span>
+        </summary>
+        <p style="margin-top:14px; color:var(--muted); font-size:0.9rem; line-height:1.7;">Yes. The transparent overlay mode lets you draw and annotate directly on top of any open window on your screen. Laser pointer and highlighter are included for free — no Pro needed.</p>
+      </details>
+
+      <details style="background:var(--bg3); border:1px solid var(--border); border-radius:14px; padding:24px; cursor:pointer;">
+        <summary style="font-weight:700; font-size:1rem; list-style:none; display:flex; justify-content:space-between; align-items:center;">
+          Is PenCast better than a Wacom tablet?
+          <span style="color:var(--glow); font-size:1.2rem;">+</span>
+        </summary>
+        <p style="margin-top:14px; color:var(--muted); font-size:0.9rem; line-height:1.7;">PenCast turns a device you already own into a drawing tablet — saving you $80–$200 on a Wacom. Full pressure, tilt, hover, and palm rejection at a fraction of the cost.</p>
+      </details>
+
+      <details style="background:var(--bg3); border:1px solid var(--border); border-radius:14px; padding:24px; cursor:pointer;">
+        <summary style="font-weight:700; font-size:1rem; list-style:none; display:flex; justify-content:space-between; align-items:center;">
+          How does the connection work?
+          <span style="color:var(--glow); font-size:1.2rem;">+</span>
+        </summary>
+        <p style="margin-top:14px; color:var(--muted); font-size:0.9rem; line-height:1.7;">Three modes: WiFi with auto-discovery via QR code, USB via ADB for ultra-low latency, and Bluetooth BLE (Pro) for wireless use without WiFi.</p>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- DOWNLOAD -->
+<section class="download" id="download">
+  <div class="download-inner">
+    <span class="section-label">Download</span>
+    <h2>Get started in minutes</h2>
+    <p class="subtitle">Install the Android app and the desktop receiver. That's it.</p>
+    <div class="download-cards">
+      <div class="dl-card">
+        <div class="dl-platform">Android</div>
+        <div class="dl-title">PenCast Sender</div>
+        <div class="dl-note">Samsung Galaxy with S Pen required. Android 8.0+</div>
+        <a href="https://play.google.com/store/apps/details?id=com.pencast.app" class="dl-btn" target="_blank">▶ Google Play</a>
+      </div>
+      <div class="dl-card">
+        <div class="dl-platform">macOS</div>
+        <div class="dl-title">PenCast for Mac</div>
+        <div class="dl-note">macOS 12+. Apple Silicon & Intel. Requires allowing "unidentified developer" on first launch.</div>
+        <a href="https://github.com/ahmedesa/pencast-app/releases/latest/download/pencast_macos.zip" class="dl-btn ghost" target="_blank">↓ Download ZIP</a>
+      </div>
+      <div class="dl-card">
+        <div class="dl-platform">Windows</div>
+        <div class="dl-title">PenCast for Windows</div>
+        <div class="dl-note">Windows 10/11 (64-bit). Portable — no installation needed.</div>
+        <a href="https://github.com/ahmedesa/pencast-app/releases/latest/download/pencast_windows.zip" class="dl-btn ghost" target="_blank">↓ Download ZIP</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a href="#" class="footer-logo">
+    <img src="images/app_logo.png" alt="PenCast" />
+    <span>PenCast</span>
+  </a>
+  <div class="footer-links">
+    <a href="https://doc-hosting.flycricket.io/pencast-privacy-policy/2f6c8506-bc46-4dad-8de3-4849b12ca70b/privacy" target="_blank">Privacy Policy</a>
+    <a href="https://doc-hosting.flycricket.io/pencast-terms-of-use/c9b7619f-b1d7-40f2-9084-766fff25661f/terms" target="_blank">Terms of Use</a>
+    <a href="mailto:ahmedesa6120@gmail.com">Contact</a>
+  </div>
+  <div class="footer-copy">© 2026 PenCast. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
