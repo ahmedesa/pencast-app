@@ -121,6 +121,13 @@
     .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
     .nav-logo img { width: 36px; height: 36px; border-radius: 8px; }
     .nav-logo span { font-size: 1.2rem; font-weight: 700; color: var(--text); }
+    .nav-links { display: flex; gap: 28px; align-items: center; }
+    .nav-links a {
+      font-size: 0.85rem; font-weight: 500; color: var(--muted);
+      text-decoration: none; transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--text); }
+
     .nav-cta {
       background: linear-gradient(135deg, var(--purple), var(--blue));
       color: white; border: none; border-radius: 8px;
@@ -385,8 +392,22 @@
     .footer-links a:hover { color: var(--text); }
     .footer-copy { font-size: 0.8rem; color: var(--muted); width: 100%; text-align: center; margin-top: 12px; }
 
+    /* ── APP PILLS ── */
+    .app-pill {
+      display: inline-flex; align-items: center;
+      background: var(--bg3); border: 1px solid var(--border);
+      border-radius: 10px; padding: 10px 20px;
+      font-size: 0.9rem; font-weight: 600; color: var(--text);
+      transition: border-color 0.3s, transform 0.2s;
+    }
+    .app-pill:hover {
+      border-color: rgba(124,58,237,0.5);
+      transform: translateY(-2px);
+    }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
+      .nav-links { display: none; }
       .highlight-inner { grid-template-columns: 1fr; gap: 40px; }
       .highlight-img { order: -1; }
       .pricing-cards { grid-template-columns: 1fr; }
@@ -404,7 +425,13 @@
     <img src="images/app_logo.png" alt="PenCast" />
     <span>PenCast</span>
   </a>
-  <a href="https://play.google.com/store/apps/details?id=com.pencast.app" class="nav-cta" target="_blank">
+  <div class="nav-links">
+    <a href="#features">Features</a>
+    <a href="#how">How it works</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#faq">FAQ</a>
+  </div>
+  <a href="#download" class="nav-cta">
     Download Free
   </a>
 </nav>
@@ -459,16 +486,16 @@
     <div class="stat-label">USB Latency</div>
   </div>
   <div class="stat">
+    <div class="stat-num">&lt;20ms</div>
+    <div class="stat-label">WiFi Latency</div>
+  </div>
+  <div class="stat">
     <div class="stat-num">3</div>
     <div class="stat-label">Connection Modes</div>
   </div>
   <div class="stat">
-    <div class="stat-num">100%</div>
-    <div class="stat-label">Works in Photoshop, Figma & more</div>
-  </div>
-  <div class="stat">
     <div class="stat-num">$7.99</div>
-    <div class="stat-label">One-time Pro unlock</div>
+    <div class="stat-label">One-time — no subscription</div>
   </div>
 </div>
 
@@ -512,22 +539,29 @@
       <div class="feat-card">
         <img src="images/zero_lag_connection.png" alt="Zero-Lag Connection" />
         <div class="feat-card-body">
-          <h3>Zero-Lag WiFi & USB</h3>
-          <p>Connect over WiFi for wireless freedom or USB for ultra-low latency. Auto-discovery finds your Mac — no manual IP needed.</p>
+          <h3>WiFi, USB, or Bluetooth</h3>
+          <p>Three ways to connect. WiFi auto-discovers your Mac or PC — no manual IP. USB for studio-grade latency. Bluetooth for cable-free anywhere.</p>
         </div>
       </div>
       <div class="feat-card">
         <img src="images/pressure_support_settings.png" alt="Pressure Support" />
         <div class="feat-card-body">
-          <h3>Full S Pen Pressure</h3>
-          <p>4096 pressure levels transmitted in real-time. Customize the pressure curve from soft to firm to match your drawing style.</p>
+          <h3>Full S Pen Pressure & Tilt</h3>
+          <p>Continuous pressure transmitted in real-time with a customizable response curve. Tilt and orientation data let brushes respond to how you hold the pen — just like a Wacom.</p>
         </div>
       </div>
       <div class="feat-card">
-        <img src="images/turn_phone_into_tablet.png" alt="Precision Pro Tools" />
+        <img src="images/turn_phone_into_tablet.png" alt="Standalone Canvas" />
         <div class="feat-card-body">
-          <h3>Precision Pro Tools</h3>
-          <p>Hover mode, scroll & zoom control, high refresh rate canvas, palm rejection, tilt data, and aspect ratio lock — everything professional artists expect from a Wacom tablet.</p>
+          <h3>Not Just a Tablet Emulator</h3>
+          <p>Most apps only mirror your pen to a desktop cursor. PenCast also gives you a full drawing canvas with shapes, highlighter, colors, and transparent overlay — no Photoshop needed.</p>
+        </div>
+      </div>
+      <div class="feat-card">
+        <img src="images/hover_palm_rejection.png" alt="Hover & Precision" />
+        <div class="feat-card-body">
+          <h3>Hover, Hotkeys & Multi-Monitor</h3>
+          <p>See where your pen will land before it touches. Set global hotkeys to switch modes instantly. Choose which monitor to draw on — all from your phone.</p>
         </div>
       </div>
     </div>
@@ -540,17 +574,40 @@
     <img src="images/feature_showcase_phones.png" alt="PenCast Features" class="highlight-img" />
     <div class="highlight-text">
       <span class="section-label">What makes PenCast different</span>
-      <h2>Works inside your apps.<br/>Not just on a canvas.</h2>
-      <p class="subtitle">Other apps mirror your screen or give you a drawing canvas. PenCast injects raw S Pen events directly into macOS and Windows — so Photoshop, Clip Studio, and Figma all see a real tablet.</p>
+      <h2>A drawing tablet and a creative tool in one.</h2>
+      <p class="subtitle">Other apps just mirror your pen to a mouse cursor. PenCast does that — and gives you a full standalone canvas, transparent overlay, laser pointer, and presentation tools. One app, two workflows.</p>
       <ul class="check-list">
-        <li>No screen mirroring — pure pen data only</li>
-        <li>Works in every professional drawing app</li>
-        <li>Tilt angle for realistic brush effects</li>
-        <li>Hover tracking before pen touches screen</li>
-        <li>S Pen button maps to right-click</li>
-        <li>Multi-monitor support — draw on any screen</li>
+        <li>Tablet mode — Photoshop, Clip Studio, and every pro app see a real pen</li>
+        <li>Canvas mode — draw with shapes, colors, and undo without any desktop app</li>
+        <li>Transparent overlay — annotate directly on top of your screen</li>
+        <li>Laser pointer & highlighter for live presentations</li>
+        <li>QR code pairing — connect in seconds, no manual IP entry</li>
+        <li>One-time purchase — no monthly subscription, ever</li>
       </ul>
     </div>
+  </div>
+</section>
+
+<!-- APP COMPATIBILITY -->
+<section id="apps" style="background: var(--bg2);">
+  <div style="max-width: 860px; margin: 0 auto; text-align: center;">
+    <span class="section-label">Real tablet events — not mouse spoofing</span>
+    <h2>Your apps already support PenCast</h2>
+    <p class="subtitle" style="margin: 0 auto 20px;">PenCast registers as a native pen device on macOS and Windows. Any app that supports a Wacom tablet works with PenCast — no plugins, no drivers, no configuration.</p>
+    <p style="font-size: 0.85rem; color: var(--muted); margin-bottom: 48px;">Pressure, tilt, and hover work out of the box in every app below.</p>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-bottom: 48px;">
+      <div class="app-pill">Adobe Photoshop</div>
+      <div class="app-pill">Clip Studio Paint</div>
+      <div class="app-pill">Figma</div>
+      <div class="app-pill">Krita</div>
+      <div class="app-pill">GIMP</div>
+      <div class="app-pill">Autodesk Sketchbook</div>
+      <div class="app-pill">Inkscape</div>
+      <div class="app-pill">Affinity Designer</div>
+      <div class="app-pill">Procreate (Mac)</div>
+      <div class="app-pill">Blender (sculpt)</div>
+    </div>
+    <p style="font-size: 0.85rem; color: var(--muted); line-height: 1.7; max-width: 620px; margin: 0 auto;">If an app reads pen pressure on your Mac or Windows PC, it works with PenCast. We inject tablet events at the OS level — the same API that Wacom drivers use.</p>
   </div>
 </section>
 
