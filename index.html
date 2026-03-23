@@ -1,727 +1,2212 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PenCast — S Pen Drawing Tablet for Mac & Windows</title>
-  <meta name="description" content="Turn your Samsung S Pen into a professional Wacom-style drawing tablet for Mac and Windows. WiFi, USB, and Bluetooth. No screen mirroring — raw pen data, zero latency." />
+  <meta name="description"
+    content="Turn your Samsung S Pen into a professional Wacom-style drawing tablet for Mac and Windows. WiFi, USB, and Bluetooth. No screen mirroring — raw pen data, zero latency." />
   <meta property="og:title" content="PenCast — S Pen Drawing Tablet for Mac & Windows" />
-  <meta property="og:description" content="Turn your Samsung S Pen into a professional drawing tablet for Mac and Windows." />
-  <meta property="og:image" content="images/hero_mac_tablet.png" />
+  <meta property="og:description"
+    content="Turn your Samsung S Pen into a professional drawing tablet for Mac and Windows." />
+  <meta property="og:image" content="images/hero_monitor_tablet.png" />
   <link rel="icon" type="image/png" href="images/app_logo.png" />
 
-  <!-- Structured Data -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "SoftwareApplication",
-        "name": "PenCast",
-        "operatingSystem": "Android",
-        "applicationCategory": "UtilitiesApplication",
-        "description": "Turn your Samsung S Pen into a professional drawing tablet for Mac and Windows. PenCast streams raw stylus data — pressure, tilt, hover — directly into the OS. Works inside Photoshop, Clip Studio, Figma, and any professional app.",
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD"
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "name": "PenCast",
+          "operatingSystem": "Android",
+          "applicationCategory": "UtilitiesApplication",
+          "description": "Turn your Samsung S Pen into a professional drawing tablet for Mac and Windows.",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+          "url": "https://pencastapp.com",
+          "downloadUrl": "https://play.google.com/store/apps/details?id=com.pencast.app",
+          "author": { "@type": "Person", "name": "Ahmed Essa" }
         },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "5",
-          "ratingCount": "1"
-        },
-        "url": "https://pencastapp.com",
-        "downloadUrl": "https://play.google.com/store/apps/details?id=com.pencast.app",
-        "screenshot": "https://pencastapp.com/images/hero_mac_tablet.png",
-        "author": { "@type": "Person", "name": "Ahmed Essa" }
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "What is PenCast?",
-            "acceptedAnswer": { "@type": "Answer", "text": "PenCast is an Android app that turns your Samsung S Pen into a professional drawing tablet for Mac and Windows. It streams raw pen data — pressure, tilt, hover — directly into the operating system so apps like Photoshop, Clip Studio, and Figma see it as a real Wacom tablet." }
-          },
-          {
-            "@type": "Question",
-            "name": "Does PenCast work with Photoshop?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes. PenCast injects stylus events directly into macOS and Windows, so Photoshop, Clip Studio Paint, Figma, Procreate for Mac, and any other drawing app see the S Pen as a real Wacom tablet with full pressure and tilt support." }
-          },
-          {
-            "@type": "Question",
-            "name": "What Samsung devices work with PenCast?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Any Samsung Galaxy device with a built-in S Pen works with PenCast, including Galaxy S Ultra series, Galaxy Note series, Galaxy Z Fold series, and Galaxy Tab S series." }
-          },
-          {
-            "@type": "Question",
-            "name": "Is PenCast free?",
-            "acceptedAnswer": { "@type": "Answer", "text": "PenCast is free to download and use. A one-time Pro upgrade ($7.99) unlocks advanced features like Bluetooth connection, Hover Mode, Pressure Curve customization, Tilt data, Palm Rejection, and Multi-monitor selection." }
-          },
-          {
-            "@type": "Question",
-            "name": "How does PenCast connect to Mac or Windows?",
-            "acceptedAnswer": { "@type": "Answer", "text": "PenCast supports three connection modes: WiFi (auto-discovery via QR code or mDNS), USB via ADB reverse tunnel for ultra-low latency, and Bluetooth BLE for wireless use without WiFi (Pro feature)." }
-          },
-          {
-            "@type": "Question",
-            "name": "What is the latency of PenCast?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Over USB, PenCast achieves approximately 5ms latency. Over WiFi on a good local network, latency is typically under 20ms — comparable to professional wired drawing tablets." }
-          },
-          {
-            "@type": "Question",
-            "name": "Can teachers use PenCast for presentations?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes. PenCast has a transparent overlay mode that lets you draw and annotate directly on top of any open window on your Mac or Windows screen — perfect for teachers, presenters, and online tutors. The laser pointer and highlighter tools are also included for free." }
-          },
-          {
-            "@type": "Question",
-            "name": "Is PenCast better than a Wacom tablet?",
-            "acceptedAnswer": { "@type": "Answer", "text": "PenCast turns a device you already own (your Samsung Galaxy) into a drawing tablet, saving you $80-$200 on a dedicated Wacom. It supports pressure sensitivity, tilt, hover, and palm rejection — the same features professional artists need — at a fraction of the cost." }
-          }
-        ]
-      }
-    ]
-  }
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            { "@type": "Question", "name": "What is PenCast?", "acceptedAnswer": { "@type": "Answer", "text": "PenCast turns your Samsung S Pen into a professional drawing tablet for Mac and Windows." } },
+            { "@type": "Question", "name": "Does PenCast work with Photoshop?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. PenCast injects stylus events into macOS and Windows so any drawing app sees it as a real Wacom tablet." } },
+            { "@type": "Question", "name": "What is the latency?", "acceptedAnswer": { "@type": "Answer", "text": "USB: ~5ms. WiFi: under 20ms." } }
+          ]
+        }
+      ]
+    }
   </script>
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
-      --bg:        #07071A;
-      --bg2:       #0D0D28;
-      --bg3:       #12122F;
-      --purple:    #7C3AED;
-      --blue:      #3B82F6;
-      --pink:      #EC4899;
-      --glow:      #8B5CF6;
-      --text:      #F1F1FF;
-      --muted:     #8888AA;
-      --border:    rgba(139,92,246,0.2);
+      --bg-color: #0f0518;
+      --text-main: #ffffff;
+      --text-muted: #a098b6;
+
+      /* Neon Glow Colors */
+      --neon-purple: #b05cf8;
+      --neon-blue: #4f8bf9;
+      --neon-cyan: #22d3ee;
+      --neon-purple-light: #d872ff;
+      --neon-gold: #fbbf24;
     }
 
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      scroll-behavior: smooth;
+    }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      overflow-x: hidden;
-    }
-
-    /* ── NAV ── */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 12px 3%; /* Narrower padding for tighter top-right feel */
-      background: rgba(7,7,26,0.85);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-    }
-    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-    .nav-logo img { width: 36px; height: 36px; border-radius: 8px; }
-    .nav-logo span { font-size: 1.2rem; font-weight: 700; color: var(--text); }
-    .nav-cta {
-      background: linear-gradient(135deg, var(--purple), var(--blue));
-      color: white; border: none; border-radius: 8px;
-      padding: 8px 20px; font-size: 0.85rem; font-weight: 700;
-      cursor: pointer; text-decoration: none;
-      transition: all 0.2s ease;
-      box-shadow: 0 4px 15px rgba(124,58,237,0.3);
-    }
-    .nav-cta:hover { 
-      opacity: 1; 
-      transform: translateY(-1px);
-      box-shadow: 0 6px 20px rgba(124,58,237,0.5);
-    }
-
-    /* ── HERO ── */
-    .hero {
+      background: #0a0216;
+      color: var(--text-main);
       min-height: 100vh;
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
-      text-align: center;
-      padding: 120px 5% 80px;
+      padding: 20px 20px 40px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    /* --- Background Neural Mesh Effects --- */
+    .bg-effects {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+      background: radial-gradient(circle at 50% 0%, #2a1050 0%, #0a0216 80%);
+    }
+
+    .mesh-container {
+      position: absolute;
+      bottom: -20%;
+      width: 200%;
+      height: 100%;
+      left: -50%;
+      transform: perspective(600px) rotateX(60deg);
+      mask-image: linear-gradient(to top, black 20%, transparent 90%);
+      -webkit-mask-image: linear-gradient(to top, black 20%, transparent 90%);
+    }
+
+    .neural-mesh {
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%236a43ff' stroke-width='0.5'%3E%3Cpath d='M30 0 L60 30 L30 60 L0 30 Z'/%3E%3Ccircle cx='30' cy='30' r='1.5' fill='%23b53cff'/%3E%3C/g%3E%3C/svg%3E");
+      background-size: 80px 80px;
+      animation: moveMesh 60s linear infinite;
+      opacity: 0.6;
+      position: relative;
+    }
+
+    .neural-mesh::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(106, 67, 255, 0.1), transparent);
+      background-size: 200% 100%;
+      animation: waveGlow 10s ease-in-out infinite;
+    }
+
+    @keyframes moveMesh {
+      from { background-position: 0 0; }
+      to   { background-position: 0 1000px; }
+    }
+
+    @keyframes waveGlow {
+      0%, 100% { transform: translateX(-100%); }
+      50%       { transform: translateX(100%); }
+    }
+
+    .container {
+      max-width: 1200px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* --- Main Navigation Bar --- */
+    .main-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 100px;
+      backdrop-filter: blur(10px);
+      margin-bottom: 20px;
+      position: sticky;
+      top: 20px;
+      z-index: 100;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-icon {
+      width: 24px;
+      height: 24px;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 35px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text-main);
+    }
+
+    .btn-nav {
+      background: rgba(176, 92, 248, 0.2);
+      color: white;
+      border: 1px solid rgba(176, 92, 248, 0.5);
+      padding: 10px 24px;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+
+    .btn-nav:hover {
+      background: rgba(176, 92, 248, 0.4);
+      border-color: rgba(176, 92, 248, 0.8);
+      box-shadow: 0 0 15px rgba(176, 92, 248, 0.3);
+    }
+
+    /* --- Hero Section --- */
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      line-height: 1.2;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .hero p {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+
+    .hero-images {
+      width: 50%;
+      height: 200px;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    /* --- Software Bar --- */
+    .software-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 16px 35px;
+      backdrop-filter: blur(15px);
+    }
+
+    .software-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .software-item span {
+      font-weight: 500;
+      color: #e2dcf2;
+      font-size: 1.05rem;
+      letter-spacing: 0.02em;
+    }
+
+    .app-icon {
+      width: 24px;
+      height: 24px;
+      display: block;
+    }
+
+    .figma-icon {
+      width: 16px;
+      height: 24px;
+    }
+
+    .csp-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      line-height: 1;
+    }
+
+    .csp-small {
+      font-size: 0.55rem !important;
+      letter-spacing: 0.05em;
+      opacity: 0.8;
+      margin-bottom: 2px;
+    }
+
+    .csp-large {
+      font-size: 1rem !important;
+      font-weight: 400 !important;
+    }
+
+    .blender-text {
+      font-weight: 600 !important;
+      letter-spacing: -0.02em;
+    }
+
+    /* --- Dashboard Visual Grid --- */
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: 2fr 1.2fr 1.2fr 1.5fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 20px;
+      min-height: 400px;
+    }
+
+    .card {
+      background: rgba(15, 5, 24, 0.4);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      border: 2px solid transparent;
       position: relative;
       overflow: hidden;
+      transition: transform 0.2s ease;
     }
-    .hero::before {
-      content: '';
-      position: absolute; inset: 0;
-      background:
-        radial-gradient(ellipse 60% 50% at 50% 0%, rgba(124,58,237,0.25) 0%, transparent 70%),
-        radial-gradient(ellipse 40% 40% at 80% 60%, rgba(59,130,246,0.15) 0%, transparent 60%);
-      pointer-events: none;
+
+    .card:hover {
+      transform: translateY(-2px);
     }
-    .hero-badge {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: rgba(124,58,237,0.15); border: 1px solid rgba(124,58,237,0.4);
-      border-radius: 20px; padding: 6px 16px;
-      font-size: 0.8rem; font-weight: 600; color: #A78BFA;
-      margin-bottom: 28px; letter-spacing: 0.05em;
+
+    .span-2-rows {
+      grid-row: span 2;
     }
-    .hero h1 {
-      font-size: clamp(2.2rem, 5vw, 4rem);
-      font-weight: 800; line-height: 1.15;
-      max-width: 780px;
-      background: linear-gradient(135deg, #fff 0%, #C4B5FD 50%, #93C5FD 100%);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 20px;
+
+    .card h2 {
+      font-size: 2.2rem;
+      margin-bottom: 5px;
+      font-weight: 700;
     }
-    .hero p {
-      font-size: clamp(1rem, 2vw, 1.2rem);
-      color: var(--muted); max-width: 560px; line-height: 1.7;
+
+    .card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 5px;
+      line-height: 1.3;
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    .neon-purple {
+      border-color: rgba(176, 92, 248, 0.6);
+      box-shadow: 0 0 25px rgba(176, 92, 248, 0.15), inset 0 0 15px rgba(176, 92, 248, 0.1);
+    }
+
+    .neon-blue {
+      border-color: rgba(79, 139, 249, 0.6);
+      box-shadow: 0 0 25px rgba(79, 139, 249, 0.15), inset 0 0 15px rgba(79, 139, 249, 0.1);
+    }
+
+    .neon-cyan {
+      border-color: rgba(34, 211, 238, 0.6);
+      box-shadow: 0 0 25px rgba(34, 211, 238, 0.15), inset 0 0 15px rgba(34, 211, 238, 0.1);
+    }
+
+    .neon-purple-light {
+      border-color: rgba(216, 114, 255, 0.6);
+      box-shadow: 0 0 25px rgba(216, 114, 255, 0.15), inset 0 0 15px rgba(216, 114, 255, 0.1);
+    }
+
+    .neon-gold {
+      border-color: rgba(251, 191, 36, 0.6);
+      box-shadow: 0 0 25px rgba(251, 191, 36, 0.15), inset 0 0 15px rgba(251, 191, 36, 0.1);
+    }
+
+    .pricing-card-mini {
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .pricing-card-mini h2 {
+      font-size: 1.8rem;
+      color: var(--neon-gold);
+      margin-bottom: 0;
+    }
+
+    .pricing-card-mini .price {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin: 10px 0;
+      color: white;
+    }
+
+    .pricing-card-mini .subtitle,
+    .pricing-card-mini .includes {
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    .btn-primary {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.08);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 14px 0;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      margin-top: 10px;
+    }
+
+    .btn-primary:hover {
+      background: rgba(255, 255, 255, 0.15);
+      border-color: rgba(255, 255, 255, 0.4);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    }
+
+    .btn-gold {
+      background: rgba(251, 191, 36, 0.15);
+      border-color: rgba(251, 191, 36, 0.5);
+      color: var(--neon-gold);
+    }
+
+    .btn-gold:hover {
+      background: rgba(251, 191, 36, 0.25);
+      border-color: var(--neon-gold);
+      box-shadow: 0 0 15px rgba(251, 191, 36, 0.3);
+    }
+
+    .asset-placeholder {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255, 255, 255, 0.2);
+      font-size: 0.9rem;
+      margin-top: 15px;
+      border: 1px dashed rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      min-height: 80px;
+    }
+
+    .chart-placeholder {
+      min-height: 200px;
+    }
+
+    /* --- Section Headers --- */
+    .section-header {
+      text-align: center;
       margin-bottom: 40px;
     }
-    .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; margin-bottom: 60px; }
-    .btn-primary {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: linear-gradient(135deg, var(--purple), var(--blue));
-      color: white; border: none; border-radius: 12px;
-      padding: 14px 28px; font-size: 1rem; font-weight: 700;
-      cursor: pointer; text-decoration: none;
-      box-shadow: 0 0 30px rgba(124,58,237,0.4);
-      transition: transform 0.2s, box-shadow 0.2s;
+
+    .section-header h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      font-weight: 700;
     }
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 45px rgba(124,58,237,0.6); }
-    .btn-secondary {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: rgba(255,255,255,0.05); border: 1px solid var(--border);
-      color: var(--text); border-radius: 12px;
-      padding: 14px 28px; font-size: 1rem; font-weight: 600;
-      cursor: pointer; text-decoration: none;
-      transition: background 0.2s;
+
+    .section-header p {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      line-height: 1.5;
+      max-width: 600px;
+      margin: 0 auto;
     }
-    .btn-secondary:hover { background: rgba(255,255,255,0.1); }
-    .hero-img {
-      width: 100%; max-width: 900px;
+
+    /* --- REDESIGNED: 3 Vertical, 1 Horizontal Bento Box Grid --- */
+    .pro-features-section {
+      margin-top: 60px;
+      scroll-margin-top: 100px;
+    }
+
+    .pro-features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .feature-bento-card {
+      background: rgba(15, 5, 24, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 24px;
+      padding: 30px;
+      backdrop-filter: blur(12px);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .feature-bento-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .bento-vertical {
+      grid-column: span 1;
+    }
+
+    .bento-wide {
+      grid-column: span 3;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .bento-wide .bento-content,
+    .bento-wide .bento-image {
+      flex: 1;
+    }
+
+    .bento-image {
       border-radius: 16px;
-      box-shadow: 0 0 60px rgba(124,58,237,0.3);
-    }
-
-    /* ── STATS ── */
-    .stats {
-      display: flex; justify-content: center; gap: 60px; flex-wrap: wrap;
-      padding: 48px 5%;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      background: var(--bg2);
-    }
-    .stat { text-align: center; }
-    .stat-num {
-      font-size: 2rem; font-weight: 800;
-      background: linear-gradient(135deg, var(--purple), var(--blue));
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .stat-label { font-size: 0.85rem; color: var(--muted); margin-top: 4px; }
-
-    /* ── SECTIONS ── */
-    section { padding: 100px 5%; }
-    .section-label {
-      display: inline-block;
-      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em;
-      color: #A78BFA; text-transform: uppercase; margin-bottom: 14px;
-    }
-    h2 {
-      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
-      font-weight: 800; line-height: 1.2; margin-bottom: 16px;
-    }
-    .subtitle { font-size: 1.05rem; color: var(--muted); line-height: 1.7; max-width: 560px; }
-
-    /* ── HOW IT WORKS ── */
-    .how { background: var(--bg2); }
-    .how-inner { max-width: 1100px; margin: 0 auto; }
-    .how-header { text-align: center; margin-bottom: 70px; }
-    .how-header .subtitle { margin: 0 auto; }
-    .steps {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 32px;
-    }
-    .step {
-      background: var(--bg3); border: 1px solid var(--border);
-      border-radius: 20px; padding: 36px 28px;
-      position: relative; overflow: hidden;
-      transition: border-color 0.3s;
-    }
-    .step:hover { border-color: rgba(124,58,237,0.6); }
-    .step-num {
-      font-size: 3.5rem; font-weight: 900; line-height: 1;
-      background: linear-gradient(135deg, rgba(124,58,237,0.3), rgba(59,130,246,0.3));
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 16px;
-    }
-    .step h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 10px; }
-    .step p { font-size: 0.9rem; color: var(--muted); line-height: 1.65; }
-
-    /* ── FEATURES ── */
-    .features-inner { max-width: 1100px; margin: 0 auto; }
-    .features-header { text-align: center; margin-bottom: 70px; }
-    .features-header .subtitle { margin: 0 auto; }
-    .features-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 28px;
-    }
-    .feat-card {
-      background: var(--bg2); border: 1px solid var(--border);
-      border-radius: 20px; overflow: hidden;
-      transition: transform 0.3s, border-color 0.3s;
-    }
-    .feat-card:hover { transform: translateY(-4px); border-color: rgba(124,58,237,0.5); }
-    .feat-card img { width: 100%; display: block; height: 320px; object-fit: contain; background: #0a0a1f; }
-    .feat-card-body { padding: 24px; }
-    .feat-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; }
-    .feat-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.6; }
-
-    /* ── HIGHLIGHT ── */
-    .highlight { background: var(--bg2); }
-    .highlight-inner {
-      max-width: 1100px; margin: 0 auto;
-      display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
-    }
-    .highlight-img {
-      width: 100%; border-radius: 20px;
-      box-shadow: 0 0 50px rgba(124,58,237,0.25);
-    }
-    .highlight-text .section-label { display: block; }
-    .highlight-text h2 { margin-bottom: 20px; }
-    .highlight-text .subtitle { margin-bottom: 32px; }
-    .check-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
-    .check-list li {
-      display: flex; align-items: flex-start; gap: 12px;
-      font-size: 0.95rem; color: var(--muted); line-height: 1.5;
-    }
-    .check-list li::before {
-      content: '✦'; color: #A78BFA; font-size: 0.75rem;
-      margin-top: 3px; flex-shrink: 0;
-    }
-
-    /* ── PRICING ── */
-    .pricing-inner { max-width: 860px; margin: 0 auto; text-align: center; }
-    .pricing-inner h2 { margin-bottom: 12px; }
-    .pricing-inner .subtitle { margin: 0 auto 60px; }
-    .pricing-cards {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 24px; text-align: left;
-    }
-    .pricing-card {
-      background: var(--bg2); border: 1px solid var(--border);
-      border-radius: 20px; padding: 36px;
-    }
-    .pricing-card.featured {
-      background: linear-gradient(145deg, rgba(124,58,237,0.15), rgba(59,130,246,0.1));
-      border-color: rgba(124,58,237,0.5);
+      overflow: hidden;
+      flex-grow: 1;
+      width: 100%;
       position: relative;
     }
-    .popular-badge {
-      position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
-      background: linear-gradient(135deg, var(--purple), var(--blue));
-      color: white; font-size: 0.72rem; font-weight: 700;
-      padding: 4px 16px; border-radius: 20px; white-space: nowrap;
-    }
-    .plan-name { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; color: var(--muted); text-transform: uppercase; margin-bottom: 12px; }
-    .plan-price { font-size: 2.2rem; font-weight: 800; margin-bottom: 6px; }
-    .plan-price span { font-size: 1rem; font-weight: 400; color: var(--muted); }
-    .plan-desc { font-size: 0.85rem; color: var(--muted); margin-bottom: 28px; line-height: 1.5; }
-    .plan-divider { border: none; border-top: 1px solid var(--border); margin-bottom: 24px; }
-    .plan-features { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px; }
-    .plan-features li { display: flex; align-items: center; gap: 10px; font-size: 0.9rem; }
-    .plan-features li .icon { font-size: 0.8rem; width: 20px; text-align: center; }
-    .plan-features li .icon.yes { color: #A78BFA; }
-    .plan-features li .icon.lock { color: #F59E0B; }
-    .plan-btn {
-      display: block; text-align: center; width: 100%;
-      padding: 13px; border-radius: 10px; font-weight: 700; font-size: 0.95rem;
-      text-decoration: none; cursor: pointer; border: none;
-      transition: opacity 0.2s;
-    }
-    .plan-btn:hover { opacity: 0.85; }
-    .plan-btn.filled { background: linear-gradient(135deg, var(--purple), var(--blue)); color: white; }
-    .plan-btn.outlined { background: transparent; border: 1px solid var(--border); color: var(--text); }
 
-    /* ── DOWNLOAD ── */
-    .download { background: var(--bg2); }
-    .download-inner { max-width: 860px; margin: 0 auto; text-align: center; }
-    .download-inner h2 { margin-bottom: 12px; }
-    .download-inner .subtitle { margin: 0 auto 48px; }
-    .download-cards {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px; text-align: left;
-    }
-    .dl-card {
-      background: var(--bg3); border: 1px solid var(--border);
-      border-radius: 16px; padding: 28px 24px;
-      display: flex; flex-direction: column; gap: 10px;
-      transition: border-color 0.3s;
-    }
-    .dl-card:hover { border-color: rgba(124,58,237,0.5); }
-    .dl-platform { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; color: var(--muted); text-transform: uppercase; }
-    .dl-title { font-size: 1.1rem; font-weight: 700; }
-    .dl-note { font-size: 0.8rem; color: var(--muted); flex: 1; }
-    .dl-btn {
-      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-      margin-top: 8px; padding: 11px 20px; border-radius: 10px;
-      font-weight: 600; font-size: 0.88rem; text-decoration: none;
-      background: linear-gradient(135deg, var(--purple), var(--blue)); color: white;
-      transition: opacity 0.2s;
-    }
-    .dl-btn:hover { opacity: 0.85; }
-    .dl-btn.ghost {
-      background: transparent; border: 1px solid var(--border); color: var(--text);
+    .bento-image img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      inset: 0;
     }
 
-    /* ── FOOTER ── */
-    footer {
-      padding: 48px 5% 32px;
-      border-top: 1px solid var(--border);
-      display: flex; flex-wrap: wrap; gap: 24px;
-      align-items: center; justify-content: space-between;
+    /* Photo heights based on orientation */
+    .bento-vertical .bento-image {
+      min-height: 340px;
+      height: 340px;
+      background: #111827;
     }
-    .footer-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-    .footer-logo img { width: 30px; height: 30px; border-radius: 6px; }
-    .footer-logo span { font-size: 1rem; font-weight: 700; color: var(--text); }
-    .footer-links { display: flex; gap: 28px; flex-wrap: wrap; }
-    .footer-links a { font-size: 0.85rem; color: var(--muted); text-decoration: none; transition: color 0.2s; }
-    .footer-links a:hover { color: var(--text); }
-    .footer-copy { font-size: 0.8rem; color: var(--muted); width: 100%; text-align: center; margin-top: 12px; }
 
-    /* ── RESPONSIVE ── */
-    @media (max-width: 768px) {
-      .highlight-inner { grid-template-columns: 1fr; gap: 40px; }
-      .highlight-img { order: -1; }
-      .pricing-cards { grid-template-columns: 1fr; }
-      .stats { gap: 32px; }
-      nav { padding: 14px 4%; }
-      #usecases .features-inner > div:last-child { grid-template-columns: 1fr !important; }
+    .bento-wide .bento-image {
+      min-height: 260px;
+      height: 260px;
+      background: #111827;
+    }
+
+    .bento-content h3 {
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+      font-weight: 800;
+    }
+
+    .bento-content h4 {
+      font-size: 1.5rem;
+      color: #ffffff;
+      margin-bottom: 12px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    .bento-content p {
+      color: var(--text-muted);
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .feat-purple h3 {
+      color: var(--neon-purple-light);
+    }
+
+    .feat-blue h3 {
+      color: var(--neon-blue);
+    }
+
+    .feat-cyan h3 {
+      color: var(--neon-cyan);
+    }
+
+    .feat-gold h3 {
+      color: var(--neon-gold);
+    }
+
+    /* --- Who Is It For Section --- */
+    .who-is-it-for {
+      margin-top: 60px;
+      scroll-margin-top: 100px;
+    }
+
+    .superpowers-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    .superpower-col {
+      background: rgba(15, 5, 24, 0.4);
+      border-radius: 24px;
+      padding: 40px;
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .artist-col {
+      border-top: 3px solid var(--neon-blue);
+      box-shadow: inset 0 20px 30px -20px rgba(79, 139, 249, 0.15);
+    }
+
+    .educator-col {
+      border-top: 3px solid var(--neon-purple);
+      box-shadow: inset 0 20px 30px -20px rgba(176, 92, 248, 0.15);
+    }
+
+    .col-header h3 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .artist-col .col-header h3 {
+      color: var(--neon-blue);
+    }
+
+    .educator-col .col-header h3 {
+      color: var(--neon-purple-light);
+    }
+
+    .feature-block h4 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+
+    .feature-block p {
+      color: var(--text-muted);
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .feature-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .feature-list li {
+      position: relative;
+      padding-left: 24px;
+      color: #e2dcf2;
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+
+    .feature-list li::before {
+      content: "✦";
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 1rem;
+    }
+
+    .artist-col .feature-list li::before {
+      color: var(--neon-cyan);
+    }
+
+    .educator-col .feature-list li::before {
+      color: var(--neon-purple);
+    }
+
+    /* --- How It Works Section --- */
+    .how-it-works {
+      margin-top: 60px;
+      scroll-margin-top: 100px;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .step-card {
+      background: rgba(15, 5, 24, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 30px;
+      backdrop-filter: blur(12px);
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .step-card:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.03);
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .step-number {
+      font-size: 4rem;
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 20px;
+      opacity: 0.9;
+    }
+
+    .text-glow-purple {
+      color: var(--neon-purple);
+      text-shadow: 0 0 20px rgba(176, 92, 248, 0.5);
+    }
+
+    .text-glow-blue {
+      color: var(--neon-blue);
+      text-shadow: 0 0 20px rgba(79, 139, 249, 0.5);
+    }
+
+    .text-glow-cyan {
+      color: var(--neon-cyan);
+      text-shadow: 0 0 20px rgba(34, 211, 238, 0.5);
+    }
+
+    .step-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+
+    .step-card p {
+      color: var(--text-muted);
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    /* --- Pricing Section --- */
+    .pricing-section {
+      margin-top: 60px;
+      scroll-margin-top: 100px;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .pricing-tier {
+      background: rgba(15, 5, 24, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 24px;
+      padding: 40px;
+      backdrop-filter: blur(12px);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .pricing-tier.pro-tier {
+      border-color: rgba(251, 191, 36, 0.5);
+      box-shadow: 0 0 40px rgba(251, 191, 36, 0.1), inset 0 0 20px rgba(251, 191, 36, 0.05);
+    }
+
+    .badge {
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--neon-gold);
+      color: #000;
+      font-size: 0.8rem;
+      font-weight: 800;
+      padding: 6px 16px;
+      border-radius: 20px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .pricing-tier h3 {
+      font-size: 2rem;
+      margin-bottom: 5px;
+    }
+
+    .pro-tier h3 {
+      color: var(--neon-gold);
+    }
+
+    .price-display {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin: 15px 0;
+    }
+
+    .price-amount {
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: white;
+      line-height: 1;
+    }
+
+    .price-interval {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+    }
+
+    .pricing-desc {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      line-height: 1.5;
+      margin-bottom: 30px;
+    }
+
+    .tier-features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      flex-grow: 1;
+      margin-bottom: 40px;
+    }
+
+    .tier-features li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      color: #e2dcf2;
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+
+    .feat-icon {
+      flex-shrink: 0;
+      display: inline-block;
+    }
+
+    .feat-icon.included {
+      color: var(--neon-cyan);
+    }
+
+    .feat-icon.locked {
+      color: #5a5072;
+      font-size: 0.9rem;
+      margin-top: 2px;
+    }
+
+    /* --- Download Section --- */
+    .download-section {
+      margin-top: 60px;
+      scroll-margin-top: 100px;
+    }
+
+    .download-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .download-card {
+      background: rgba(15, 5, 24, 0.6);
+      border: 1px solid rgba(251, 191, 36, 0.4);
+      border-radius: 24px;
+      padding: 40px 20px 30px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: inset 0 0 20px rgba(251, 191, 36, 0.05);
+      backdrop-filter: blur(15px);
+    }
+
+    .download-card:hover {
+      transform: translateY(-5px);
+      box-shadow: inset 0 0 30px rgba(251, 191, 36, 0.1), 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .icon-container {
+      width: 90px;
+      height: 90px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 25px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), inset 0 2px 5px rgba(255, 255, 255, 0.05);
+    }
+
+    .icon-container svg {
+      width: 45px;
+      height: 45px;
+      fill: #ffffff;
+      opacity: 0.9;
+    }
+
+    .download-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 5px;
+      color: white;
+      font-weight: 700;
+    }
+
+    .download-card h4 {
+      font-size: 1.15rem;
+      color: #d0c8e2;
+      font-weight: 400;
+      margin-bottom: 15px;
+    }
+
+    .download-card p {
+      color: #8a7fa4;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin-bottom: 25px;
+      flex-grow: 1;
+      font-weight: 500;
+    }
+
+    .btn-outline {
+      width: 100%;
+      background: transparent;
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 12px 0;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .btn-outline svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.6);
+    }
+
+    /* --- FAQ Section --- */
+    .faq-section {
+      margin-top: 60px;
+      scroll-margin-top: 100px;
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    details.faq-item {
+      background: rgba(15, 5, 24, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      backdrop-filter: blur(12px);
+      overflow: hidden;
+      transition: border-color 0.2s ease;
+    }
+
+    details.faq-item:hover {
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    details.faq-item summary {
+      padding: 20px 25px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+      color: white;
+      outline: none;
+    }
+
+    details.faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details.faq-item summary::after {
+      content: '+';
+      font-size: 1.8rem;
+      line-height: 1;
+      color: var(--neon-purple-light);
+      transition: transform 0.3s ease, color 0.3s ease;
+      font-weight: 300;
+    }
+
+    details.faq-item[open] summary::after {
+      transform: rotate(45deg);
+      color: var(--neon-cyan);
+    }
+
+    details.faq-item p {
+      padding: 0 25px 20px 25px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+
+    /* --- Footer --- */
+    .main-footer {
+      margin-top: 80px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      text-align: center;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: -0.02em;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .footer-copy {
+      color: rgba(255, 255, 255, 0.3);
+      font-size: 0.85rem;
+      margin-top: 10px;
+    }
+
+    /* --- Hero CTA Buttons --- */
+    .hero-btns {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+
+    .btn-hero-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #7B3FED, #4A7EF5);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 13px 26px;
+      font-size: .95rem;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: 0 0 28px rgba(123, 63, 237, .5);
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .btn-hero-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 44px rgba(123, 63, 237, .7);
+    }
+
+    .btn-hero-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, .07);
+      border: 1px solid rgba(255, 255, 255, .15);
+      color: #fff;
+      border-radius: 10px;
+      padding: 13px 26px;
+      font-size: .95rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background .2s;
+    }
+
+    .btn-hero-secondary:hover {
+      background: rgba(255, 255, 255, .12);
+    }
+
+    .hero-img-main {
+      width: 100%;
+      mix-blend-mode: screen;
+      filter: drop-shadow(0 0 80px rgba(120, 80, 255, .6)) brightness(1.05);
+    }
+
+    /* --- Bento Stats Grid --- */
+    .bento-section {
+      margin-bottom: 20px;
+    }
+
+    .bento-grid {
+      display: grid;
+      grid-template-columns: 2fr 1.2fr 1.2fr 1.5fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 20px;
+      min-height: 400px;
+    }
+
+    .bc {
+      border-radius: 20px;
+      border: 2px solid transparent;
+      background: rgba(15, 5, 24, .4);
+      backdrop-filter: blur(12px);
+      overflow: hidden;
+      position: relative;
+      transition: transform .2s ease;
+    }
+
+    .bc:hover {
+      transform: translateY(-2px);
+    }
+
+    .bc-latency {
+      grid-column: 1;
+      grid-row: 1 / 3;
+      border-color: rgba(176, 92, 248, .6);
+      box-shadow: 0 0 25px rgba(176, 92, 248, .15), inset 0 0 15px rgba(176, 92, 248, .10);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .bc-latency .big-num {
+      font-size: 5.5rem;
+      font-weight: 700;
+      line-height: 1;
+      color: #b05cf8;
+    }
+
+    .bc-latency .card-label {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: rgba(240, 238, 255, .7);
+      margin-top: 4px;
+    }
+
+    .graph-wrap {
+      flex: 1;
+      position: relative;
+      margin-top: 16px;
+    }
+
+    .bc-pressure {
+      grid-column: 2;
+      grid-row: 1;
+      border-color: rgba(79, 139, 249, .6);
+      box-shadow: 0 0 25px rgba(79, 139, 249, .15), inset 0 0 15px rgba(79, 139, 249, .10);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .bc-pressure .big-num {
+      font-size: 2.8rem;
+      font-weight: 700;
+      line-height: 1;
+      color: #4f8bf9;
+    }
+
+    .bc-pressure .card-label {
+      font-size: .95rem;
+      font-weight: 600;
+      color: rgba(240, 238, 255, .65);
+      margin-top: 3px;
+    }
+
+    .pen-draw-wrap {
+      flex: 1;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding: 4px 0;
+    }
+
+    .bc-tilt {
+      grid-column: 3;
+      grid-row: 1;
+      border-color: rgba(34, 211, 238, .6);
+      box-shadow: 0 0 25px rgba(34, 211, 238, .15), inset 0 0 15px rgba(34, 211, 238, .10);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .bc-tilt .big-num {
+      font-size: 2.2rem;
+      font-weight: 700;
+      line-height: 1.2;
+      color: #22d3ee;
+    }
+
+    .bc-tilt .card-label {
+      font-size: .95rem;
+      font-weight: 600;
+      color: rgba(240, 238, 255, .65);
+      margin-top: 3px;
+    }
+
+    .tilt-wrap {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .bc-wifi {
+      grid-column: 2;
+      grid-row: 2;
+      border-color: rgba(216, 114, 255, .6);
+      box-shadow: 0 0 25px rgba(216, 114, 255, .15), inset 0 0 15px rgba(216, 114, 255, .10);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .bc-wifi .big-label {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.3;
+    }
+
+    .bc-wifi .card-label {
+      font-size: .8rem;
+      color: rgba(240, 238, 255, .55);
+      margin-top: 3px;
+    }
+
+    .wifi-icon-wrap {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .bc-zero {
+      grid-column: 3;
+      grid-row: 2;
+      border-color: rgba(34, 211, 238, .6);
+      box-shadow: 0 0 25px rgba(34, 211, 238, .15), inset 0 0 15px rgba(34, 211, 238, .10);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .bc-zero .big-label {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.3;
+    }
+
+    .bc-zero .card-label {
+      font-size: .8rem;
+      color: rgba(240, 238, 255, .55);
+      margin-top: 3px;
+    }
+
+    .zero-icon-wrap {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .bc-pro {
+      grid-column: 4;
+      grid-row: 1 / 3;
+      border-color: rgba(251, 191, 36, .6);
+      box-shadow: 0 0 25px rgba(251, 191, 36, .15), inset 0 0 15px rgba(251, 191, 36, .10);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .pro-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #fbbf24;
+      line-height: 1.1;
+    }
+
+    .pro-sub {
+      font-size: .9rem;
+      color: rgba(240, 238, 255, .65);
+      line-height: 1.4;
+    }
+
+    .pro-price {
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1;
+      margin: 10px 0;
+    }
+
+    .pro-note {
+      font-size: .9rem;
+      color: rgba(240, 238, 255, .55);
+      line-height: 1.4;
+    }
+
+    .pro-feats {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 4px;
+      width: 100%;
+      text-align: left;
+    }
+
+    .pro-feats li {
+      font-size: .73rem;
+      color: rgba(240, 238, 255, .55);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .pro-feats li::before {
+      content: '✦';
+      color: #fbbf24;
+      font-size: .55rem;
+    }
+
+    .pro-btn {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background: rgba(255, 255, 255, .08);
+      border: 1px solid rgba(255, 255, 255, .2);
+      border-radius: 30px;
+      padding: 14px 0;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #fff;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all .2s ease;
+      margin-top: 10px;
+    }
+
+    .pro-btn:hover {
+      background: rgba(255, 255, 255, .15);
+      border-color: rgba(255, 255, 255, .4);
+      box-shadow: 0 0 15px rgba(255, 255, 255, .1);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 1000px) {
+      .bento-grid {
+        grid-template-columns: 1fr 1fr;
+        height: auto;
+        grid-template-rows: auto;
+      }
+
+      .bc-latency {
+        grid-column: 1/3;
+        grid-row: auto;
+        height: 220px;
+      }
+
+      .bc-pro {
+        grid-column: 1/3;
+        grid-row: auto;
+      }
+    }
+
+    @media (max-width: 900px) {
+
+      .dashboard-grid,
+      .features-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .software-bar {
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      .span-2-rows {
+        grid-row: auto;
+      }
+
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+      }
+
+      .hero-images {
+        width: 100%;
+      }
+
+      .main-nav {
+        flex-direction: column;
+        gap: 20px;
+        border-radius: 20px;
+        position: relative;
+        top: 0;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .steps-grid,
+      .superpowers-grid,
+      .pricing-grid,
+      .download-grid {
+        grid-template-columns: 1fr;
+      }
+
+      /* Responsive Bento Box fixes */
+      .pro-features-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .bento-vertical {
+        grid-column: span 1;
+      }
+
+      .bento-wide {
+        grid-column: span 1;
+        flex-direction: column;
+      }
+
+      .bento-wide .bento-image {
+        min-height: 200px;
+        width: 100%;
+      }
+
+      .superpower-col {
+        padding: 30px 20px;
+      }
+
+      .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .bento-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .bc-latency,
+      .bc-pro {
+        grid-column: 1;
+      }
+
+      .nav-links {
+        display: none;
+      }
     }
   </style>
 </head>
+
 <body>
 
-<!-- NAV -->
-<nav>
-  <a href="#" class="nav-logo">
-    <img src="images/app_logo.png" alt="PenCast" />
-    <span>PenCast</span>
-  </a>
-  <a href="https://play.google.com/store/apps/details?id=com.pencast.app" class="nav-cta" target="_blank">
-    Download Free
-  </a>
-</nav>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-badge">✦ Works inside any Mac or Windows app</div>
-  <h1>Your S Pen.<br/>A Professional Drawing Tablet.</h1>
-  <p>PenCast streams raw stylus data — pressure, tilt, hover — directly into Mac and Windows. Every app sees a real Wacom tablet. No screen mirroring. No lag.</p>
-  <div class="hero-btns">
-    <a href="https://play.google.com/store/apps/details?id=com.pencast.app" class="btn-primary" target="_blank">
-      ▶ Download on Google Play
-    </a>
-    <a href="#how" class="btn-secondary">How it works →</a>
-  </div>
-  <img src="images/hero_mac_tablet.png" alt="PenCast in action" class="hero-img" />
-</section>
-
-<!-- DOWNLOAD -->
-<section class="download" id="download">
-  <div class="download-inner">
-    <span class="section-label">Download</span>
-    <h2>Get started in minutes</h2>
-    <p class="subtitle">Install the Android app and the desktop receiver. That's it.</p>
-    <div class="download-cards">
-      <div class="dl-card">
-        <div class="dl-platform">Android</div>
-        <div class="dl-title">PenCast Sender</div>
-        <div class="dl-note">Samsung Galaxy with S Pen required. Android 8.0+</div>
-        <a href="https://play.google.com/store/apps/details?id=com.pencast.app" class="dl-btn" target="_blank">▶ Google Play</a>
-      </div>
-      <div class="dl-card">
-        <div class="dl-platform">macOS</div>
-        <div class="dl-title">PenCast for Mac</div>
-        <div class="dl-note">macOS 12+. Apple Silicon & Intel.</div>
-        <a href="https://github.com/ahmedesa/pencast-app/releases/latest/download/PenCast.dmg" class="dl-btn" target="_blank">↓ Download DMG</a>
-      </div>
-      <div class="dl-card">
-        <div class="dl-platform">Windows</div>
-        <div class="dl-title">PenCast for Windows</div>
-        <div class="dl-note">Windows 10/11 (64-bit).</div>
-        <a href="https://github.com/ahmedesa/pencast-app/releases/latest/download/PenCast-Installer.msix" class="dl-btn" target="_blank">↓ Download Installer</a>
-      </div>
+  <!-- Background neural mesh effect -->
+  <div class="bg-effects" aria-hidden="true">
+    <div class="mesh-container">
+      <div class="neural-mesh"></div>
     </div>
   </div>
-</section>
 
-<!-- STATS -->
-<div class="stats">
-  <div class="stat">
-    <div class="stat-num">~5ms</div>
-    <div class="stat-label">USB Latency</div>
-  </div>
-  <div class="stat">
-    <div class="stat-num">3</div>
-    <div class="stat-label">Connection Modes</div>
-  </div>
-  <div class="stat">
-    <div class="stat-num">100%</div>
-    <div class="stat-label">Works in Photoshop, Figma & more</div>
-  </div>
-  <div class="stat">
-    <div class="stat-num">$7.99</div>
-    <div class="stat-label">One-time Pro unlock</div>
-  </div>
-</div>
+  <div class="container">
 
-<!-- HOW IT WORKS -->
-<section class="how" id="how">
-  <div class="how-inner">
-    <div class="how-header">
-      <span class="section-label">How it works</span>
-      <h2>Three steps to your drawing tablet</h2>
-      <p class="subtitle">No drivers. No cables required. Just install and draw.</p>
-    </div>
-    <div class="steps">
-      <div class="step">
-        <div class="step-num">01</div>
-        <h3>Install both apps</h3>
-        <p>Get PenCast on your Android phone from Google Play. Download the Mac or Windows receiver from this page.</p>
+    <nav class="main-nav">
+      <div class="nav-brand">
+        <img src="images/app_logo.png" alt="PenCast" class="brand-icon"
+          style="border-radius: 6px; object-fit: cover;" />
+        <span>PenCast</span>
       </div>
-      <div class="step">
-        <div class="step-num">02</div>
-        <h3>Connect in seconds</h3>
-        <p>Scan the QR code with your phone or connect via USB for ultra-low latency. Auto-discovery finds your Mac automatically on WiFi.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">03</div>
-        <h3>Draw in any app</h3>
-        <p>Open Photoshop, Clip Studio, Figma, or any other app. Your S Pen works as a real Wacom tablet — pressure, tilt, hover included.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FEATURES GRID -->
-<section id="features">
-  <div class="features-inner">
-    <div class="features-header">
-      <span class="section-label">Features</span>
-      <h2>Everything a pro needs</h2>
-      <p class="subtitle">From casual sketching to professional illustration — PenCast covers every use case.</p>
-    </div>
-    <div class="features-grid">
-      <div class="feat-card">
-        <img src="images/zero_lag_connection.png" alt="Zero-Lag Connection" />
-        <div class="feat-card-body">
-          <h3>Zero-Lag WiFi & USB</h3>
-          <p>Connect over WiFi for wireless freedom or USB for ultra-low latency. Auto-discovery finds your Mac — no manual IP needed.</p>
-        </div>
-      </div>
-      <div class="feat-card">
-        <img src="images/pressure_support_settings.png" alt="Pressure Support" />
-        <div class="feat-card-body">
-          <h3>Full S Pen Pressure</h3>
-          <p>4096 pressure levels transmitted in real-time. Customize the pressure curve from soft to firm to match your drawing style.</p>
-        </div>
-      </div>
-      <div class="feat-card">
-        <img src="images/pro_tools_precision.png" alt="Pro Tools" />
-        <div class="feat-card-body">
-          <h3>Precision Pro Tools</h3>
-          <p>Hover mode, palm rejection, tilt data, and aspect ratio lock — everything professional artists expect from a Wacom tablet.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- HIGHLIGHT — UNIQUE FEATURE -->
-<section class="highlight">
-  <div class="highlight-inner">
-    <img src="images/feature_showcase_phones.png" alt="PenCast Features" class="highlight-img" />
-    <div class="highlight-text">
-      <span class="section-label">What makes PenCast different</span>
-      <h2>Works inside your apps.<br/>Not just on a canvas.</h2>
-      <p class="subtitle">Other apps mirror your screen or give you a drawing canvas. PenCast injects raw S Pen events directly into macOS and Windows — so Photoshop, Clip Studio, and Figma all see a real tablet.</p>
-      <ul class="check-list">
-        <li>No screen mirroring — pure pen data only</li>
-        <li>Works in every professional drawing app</li>
-        <li>Tilt angle for realistic brush effects</li>
-        <li>Hover tracking before pen touches screen</li>
-        <li>S Pen button maps to right-click</li>
-        <li>Multi-monitor support — draw on any screen</li>
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#who-is-it-for">Who is it for</a></li>
+        <li><a href="#how-it-works">How it works</a></li>
+        <li><a href="#pricing-section">Pricing</a></li>
+        <li><a href="#faq">FAQ</a></li>
       </ul>
-    </div>
-  </div>
-</section>
+      <div class="nav-cta">
+        <a href="#download" class="btn-nav">Download Free</a>
+      </div>
+    </nav>
 
-<!-- TWO USE CASES -->
-<section id="usecases">
-  <div class="features-inner">
-    <div class="features-header">
-      <span class="section-label">Who is PenCast for?</span>
-      <h2>One app. Two superpowers.</h2>
-      <p class="subtitle">Whether you design or teach — PenCast has a dedicated mode built for you.</p>
-    </div>
-    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 28px;">
+    <header class="hero">
+      <div class="hero-text">
+        <h1>Your S Pen.<br>Now a Pro Tablet.</h1>
+        <p>PenCast streams raw pressure, tilt &amp; hover from your S Pen directly into Mac and Windows. Every app sees
+          a real pen device. Zero lag.</p>
+        <div class="hero-btns">
+          <a href="#download" class="btn-hero-primary">▶ Download Free</a>
+          <a href="#how-it-works" class="btn-hero-secondary">How it works →</a>
+        </div>
+      </div>
+      <div class="hero-images">
+        <img src="images/hero_monitor_tablet.png" alt="PenCast in action" class="hero-img-main" />
+      </div>
+    </header>
 
-      <!-- DESIGNERS -->
-      <div style="background:var(--bg2); border:1px solid rgba(124,58,237,0.3); border-radius:24px; padding:40px 36px;">
-        <div style="font-size:2.5rem; margin-bottom:16px;">🎨</div>
-        <div style="font-size:0.75rem; font-weight:700; letter-spacing:0.12em; color:#A78BFA; text-transform:uppercase; margin-bottom:10px;">For Designers & Artists</div>
-        <h3 style="font-size:1.5rem; font-weight:800; margin-bottom:14px; line-height:1.2;">S Pen as a<br/>Wacom Tablet</h3>
-        <p style="font-size:0.9rem; color:var(--muted); line-height:1.7; margin-bottom:28px;">Open Photoshop, Clip Studio, or Figma on your Mac. PenCast injects your S Pen strokes directly into the app — with full pressure, tilt, and hover — exactly like a $200 Wacom tablet.</p>
-        <ul class="check-list">
-          <li>Works in Photoshop, Clip Studio, Figma & more</li>
-          <li>Pressure + tilt for realistic brush strokes</li>
-          <li>Hover mode for precise cursor positioning</li>
-          <li>Palm rejection for comfortable long sessions</li>
-          <li>S Pen button → right-click</li>
-        </ul>
+    <nav class="software-bar">
+      <div class="software-item">
+        <svg class="app-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="24" height="24" rx="6" fill="#e2dcf2" /><text x="12" y="16.5" fill="#1a0b2e" font-weight="800"
+            font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Ps</text>
+        </svg>
+        <span>Photoshop</span>
+      </div>
+      <div class="software-item">
+        <svg class="app-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="24" height="24" rx="6" fill="#e2dcf2" /><text x="12" y="16.5" fill="#1a0b2e" font-weight="800"
+            font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Ai</text>
+        </svg>
+        <span>Illustrator</span>
+      </div>
+      <div class="software-item">
+        <svg class="app-icon figma-icon" viewBox="0 0 38 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19 28.5A9.5 9.5 0 1 1 38 28.5A9.5 9.5 0 1 1 19 28.5Z" fill="#e2dcf2" />
+          <path d="M0 47.5A9.5 9.5 0 0 1 9.5 38H19V57C13.7533 57 9.5 52.7467 9.5 47.5H0Z" fill="#e2dcf2" />
+          <path d="M19 0H9.5C4.25329 0 0 4.25329 0 9.5C0 14.7467 4.25329 19 9.5 19H19V0Z" fill="#e2dcf2" />
+          <path d="M19 19H9.5C4.25329 19 0 23.2533 0 28.5C0 33.7467 4.25329 38 9.5 38H19V19Z" fill="#e2dcf2" />
+          <path d="M38 9.5C38 14.7467 33.7467 19 28.5 19H19V0H28.5C33.7467 0 38 4.25329 38 9.5Z" fill="#e2dcf2" />
+        </svg>
+        <span>Figma</span>
+      </div>
+      <div class="software-item">
+        <svg class="app-icon" viewBox="0 0 100 100" fill="#e2dcf2" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M60.6,18.8c-7.9,0-15.7,3-21.7,8.5L5.7,60.8l4.4,2.9L40,36.5c3.2-3.1,7.6-4.9,12.2-4.9c9.3,0,16.8,7.5,16.8,16.8 c0,9.3-7.5,16.8-16.8,16.8c-8.4,0-15.5-6.2-16.6-14.4l-11,4c3.4,14.6,16.5,25.4,32,25.4c18,0,32.6-14.6,32.6-32.6 C93.2,33.5,78.6,18.8,60.6,18.8z M52.2,48.4c4.4,0,8,3.6,8,8c0,4.4-3.6,8-8,8c-4.4,0-8-3.6-8-8C44.2,52,47.8,48.4,52.2,48.4z" />
+        </svg>
+        <span class="blender-text">blender<sup style="font-size: 0.5rem; margin-left:2px;">&reg;</sup></span>
+      </div>
+      <div class="software-item">
+        <svg class="app-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="24" height="24" rx="6" fill="#e2dcf2" />
+          <path
+            d="M12 16.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm1.1-9c1.5-.1 2.8.8 3.2 2.2.3 1.2-.2 2.3-1 3.1-.7.5-1.3 1.2-1.3 2.1v.8H12v-.9c0-1.5.7-2.8 1.7-3.7.5-.4.8-1 .6-1.6-.2-.7-1-1.2-1.8-1-1 .2-1.5.9-1.5 1.7H9.2c0-1.7 1.2-3.1 2.9-3.3h.2-.2-1.2z"
+            fill="#1a0b2e" />
+        </svg>
+        <div class="csp-text"><span class="csp-small">CLIP STUDIO</span><span class="csp-large">PAINT</span></div>
+      </div>
+    </nav>
+
+    <div class="bento-section">
+      <div class="bento-grid">
+
+        <!-- Latency -->
+        <div class="bc bc-latency">
+          <div class="big-num">5<span style="font-size:2.2rem;">ms</span></div>
+          <div class="card-label">USB Latency</div>
+          <div class="graph-wrap">
+            <svg width="100%" height="100%" viewBox="0 0 260 150" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#818CF8" />
+                  <stop offset="100%" stop-color="#C084FC" />
+                </linearGradient>
+                <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#22D3EE" />
+                  <stop offset="100%" stop-color="#60A5FA" />
+                </linearGradient>
+                <linearGradient id="gfill" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="rgba(192,132,252,0.18)" />
+                  <stop offset="100%" stop-color="rgba(192,132,252,0)" />
+                </linearGradient>
+              </defs>
+              <line x1="8" y1="10" x2="220" y2="10" stroke="rgba(255,255,255,.055)" stroke-width="1" />
+              <line x1="8" y1="28" x2="220" y2="28" stroke="rgba(255,255,255,.055)" stroke-width="1" />
+              <line x1="8" y1="46" x2="220" y2="46" stroke="rgba(255,255,255,.055)" stroke-width="1" />
+              <line x1="8" y1="64" x2="220" y2="64" stroke="rgba(255,255,255,.055)" stroke-width="1" />
+              <line x1="8" y1="82" x2="220" y2="82" stroke="rgba(255,255,255,.055)" stroke-width="1" />
+              <line x1="8" y1="100" x2="220" y2="100" stroke="rgba(255,255,255,.055)" stroke-width="1" />
+              <line x1="8" y1="118" x2="220" y2="118" stroke="rgba(255,255,255,.055)" stroke-width="1" />
+              <text x="225" y="13" fill="rgba(200,195,255,.58)" font-size="8" text-anchor="start">2000</text>
+              <text x="225" y="31" fill="rgba(200,195,255,.58)" font-size="8" text-anchor="start">1750</text>
+              <text x="225" y="49" fill="rgba(200,195,255,.58)" font-size="8" text-anchor="start">1500</text>
+              <text x="225" y="67" fill="rgba(200,195,255,.58)" font-size="8" text-anchor="start">1250</text>
+              <text x="225" y="85" fill="rgba(200,195,255,.58)" font-size="8" text-anchor="start">1000</text>
+              <text x="225" y="103" fill="rgba(200,195,255,.58)" font-size="8" text-anchor="start">750</text>
+              <text x="225" y="121" fill="rgba(200,195,255,.58)" font-size="8" text-anchor="start">500</text>
+              <text x="8" y="138" fill="rgba(200,195,255,.5)" font-size="8" text-anchor="middle">0</text>
+              <text x="51" y="138" fill="rgba(200,195,255,.5)" font-size="8" text-anchor="middle">200</text>
+              <text x="95" y="138" fill="rgba(200,195,255,.5)" font-size="8" text-anchor="middle">400</text>
+              <text x="138" y="138" fill="rgba(200,195,255,.5)" font-size="8" text-anchor="middle">600</text>
+              <text x="181" y="138" fill="rgba(200,195,255,.5)" font-size="8" text-anchor="middle">800</text>
+              <text x="220" y="138" fill="rgba(200,195,255,.5)" font-size="8" text-anchor="middle">1000</text>
+              <path d="M8,118 C40,116 80,110 110,90 C140,68 175,40 220,14 L220,118 L8,118 Z" fill="url(#gfill)" />
+              <path d="M8,118 C40,116 80,110 110,90 C140,68 175,40 220,14" stroke="url(#g1)" stroke-width="1.8"
+                fill="none" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M8,120 C35,117 70,113 100,102 C132,90 165,68 220,38" stroke="url(#g2)" stroke-width="1.5"
+                fill="none" stroke-linecap="round" stroke-linejoin="round" />
+              <circle cx="130" cy="82" r="3.5" fill="#C084FC" opacity=".9" />
+              <circle cx="130" cy="82" r="6" fill="rgba(192,132,252,0.18)" />
+              <rect x="100" y="62" width="60" height="17" rx="5" fill="rgba(20,14,55,.94)" stroke="rgba(192,132,252,.5)"
+                stroke-width="1" />
+              <text x="130" y="74" fill="#C084FC" font-size="8" font-weight="700" text-anchor="middle">USB 5ms</text>
+              <circle cx="172" cy="60" r="3.5" fill="#22D3EE" opacity=".9" />
+              <circle cx="172" cy="60" r="6" fill="rgba(34,211,238,0.18)" />
+              <rect x="142" y="40" width="64" height="17" rx="5" fill="rgba(8,18,38,.94)" stroke="rgba(34,211,238,.45)"
+                stroke-width="1" />
+              <text x="174" y="52" fill="#22D3EE" font-size="8" font-weight="700" text-anchor="middle">WiFi 18ms</text>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Pressure -->
+        <div class="bc bc-pressure">
+          <div class="big-num">4096</div>
+          <div class="card-label">Pressure Levels</div>
+          <div class="pen-draw-wrap">
+            <svg width="130" height="100" viewBox="0 0 130 100">
+              <defs>
+                <linearGradient id="pen-grad-p" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#c0d0e8" />
+                  <stop offset="30%" stop-color="#7888a8" />
+                  <stop offset="70%" stop-color="#3a4660" />
+                  <stop offset="100%" stop-color="#1a2236" />
+                </linearGradient>
+                <linearGradient id="bs-p" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#38BDF8" />
+                  <stop offset="55%" stop-color="#38BDF8" stop-opacity=".5" />
+                  <stop offset="100%" stop-color="#38BDF8" stop-opacity=".03" />
+                </linearGradient>
+              </defs>
+              <g transform="rotate(45, 88, 22)">
+                <rect x="82" y="-6" width="12" height="7" rx="4" fill="#2a3248" />
+                <rect x="82" y="1" width="12" height="52" fill="url(#pen-grad-p)" />
+                <rect x="83" y="2" width="4" height="50" rx="2" fill="rgba(255,255,255,0.12)" />
+                <rect x="84.5" y="3" width="1.5" height="46" rx=".8" fill="rgba(255,255,255,0.18)" />
+                <rect x="82" y="8" width="12" height="2" fill="rgba(150,170,210,0.35)" />
+                <rect x="82" y="42" width="12" height="2" fill="rgba(180,200,240,0.45)" />
+                <rect x="82" y="44" width="12" height="1.5" fill="rgba(140,160,200,0.25)" />
+                <rect x="83" y="46" width="10" height="12" rx="2" fill="#141c2e" />
+                <rect x="83.5" y="57" width="9" height="4" rx="1.5" fill="#1c2438" />
+                <polygon points="83.5,61 92.5,61 88,70" fill="#8898b8" />
+                <polygon points="85.5,61 90.5,61 88,67" fill="#b8c8e4" />
+                <rect x="92" y="0" width="3" height="42" rx="1.5" fill="rgba(120,140,180,0.35)" />
+                <rect x="93" y="1" width="1.2" height="40" rx=".5" fill="rgba(180,200,240,0.2)" />
+              </g>
+              <path d="M4,56 C17,48 27,64 42,52 C54,42 58,66 72,56" stroke="url(#bs-p)" stroke-width="8"
+                stroke-linecap="round" fill="none" />
+              <path d="M4,70 C14,62 29,76 45,66 C57,56 64,76 80,68" stroke="url(#bs-p)" stroke-width="4.5"
+                stroke-linecap="round" fill="none" opacity=".68" />
+              <path d="M4,82 C16,76 33,87 51,81 C65,75 73,89 90,82" stroke="url(#bs-p)" stroke-width="2.2"
+                stroke-linecap="round" fill="none" opacity=".42" />
+              <path d="M4,92 C22,89 42,94 60,91 C74,88 85,94 102,91" stroke="url(#bs-p)" stroke-width="1"
+                stroke-linecap="round" fill="none" opacity=".20" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Tilt -->
+        <div class="bc bc-tilt">
+          <div class="big-num">Tilt &amp;<br />Orientation</div>
+          <div class="tilt-wrap">
+            <svg width="120" height="96" viewBox="0 0 120 96">
+              <defs>
+                <linearGradient id="pen-grad-t" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#8aa870" />
+                  <stop offset="30%" stop-color="#4a6834" />
+                  <stop offset="70%" stop-color="#2a3e1e" />
+                  <stop offset="100%" stop-color="#142010" />
+                </linearGradient>
+                <marker id="arrowT" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto">
+                  <path d="M0,1 L6,3.5 L0,6 Z" fill="#2DD4BF" opacity=".88" />
+                </marker>
+              </defs>
+              <g transform="rotate(30, 64, 38)">
+                <rect x="58" y="0" width="12" height="7" rx="4" fill="#1e2e16" />
+                <rect x="58" y="7" width="12" height="50" fill="url(#pen-grad-t)" />
+                <rect x="59" y="8" width="4" height="48" rx="2" fill="rgba(180,220,140,0.12)" />
+                <rect x="60.5" y="9" width="1.5" height="44" rx=".8" fill="rgba(200,240,170,0.16)" />
+                <rect x="58" y="14" width="12" height="2" fill="rgba(45,212,191,0.4)" />
+                <rect x="58" y="46" width="12" height="2" fill="rgba(45,212,191,0.45)" />
+                <rect x="58" y="48" width="12" height="1.5" fill="rgba(45,212,191,0.22)" />
+                <rect x="59" y="50" width="10" height="10" rx="2" fill="#0e1a0a" />
+                <rect x="59.5" y="59" width="9" height="4" rx="1.5" fill="#1a2814" />
+                <polygon points="59.5,63 68.5,63 64,72" fill="#5a8848" />
+                <polygon points="61.5,63 66.5,63 64,69" fill="#88b870" />
+                <rect x="68" y="8" width="3" height="40" rx="1.5" fill="rgba(70,100,55,0.38)" />
+                <rect x="69" y="9" width="1.2" height="38" rx=".5" fill="rgba(130,180,100,0.2)" />
+              </g>
+              <line x1="64" y1="4" x2="64" y2="90" stroke="rgba(45,212,191,0.18)" stroke-width="1"
+                stroke-dasharray="4,4" />
+              <path d="M64,28 A22,22 0 0,1 75,9" stroke="#2DD4BF" stroke-width="1.5" fill="none" stroke-dasharray="4,3"
+                opacity=".8" />
+              <text x="78" y="14" fill="#2DD4BF" font-size="9" font-weight="700">30°</text>
+              <path d="M26,84 C36,93 54,96 66,89" stroke="#2DD4BF" stroke-width="1.8" fill="none" stroke-linecap="round"
+                marker-end="url(#arrowT)" opacity=".75" />
+              <path d="M72,87 C84,77 92,68 94,56" stroke="#2DD4BF" stroke-width="1.8" fill="none" stroke-linecap="round"
+                marker-end="url(#arrowT)" opacity=".50" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- WiFi/QR -->
+        <div class="bc bc-wifi">
+          <div style="display:flex; align-items:center; gap:10px; flex:1;">
+            <div>
+              <div class="big-label">WiFi/QR<br />Connect</div>
+              <div class="card-label" style="margin-top:4px;">Auto-discover · No IP</div>
+            </div>
+            <div class="wifi-icon-wrap">
+              <svg width="62" height="78" viewBox="0 0 62 78">
+                <rect x="6" y="1" width="50" height="76" rx="10" fill="rgba(130,100,255,.12)"
+                  stroke="rgba(130,100,255,.5)" stroke-width="1.5" />
+                <rect x="22" y="6" width="18" height="3" rx="1.5" fill="rgba(130,100,255,.4)" />
+                <rect x="10" y="14" width="42" height="50" rx="4" fill="rgba(20,14,50,.8)"
+                  stroke="rgba(130,100,255,.25)" stroke-width="1" />
+                <rect x="24" y="69" width="14" height="2.5" rx="1.5" fill="rgba(130,100,255,.5)" />
+                <path d="M25,24 C26,20 36,20 37,24" stroke="#A5B4FC" stroke-width="1.8" fill="none"
+                  stroke-linecap="round" opacity=".9" />
+                <path d="M22,21 C24,15 38,15 40,21" stroke="#A5B4FC" stroke-width="1.5" fill="none"
+                  stroke-linecap="round" opacity=".6" />
+                <path d="M19,18 C22,10 40,10 43,18" stroke="#A5B4FC" stroke-width="1.2" fill="none"
+                  stroke-linecap="round" opacity=".3" />
+                <rect x="14" y="30" width="10" height="10" rx="1.5" fill="none" stroke="#A5B4FC" stroke-width="1.2" />
+                <rect x="16" y="32" width="6" height="6" rx=".5" fill="#A5B4FC" />
+                <rect x="38" y="30" width="10" height="10" rx="1.5" fill="none" stroke="#A5B4FC" stroke-width="1.2" />
+                <rect x="40" y="32" width="6" height="6" rx=".5" fill="#A5B4FC" />
+                <rect x="14" y="44" width="10" height="10" rx="1.5" fill="none" stroke="#A5B4FC" stroke-width="1.2" />
+                <rect x="16" y="46" width="6" height="6" rx=".5" fill="#A5B4FC" />
+                <rect x="28" y="30" width="3" height="3" rx=".5" fill="#A5B4FC" opacity=".8" />
+                <rect x="33" y="30" width="3" height="3" rx=".5" fill="#A5B4FC" opacity=".5" />
+                <rect x="28" y="35" width="3" height="3" rx=".5" fill="#A5B4FC" opacity=".6" />
+                <rect x="28" y="40" width="3" height="3" rx=".5" fill="#A5B4FC" opacity=".8" />
+                <rect x="33" y="35" width="3" height="3" rx=".5" fill="#A5B4FC" opacity=".4" />
+                <rect x="38" y="44" width="3" height="3" rx=".5" fill="#A5B4FC" opacity=".7" />
+                <rect x="43" y="44" width="3" height="3" rx=".5" fill="#A5B4FC" opacity=".5" />
+                <rect x="38" y="50" width="3" height="3" rx=".5" fill="#A5B4FC" opacity=".6" />
+                <rect x="43" y="50" width="3" height="3" rx=".5" fill="#A5B4FC" opacity=".8" />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Zero Latency -->
+        <div class="bc bc-zero">
+          <div style="display:flex; align-items:center; gap:10px; flex:1;">
+            <div>
+              <div class="big-label">Zero<br />Latency</div>
+              <div class="card-label" style="margin-top:4px;">Instant response</div>
+            </div>
+            <div class="zero-icon-wrap">
+              <svg width="68" height="68" viewBox="0 0 68 68">
+                <circle cx="34" cy="34" r="32" fill="rgba(16,185,129,.08)" stroke="rgba(16,185,129,.35)"
+                  stroke-width="1.5" />
+                <path d="M10,46 A26,26 0 0,1 58,46" stroke="rgba(255,255,255,.1)" stroke-width="5" fill="none"
+                  stroke-linecap="round" />
+                <path d="M10,46 A26,26 0 0,1 52,24" stroke="#34D399" stroke-width="5" fill="none"
+                  stroke-linecap="round" />
+                <line x1="10" y1="46" x2="13" y2="43" stroke="rgba(52,211,153,.4)" stroke-width="1.5"
+                  stroke-linecap="round" />
+                <line x1="34" y1="20" x2="34" y2="24" stroke="rgba(52,211,153,.4)" stroke-width="1.5"
+                  stroke-linecap="round" />
+                <line x1="58" y1="46" x2="55" y2="43" stroke="rgba(52,211,153,.4)" stroke-width="1.5"
+                  stroke-linecap="round" />
+                <line x1="34" y1="46" x2="50" y2="24" stroke="#6EE7B7" stroke-width="2.5" stroke-linecap="round" />
+                <circle cx="34" cy="46" r="4" fill="#34D399" stroke="rgba(0,0,0,.4)" stroke-width="1" />
+                <path d="M32,6 L27,19 L33,19 L28,33 L41,15 L35,15 Z" fill="#34D399" opacity=".95" />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pro -->
+        <div class="bc bc-pro">
+          <div class="pro-title">⭐ Golden Pro</div>
+          <div class="pro-sub">PenCast Masterwork Edition.<br />Lifetime Access.</div>
+          <div class="pro-price">$7.99</div>
+          <div class="pro-note">Includes all future updates.</div>
+          <ul class="pro-feats">
+            <li>Bluetooth connection</li>
+            <li>Hover mode + FPS control</li>
+            <li>Pressure curve customization</li>
+            <li>Tilt data (brush angle)</li>
+            <li>Palm rejection</li>
+            <li>Multi-monitor selection</li>
+            <li>Custom hotkeys</li>
+          </ul>
+          <a href="https://play.google.com/store/apps/details?id=com.pencast.app" class="pro-btn" target="_blank">Get
+            Started Now</a>
+        </div>
+
+      </div>
+    </div>
+
+    <section id="features" class="pro-features-section">
+      <div class="section-header">
+        <h2>Features</h2>
+        <p>Everything a pro needs</p>
       </div>
 
-      <!-- TEACHERS -->
-      <div style="background:var(--bg2); border:1px solid rgba(59,130,246,0.3); border-radius:24px; padding:40px 36px;">
-        <div style="font-size:2.5rem; margin-bottom:16px;">📖</div>
-        <div style="font-size:0.75rem; font-weight:700; letter-spacing:0.12em; color:#93C5FD; text-transform:uppercase; margin-bottom:10px;">For Teachers & Presenters</div>
-        <h3 style="font-size:1.5rem; font-weight:800; margin-bottom:14px; line-height:1.2;">Annotate Directly<br/>on Your Screen</h3>
-        <p style="font-size:0.9rem; color:var(--muted); line-height:1.7; margin-bottom:28px;">Draw on top of your slides, browser, or any app on screen — completely transparent. Highlight, annotate, and use the laser pointer during live presentations without switching windows.</p>
-        <ul class="check-list">
-          <li>Transparent overlay — draw on any open window</li>
-          <li>Laser pointer for live presentations</li>
-          <li>Highlighter tool for emphasis</li>
-          <li>Instant clear between slides</li>
-          <li>Free — no Pro needed</li>
-        </ul>
+      <div class="pro-features-grid">
+        <div class="feature-bento-card bento-vertical feat-purple">
+          <div class="bento-content">
+            <h3>Connection modes</h3>
+            <h4>WiFi, USB, or Bluetooth</h4>
+            <p>Three ways to connect. WiFi auto-discovers your Mac. USB for studio-grade 5ms latency. Bluetooth for
+              cable-free use.</p>
+          </div>
+          <div class="bento-image">
+            <img src="images/zero_lag_connection.png" alt="Connection modes"
+              style="width:100%; height:100%; object-fit:contain; object-position:center;" />
+          </div>
+        </div>
+
+        <div class="feature-bento-card bento-vertical feat-blue">
+          <div class="bento-content">
+            <h3>Pressure & Tilt</h3>
+            <h4>Full Pressure & Tilt</h4>
+            <p>4096 pressure levels with customizable response curve. Tilt data lets brushes respond to how you hold the
+              pen.</p>
+          </div>
+          <div class="bento-image">
+            <img src="images/pressure_tilt.png" alt="Pressure & Tilt"
+              style="width:100%; height:100%; object-fit:contain; object-position:center;" />
+          </div>
+        </div>
+
+        <div class="feature-bento-card bento-vertical feat-gold">
+          <div class="bento-content">
+            <h3>Hover & Precision</h3>
+            <h4>Hover, Hotkeys & Multi-Monitor</h4>
+            <p>See where your pen lands before it touches. Set global hotkeys. Choose which monitor to draw on.</p>
+          </div>
+          <div class="bento-image">
+            <img src="images/hover_capabilities.png" alt="Hover, Hotkeys & Multi-Monitor"
+              style="width:100%; height:100%; object-fit:contain; object-position:center;" />
+          </div>
+        </div>
+
+        <div class="feature-bento-card bento-wide feat-cyan">
+          <div class="bento-content">
+            <h3>Canvas mode</h3>
+            <h4>Tablet Mode + Standalone Canvas</h4>
+            <p>Use your phone as a Wacom tablet in any pro app — or draw directly with shapes, colors, and transparent
+              overlay.</p>
+          </div>
+          <div class="bento-image">
+            <img src="images/canvas_mode.png" alt="Canvas mode"
+              style="width:100%; height:100%; object-fit:contain; object-position:center;" />
+          </div>
+        </div>
       </div>
+    </section>
 
-    </div>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section id="pricing">
-  <div class="pricing-inner">
-    <span class="section-label">Pricing</span>
-    <h2>Free to try. $7.99 to own forever.</h2>
-    <p class="subtitle">No subscriptions. No recurring fees. Pay once and use PenCast Pro on all your devices.</p>
-    <div class="pricing-cards">
-      <!-- FREE -->
-      <div class="pricing-card">
-        <div class="plan-name">Free</div>
-        <div class="plan-price">$0 <span>forever</span></div>
-        <div class="plan-desc">Everything you need to get started with WiFi and USB drawing.</div>
-        <hr class="plan-divider" />
-        <ul class="plan-features">
-          <li><span class="icon yes">✦</span> WiFi + USB connection</li>
-          <li><span class="icon yes">✦</span> Canvas mode — full drawing tools</li>
-          <li><span class="icon yes">✦</span> Cursor mode</li>
-          <li><span class="icon yes">✦</span> Laser pointer for presentations</li>
-          <li><span class="icon yes">✦</span> Transparent overlay mode</li>
-          <li><span class="icon yes">✦</span> Shapes, colors, undo, clear</li>
-          <li><span class="icon yes">✦</span> QR code pairing</li>
-          <li><span class="icon yes">✦</span> Auto-discovery (mDNS)</li>
-        </ul>
-        <a href="https://play.google.com/store/apps/details?id=com.pencast.app" class="plan-btn outlined" target="_blank">Download Free</a>
+    <section id="who-is-it-for" class="who-is-it-for">
+      <div class="section-header">
+        <h2>Who is it for?</h2>
+        <p>One app. Two superpowers.</p>
       </div>
-      <!-- PRO -->
-      <div class="pricing-card featured">
-        <div class="popular-badge">BEST FOR DESIGNERS</div>
-        <div class="plan-name">Pro</div>
-        <div class="plan-price">$7.99 <span>one-time</span></div>
-        <div class="plan-desc">Professional-grade precision. Everything a designer or illustrator needs.</div>
-        <hr class="plan-divider" />
-        <ul class="plan-features">
-          <li><span class="icon yes">✦</span> Everything in Free</li>
-          <li><span class="icon lock">🔒</span> Bluetooth connection</li>
-          <li><span class="icon lock">🔒</span> Hover mode + FPS control</li>
-          <li><span class="icon lock">🔒</span> Pressure curve customization</li>
-          <li><span class="icon lock">🔒</span> Tilt data (brush angle)</li>
-          <li><span class="icon lock">🔒</span> Palm rejection</li>
-          <li><span class="icon lock">🔒</span> Multi-monitor selection</li>
-          <li><span class="icon lock">🔒</span> Custom global hotkeys</li>
-        </ul>
-        <a href="https://play.google.com/store/apps/details?id=com.pencast.app" class="plan-btn filled" target="_blank">Unlock Pro — $7.99</a>
+      <div class="superpowers-grid">
+        <div class="superpower-col artist-col">
+          <div class="col-header">
+            <h3>🎨 For Designers & Artists</h3>
+          </div>
+          <div class="feature-block">
+            <h4>S Pen as a Wacom Tablet</h4>
+            <p>Open Photoshop, Clip Studio, or Figma on your Mac. PenCast injects your S Pen strokes — full pressure,
+              tilt, hover — exactly like a $200 Wacom.</p>
+            <ul class="feature-list">
+              <li>Works in Photoshop, Clip Studio, Figma & more</li>
+              <li>Pressure + tilt for realistic brush strokes</li>
+              <li>Hover mode for precise positioning</li>
+              <li>Palm rejection for long sessions</li>
+              <li>S Pen button → right-click</li>
+            </ul>
+          </div>
+          <div class="feature-block">
+            <h4>Drawing on the Go</h4>
+            <p>PenCast also gives you a full standalone drawing canvas — shapes, colors, highlighter — all on your
+              phone.</p>
+            <ul class="feature-list">
+              <li>Standalone canvas with shapes & colors</li>
+              <li>Transparent overlay on any window</li>
+              <li>Screenshot → saves to Desktop instantly</li>
+              <li>Scroll & zoom control in cursor mode</li>
+              <li>Multi-monitor — choose your display</li>
+            </ul>
+          </div>
+        </div>
+        <div class="superpower-col educator-col">
+          <div class="col-header">
+            <h3>📖 For Teachers & Presenters</h3>
+          </div>
+          <div class="feature-block">
+            <h4>Annotate Directly on Your Screen</h4>
+            <p>Draw on top of slides, browser, or any app — completely transparent. Highlight and annotate during live
+              presentations.</p>
+            <ul class="feature-list">
+              <li>Transparent overlay — draw on any window</li>
+              <li>Laser pointer for live presentations</li>
+              <li>Highlighter tool</li>
+              <li>Instant clear between slides</li>
+              <li>Screenshot to Desktop</li>
+            </ul>
+          </div>
+          <div class="feature-block">
+            <h4>Free for Educators</h4>
+            <p>Every tool a teacher needs is in the free version — no Pro upgrade required.</p>
+            <ul class="feature-list">
+              <li>No Pro required for teaching features</li>
+              <li>Works over WiFi — no cables</li>
+              <li>Works with Zoom, Teams, Google Meet</li>
+              <li>Works with any presentation software</li>
+              <li>Easy QR code setup in class</li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
+
+    <section id="how-it-works" class="how-it-works">
+      <div class="section-header">
+        <h2>How it works</h2>
+        <p>Three steps to your drawing tablet<br>No drivers. No complex setup. Just install and draw.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number text-glow-purple">1</div>
+          <h3>Install both apps</h3>
+          <p>Get PenCast on your Samsung from Google Play. Download the Mac or Windows receiver from this page.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number text-glow-blue">2</div>
+          <h3>Connect in seconds</h3>
+          <p>Scan the QR code with your phone or plug in USB for ultra-low latency. WiFi auto-discovers your Mac
+            automatically.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number text-glow-cyan">3</div>
+          <h3>Draw in any app</h3>
+          <p>Open Photoshop, Clip Studio, or Figma. Your S Pen works as a real Wacom tablet — pressure, tilt, hover
+            included.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing-section" class="pricing-section">
+      <div class="section-header">
+        <h2>Free to try. $7.99 to own forever.</h2>
+        <p>No subscriptions. No recurring fees. Pay once, use everywhere.</p>
+      </div>
+      <div class="pricing-grid">
+        <div class="pricing-tier">
+          <h3>Free</h3>
+          <div class="price-display">
+            <span class="price-amount">$0</span>
+            <span class="price-interval">forever</span>
+          </div>
+          <p class="pricing-desc">Everything you need to get started over WiFi and USB.</p>
+          <ul class="tier-features">
+            <li><span class="feat-icon included">✦</span> WiFi + USB connection</li>
+            <li><span class="feat-icon included">✦</span> Canvas mode — full drawing tools</li>
+            <li><span class="feat-icon included">✦</span> Cursor / tablet mode</li>
+            <li><span class="feat-icon included">✦</span> Laser pointer</li>
+            <li><span class="feat-icon included">✦</span> Transparent overlay</li>
+            <li><span class="feat-icon included">✦</span> Shapes, colors, undo, clear</li>
+            <li><span class="feat-icon included">✦</span> Screenshot to Desktop</li>
+            <li><span class="feat-icon included">✦</span> QR code pairing</li>
+          </ul>
+          <a href="#download" style="text-decoration: none;"><button class="btn-primary">Download Free</button></a>
+        </div>
+
+        <div class="pricing-tier pro-tier">
+          <div class="badge">Best for Designers</div>
+          <h3>Pro</h3>
+          <div class="price-display">
+            <span class="price-amount">$7.99</span>
+            <span class="price-interval">one-time</span>
+          </div>
+          <p class="pricing-desc">Professional precision for designers and illustrators.</p>
+          <ul class="tier-features">
+            <li><span class="feat-icon included">✦</span> <strong>Everything in Free</strong></li>
+            <li><span class="feat-icon locked">🔒</span> Bluetooth connection</li>
+            <li><span class="feat-icon locked">🔒</span> Hover mode + FPS control</li>
+            <li><span class="feat-icon locked">🔒</span> Pressure curve customization</li>
+            <li><span class="feat-icon locked">🔒</span> Tilt data (brush angle)</li>
+            <li><span class="feat-icon locked">🔒</span> Palm rejection</li>
+            <li><span class="feat-icon locked">🔒</span> Multi-monitor selection</li>
+            <li><span class="feat-icon locked">🔒</span> Custom global hotkeys</li>
+          </ul>
+          <a href="https://play.google.com/store/apps/details?id=com.pencast.app" target="_blank"
+            style="text-decoration: none;"><button class="btn-primary btn-gold">Unlock Pro — $7.99</button></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="download" class="download-section">
+      <div class="section-header">
+        <h2>Download</h2>
+        <p>Get started in minutes. Install the Android app and the desktop receiver. That's it.</p>
+      </div>
+      <div class="download-grid">
+        <div class="download-card">
+          <div class="icon-container">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M17 1H7C5.9 1 5 1.9 5 3v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2zm0 18H7V5h10v14zm-5 1c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z" />
+            </svg>
+          </div>
+          <h3>Android Sender</h3>
+          <h4>PenCast App</h4>
+          <p>Android 8.0+ / S Pen support</p>
+          <a href="https://play.google.com/store/apps/details?id=com.pencast.app" class="btn-outline"
+            target="_blank"><svg viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z" />
+            </svg> Google Play</a>
+        </div>
+        <div class="download-card">
+          <div class="icon-container">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M16.36 14.08c-.02-2.31 1.91-3.46 2-3.52-1.07-1.57-2.73-1.78-3.32-1.8-1.42-.14-2.77.84-3.5.84-.71 0-1.82-.82-2.98-.8-1.52.02-2.93.88-3.72 2.25-1.58 2.76-.4 6.84 1.15 9.07.76 1.09 1.66 2.3 2.82 2.26 1.12-.04 1.55-.73 2.91-.73 1.36 0 1.76.73 2.93.7 1.2-.02 1.98-1.11 2.73-2.2 1.04-1.52 1.46-3 1.48-3.08-.02-.02-2.48-.96-2.5-3.99zM14.71 6.55c.61-.75 1.03-1.79.92-2.83-1.01.04-2.21.67-2.84 1.42-.55.65-1.05 1.71-.92 2.73 1.13.09 2.23-.57 2.84-1.32z" />
+            </svg>
+          </div>
+          <h3>Mac Receiver</h3>
+          <h4>macOS 12+</h4>
+          <p>Apple Silicon & Intel universal</p>
+          <a href="https://github.com/ahmedesa/pencast-app/releases/latest/download/PenCast.dmg" class="btn-outline"
+            target="_blank"><svg viewBox="0 0 24 24">
+              <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+            </svg> Download DMG</a>
+        </div>
+        <div class="download-card">
+          <div class="icon-container">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M2 5.38L10.33 4.2v6.95H2V5.38zm8.33 8.3v7.05L2 19.55v-5.87h8.33zM11.67 3.97L22 2.4v8.75h-10.33V3.97zm0 9.88H22V21.6l-10.33-1.52v-6.23z" />
+            </svg>
+          </div>
+          <h3>Windows Receiver</h3>
+          <h4>Windows Installer</h4>
+          <p>Windows 10/11 (64-bit)</p>
+          <a href="https://github.com/ahmedesa/pencast-app/releases/latest/download/PenCast-Setup.exe"
+            class="btn-outline" target="_blank"><svg viewBox="0 0 24 24">
+              <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+            </svg> Download Installer</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="faq-section">
+      <div class="section-header">
+        <h2>FAQ</h2>
+        <p>Common questions</p>
+      </div>
+      <div class="faq-container">
+        <details class="faq-item">
+          <summary>Does PenCast work with Photoshop and Clip Studio?</summary>
+          <p>Yes. PenCast injects stylus events directly into macOS and Windows so Photoshop, Clip Studio Paint, Figma,
+            and any drawing app see the S Pen as a real Wacom tablet with full pressure and tilt.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Which Samsung devices work?</summary>
+          <p>Any Samsung Galaxy with a built-in S Pen — Galaxy S Ultra series, Galaxy Note series, Galaxy Z Fold series,
+            and Galaxy Tab S series.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What is the latency?</summary>
+          <p>USB: ~5ms. WiFi on a good local network: under 20ms — comparable to professional wired drawing tablets.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Can teachers use PenCast for presentations?</summary>
+          <p>Yes. The transparent overlay lets you draw on top of any open window. Laser pointer and highlighter are
+            free — no Pro needed.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Is PenCast better than a Wacom?</summary>
+          <p>PenCast turns a device you already own into a drawing tablet — saving you $80–$200. Full pressure, tilt,
+            hover, and palm rejection at a fraction of the cost.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How does the connection work?</summary>
+          <p>Three modes: WiFi with auto-discovery via QR code, USB via ADB for ultra-low latency, and Bluetooth BLE
+            (Pro) for wireless use without WiFi.</p>
+        </details>
+      </div>
+    </section>
+
+    <footer class="main-footer">
+      <div class="footer-brand">
+        <img src="images/app_logo.png" alt="PenCast" style="width:24px; height:24px; border-radius:5px;" />
+        PenCast
+      </div>
+      <ul class="footer-links">
+        <li><a
+            href="https://doc-hosting.flycricket.io/pencast-privacy-policy/2f6c8506-bc46-4dad-8de3-4849b12ca70b/privacy"
+            target="_blank">Privacy Policy</a></li>
+        <li><a href="https://doc-hosting.flycricket.io/pencast-terms-of-use/c9b7619f-b1d7-40f2-9084-766fff25661f/terms"
+            target="_blank">Terms of Use</a></li>
+        <li><a href="mailto:ahmedesa6120@gmail.com">Contact</a></li>
+      </ul>
+      <div class="footer-copy">
+        &copy; 2026 PenCast. All rights reserved.
+      </div>
+    </footer>
+
   </div>
-</section>
-
-<!-- FAQ -->
-<section id="faq" style="background: var(--bg2);">
-  <div style="max-width: 760px; margin: 0 auto;">
-    <div style="text-align:center; margin-bottom: 60px;">
-      <span class="section-label">FAQ</span>
-      <h2>Common questions</h2>
-    </div>
-    <div style="display: flex; flex-direction: column; gap: 16px;">
-
-      <details style="background:var(--bg3); border:1px solid var(--border); border-radius:14px; padding:24px; cursor:pointer;">
-        <summary style="font-weight:700; font-size:1rem; list-style:none; display:flex; justify-content:space-between; align-items:center;">
-          Does PenCast work with Photoshop and Clip Studio?
-          <span style="color:var(--glow); font-size:1.2rem;">+</span>
-        </summary>
-        <p style="margin-top:14px; color:var(--muted); font-size:0.9rem; line-height:1.7;">Yes. PenCast injects stylus events directly into macOS and Windows — so Photoshop, Clip Studio Paint, Figma, and any other drawing app see the S Pen as a real Wacom tablet with full pressure and tilt support.</p>
-      </details>
-
-      <details style="background:var(--bg3); border:1px solid var(--border); border-radius:14px; padding:24px; cursor:pointer;">
-        <summary style="font-weight:700; font-size:1rem; list-style:none; display:flex; justify-content:space-between; align-items:center;">
-          Which Samsung devices work with PenCast?
-          <span style="color:var(--glow); font-size:1.2rem;">+</span>
-        </summary>
-        <p style="margin-top:14px; color:var(--muted); font-size:0.9rem; line-height:1.7;">Any Samsung Galaxy with a built-in S Pen — Galaxy S Ultra series, Galaxy Note series, Galaxy Z Fold series, and Galaxy Tab S series.</p>
-      </details>
-
-      <details style="background:var(--bg3); border:1px solid var(--border); border-radius:14px; padding:24px; cursor:pointer;">
-        <summary style="font-weight:700; font-size:1rem; list-style:none; display:flex; justify-content:space-between; align-items:center;">
-          What is the latency?
-          <span style="color:var(--glow); font-size:1.2rem;">+</span>
-        </summary>
-        <p style="margin-top:14px; color:var(--muted); font-size:0.9rem; line-height:1.7;">Over USB, PenCast achieves approximately 5ms latency. Over WiFi on a good local network, typically under 20ms — comparable to professional wired drawing tablets.</p>
-      </details>
-
-      <details style="background:var(--bg3); border:1px solid var(--border); border-radius:14px; padding:24px; cursor:pointer;">
-        <summary style="font-weight:700; font-size:1rem; list-style:none; display:flex; justify-content:space-between; align-items:center;">
-          Can teachers use PenCast for presentations?
-          <span style="color:var(--glow); font-size:1.2rem;">+</span>
-        </summary>
-        <p style="margin-top:14px; color:var(--muted); font-size:0.9rem; line-height:1.7;">Yes. The transparent overlay mode lets you draw and annotate directly on top of any open window on your screen. Laser pointer and highlighter are included for free — no Pro needed.</p>
-      </details>
-
-      <details style="background:var(--bg3); border:1px solid var(--border); border-radius:14px; padding:24px; cursor:pointer;">
-        <summary style="font-weight:700; font-size:1rem; list-style:none; display:flex; justify-content:space-between; align-items:center;">
-          Is PenCast better than a Wacom tablet?
-          <span style="color:var(--glow); font-size:1.2rem;">+</span>
-        </summary>
-        <p style="margin-top:14px; color:var(--muted); font-size:0.9rem; line-height:1.7;">PenCast turns a device you already own into a drawing tablet — saving you $80–$200 on a Wacom. Full pressure, tilt, hover, and palm rejection at a fraction of the cost.</p>
-      </details>
-
-      <details style="background:var(--bg3); border:1px solid var(--border); border-radius:14px; padding:24px; cursor:pointer;">
-        <summary style="font-weight:700; font-size:1rem; list-style:none; display:flex; justify-content:space-between; align-items:center;">
-          How does the connection work?
-          <span style="color:var(--glow); font-size:1.2rem;">+</span>
-        </summary>
-        <p style="margin-top:14px; color:var(--muted); font-size:0.9rem; line-height:1.7;">Three modes: WiFi with auto-discovery via QR code, USB via ADB for ultra-low latency, and Bluetooth BLE (Pro) for wireless use without WiFi.</p>
-      </details>
 
 
-    </div>
-  </div>
-</section>
+  <script>
+    /* ── CANVAS DRAW ── */
+    (function () {
+      const canvas = document.getElementById('drawCanvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      const hint = document.getElementById('canvasHint');
+      const dpr = window.devicePixelRatio || 1;
+      let drawing = false, lx = 0, ly = 0, lt = Date.now();
+      let color = '#A78BFA', size = 6;
+      let snaps = [], shown = false;
 
+      function init() {
+        const w = canvas.parentElement.offsetWidth;
+        const h = 340;
+        canvas.style.width = w + 'px'; canvas.style.height = h + 'px';
+        canvas.width = w * dpr; canvas.height = h * dpr;
+        ctx.scale(dpr, dpr); ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+      }
+      function pos(e) {
+        const r = canvas.getBoundingClientRect();
+        return e.touches ? { x: e.touches[0].clientX - r.left, y: e.touches[0].clientY - r.top }
+          : { x: e.clientX - r.left, y: e.clientY - r.top };
+      }
+      function down(e) {
+        drawing = true; const p = pos(e); lx = p.x; ly = p.y; lt = Date.now();
+        snaps.push(ctx.getImageData(0, 0, canvas.width, canvas.height));
+        if (snaps.length > 30) snaps.shift();
+        if (!shown) { hint.style.opacity = '0'; shown = true; }
+        e.preventDefault();
+      }
+      function move(e) {
+        if (!drawing) return; e.preventDefault();
+        const p = pos(e), now = Date.now();
+        const dt = Math.max(1, now - lt), sp = Math.sqrt((p.x - lx) ** 2 + (p.y - ly) ** 2) / dt;
+        const pr = Math.max(0.25, Math.min(1.6, 1.4 - sp * 0.12));
+        ctx.beginPath(); ctx.moveTo(lx, ly);
+        ctx.quadraticCurveTo(lx, ly, (lx + p.x) / 2, (ly + p.y) / 2);
+        ctx.strokeStyle = color; ctx.lineWidth = size * pr; ctx.stroke();
+        lx = p.x; ly = p.y; lt = now;
+      }
+      function up() { drawing = false; }
 
-<!-- FOOTER -->
-<footer>
-  <a href="#" class="footer-logo">
-    <img src="images/app_logo.png" alt="PenCast" />
-    <span>PenCast</span>
-  </a>
-  <div class="footer-links">
-    <a href="https://doc-hosting.flycricket.io/pencast-privacy-policy/2f6c8506-bc46-4dad-8de3-4849b12ca70b/privacy" target="_blank">Privacy Policy</a>
-    <a href="https://doc-hosting.flycricket.io/pencast-terms-of-use/c9b7619f-b1d7-40f2-9084-766fff25661f/terms" target="_blank">Terms of Use</a>
-    <a href="mailto:ahmedesa6120@gmail.com">Contact</a>
-  </div>
-  <div class="footer-copy">© 2026 PenCast. All rights reserved.</div>
-</footer>
+      canvas.addEventListener('mousedown', down); canvas.addEventListener('mousemove', move);
+      canvas.addEventListener('mouseup', up); canvas.addEventListener('mouseleave', up);
+      canvas.addEventListener('touchstart', down, { passive: false }); canvas.addEventListener('touchmove', move, { passive: false });
+      canvas.addEventListener('touchend', up);
+
+      document.querySelectorAll('.swatch').forEach(el => el.addEventListener('click', function () {
+        document.querySelectorAll('.swatch').forEach(s => s.classList.remove('active'));
+        this.classList.add('active'); color = this.dataset.color;
+      }));
+      document.querySelectorAll('.sz-btn').forEach(el => el.addEventListener('click', function () {
+        document.querySelectorAll('.sz-btn').forEach(s => s.classList.remove('active'));
+        this.classList.add('active'); size = parseInt(this.dataset.size);
+      }));
+      const undoBtn = document.getElementById('undoBtn');
+      const clearBtn = document.getElementById('clearBtn');
+      if (undoBtn) undoBtn.addEventListener('click', () => { if (snaps.length) ctx.putImageData(snaps.pop(), 0, 0); });
+      if (clearBtn) clearBtn.addEventListener('click', () => {
+        snaps.push(ctx.getImageData(0, 0, canvas.width, canvas.height));
+        ctx.clearRect(0, 0, canvas.width / dpr, canvas.height / dpr);
+        hint.style.opacity = '1'; shown = false;
+      });
+      init(); window.addEventListener('resize', init);
+    })();
+
+    /* ── TAB TOGGLE ── */
+    document.querySelectorAll('.tab-btn').forEach(btn => btn.addEventListener('click', function () {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      this.classList.add('active');
+      const panel = document.getElementById('tab-' + this.dataset.tab);
+      if (panel) panel.classList.add('active');
+    }));
+  </script>
 
 </body>
+
 </html>
