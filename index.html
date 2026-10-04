@@ -5,46 +5,74 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google-site-verification" content="Tv5Al7BpIxvyG0jwSjHfa2HLJM-hwKjzmpsP_TnV1W8" />
-  <title>PenCast — S Pen Drawing Tablet for Mac & Windows</title>
-  <meta name="description" content="Turn your Samsung S Pen into a professional Wacom-style drawing tablet for Mac and Windows. WiFi, USB, and Bluetooth. No screen mirroring — raw pen data, zero latency." />
-  <meta name="robots" content="index, follow">
+  <title>PenCast — S Pen Drawing Tablet for Mac &amp; Windows</title>
+  <meta name="description" content="Use your Samsung S Pen as a pen tablet for Mac and Windows. Pressure, tilt and hover over WiFi, USB or Bluetooth. Free to start; Pro is $7.99 one-time." />
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#0a0216" />
   <link rel="canonical" href="https://pencastapp.com/" />
 
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="PenCast" />
+  <meta property="og:locale" content="en_US" />
   <meta property="og:url" content="https://pencastapp.com/" />
-  <meta property="og:title" content="PenCast — S Pen Drawing Tablet for Mac & Windows" />
-  <meta property="og:description" content="Turn your Samsung S Pen into a professional drawing tablet for Mac and Windows." />
+  <meta property="og:title" content="PenCast — S Pen Drawing Tablet for Mac &amp; Windows" />
+  <meta property="og:description" content="Use your Samsung S Pen as a pen tablet for Mac and Windows. Pressure, tilt and hover over WiFi, USB or Bluetooth. Free to start, Pro is a one-time purchase." />
   <meta property="og:image" content="https://pencastapp.com/images/hero_monitor_tablet.png" />
+  <meta property="og:image:width" content="1280" />
+  <meta property="og:image:height" content="612" />
+  <meta property="og:image:alt" content="Illustration of an S Pen tablet connected to a desktop monitor" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://pencastapp.com/" />
-  <meta name="twitter:title" content="PenCast — S Pen Drawing Tablet for Mac & Windows" />
-  <meta name="twitter:description" content="Turn your Samsung S Pen into a professional drawing tablet for Mac and Windows. WiFi, USB, and Bluetooth." />
+  <meta name="twitter:title" content="PenCast — S Pen Drawing Tablet for Mac &amp; Windows" />
+  <meta name="twitter:description" content="Use your Samsung S Pen as a pen tablet for Mac and Windows. Free to start, Pro is a $7.99 one-time purchase." />
   <meta name="twitter:image" content="https://pencastapp.com/images/hero_monitor_tablet.png" />
+  <meta name="twitter:image:alt" content="Illustration of an S Pen tablet connected to a desktop monitor" />
 
   <link rel="icon" type="image/png" href="images/app_logo.png" />
+  <link rel="apple-touch-icon" href="images/app_logo.png" />
 
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "SoftwareApplication",
+          "@type": "WebSite",
+          "@id": "https://pencastapp.com/#website",
+          "url": "https://pencastapp.com/",
           "name": "PenCast",
-          "operatingSystem": "Android",
-          "applicationCategory": "UtilitiesApplication",
-          "description": "Turn your Samsung S Pen into a professional drawing tablet for Mac and Windows.",
-          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-          "url": "https://pencastapp.com",
+          "inLanguage": "en"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://pencastapp.com/#app",
+          "name": "PenCast",
+          "alternateName": "PenCast – S Pen Drawing Tablet",
+          "operatingSystem": "Android 8.0+ (sender app); macOS and Windows 10/11 (receiver)",
+          "applicationCategory": "DesignApplication",
+          "description": "Android app that streams S Pen pressure, tilt and hover to a free PenCast receiver on Mac and Windows over WiFi, USB or Bluetooth, so the S Pen works as a pen tablet. Free to start; Pro is a one-time in-app purchase.",
+          "image": "https://pencastapp.com/images/app_logo.png",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "description": "Free to download. Optional PenCast Pro in-app purchase: $7.99 one-time, no subscription."
+          },
+          "url": "https://pencastapp.com/",
           "downloadUrl": "https://play.google.com/store/apps/details?id=com.pencast.app",
+          "installUrl": "https://play.google.com/store/apps/details?id=com.pencast.app",
           "author": { "@type": "Person", "name": "Ahmed Essa" }
         },
         {
           "@type": "FAQPage",
           "mainEntity": [
-            { "@type": "Question", "name": "What is PenCast?", "acceptedAnswer": { "@type": "Answer", "text": "PenCast turns your Samsung S Pen into a professional drawing tablet for Mac and Windows." } },
-            { "@type": "Question", "name": "Does PenCast work with Photoshop?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. PenCast injects stylus events into macOS and Windows so any drawing app sees it as a real Wacom tablet." } },
-            { "@type": "Question", "name": "What is the latency?", "acceptedAnswer": { "@type": "Answer", "text": "USB: ~5ms. WiFi: under 20ms." } }
+            { "@type": "Question", "name": "Does PenCast work with Photoshop and Clip Studio?", "acceptedAnswer": { "@type": "Answer", "text": "PenCast sends your S Pen as native pen input (tablet events on macOS, pen input on Windows), so pen-aware apps such as Photoshop, Clip Studio Paint and Krita can read pressure. Compatibility varies by app and OS settings. Try the free version first." } },
+            { "@type": "Question", "name": "Which Samsung devices work?", "acceptedAnswer": { "@type": "Answer", "text": "PenCast is built for Samsung Galaxy devices with a built-in S Pen: Galaxy Tab S series, Galaxy S Ultra series, Galaxy Note series and Galaxy Z Fold series. It needs Android 8.0 or newer." } },
+            { "@type": "Question", "name": "What is the latency?", "acceptedAnswer": { "@type": "Answer", "text": "PenCast sends raw pen data instead of streaming video, so it is low latency. USB is the lowest-latency mode, WiFi depends on your network. The app shows a live round-trip time so you can check your own setup." } },
+            { "@type": "Question", "name": "Which features are free and which are Pro?", "acceptedAnswer": { "@type": "Answer", "text": "Free: WiFi and USB connection, QR pairing, cursor mode, pressure, and a drawing canvas with shapes, undo and screenshot. Pro ($7.99 one-time, no subscription) adds Bluetooth, hover, tilt, pressure curve, palm rejection, laser pointer, highlighter, transparent overlay, multi-page canvas, multi-monitor selection and a global hotkey." } },
+            { "@type": "Question", "name": "Does PenCast have ads or subscriptions?", "acceptedAnswer": { "@type": "Answer", "text": "No ads and no subscription. Pro is a single one-time purchase through Google Play. The app uses Firebase for crash reports and basic analytics; see the privacy policy." } },
+            { "@type": "Question", "name": "How does PenCast compare to a Wacom tablet?", "acceptedAnswer": { "@type": "Answer", "text": "PenCast turns a device you already own into a pen tablet, which can save you the cost of dedicated hardware. A dedicated tablet will still have its own driver support and wired latency, so expect some differences, especially over WiFi." } },
+            { "@type": "Question", "name": "How does the connection work?", "acceptedAnswer": { "@type": "Answer", "text": "WiFi with automatic discovery or QR code pairing, USB through an ADB tunnel (requires USB debugging) for the lowest latency, and Bluetooth LE (Pro) for use without WiFi." } }
           ]
         }
       ]
@@ -1200,16 +1228,16 @@
 
     <header class="hero">
       <div class="hero-text">
-        <h1>Your S Pen.<br>Now a Pro Drawing Tablet.</h1>
-        <p>PenCast streams raw pressure, tilt &amp; hover from your S Pen directly into Mac and Windows. Every app sees
-          a real pen device. Zero lag.</p>
+        <h1>Your S Pen.<br>Now a Pen Tablet for Mac &amp; Windows.</h1>
+        <p>PenCast streams raw pen data &mdash; pressure, tilt and hover &mdash; from your Samsung S Pen to your Mac or
+          Windows PC as native pen input. Low-latency over WiFi or USB. Free to start, no subscription.</p>
         <div class="hero-btns">
           <a href="#download" class="btn-hero-primary">▶ Download Free</a>
           <a href="#how-it-works" class="btn-hero-secondary">How it works →</a>
         </div>
       </div>
       <div class="hero-images">
-        <img src="images/hero_monitor_tablet.png" alt="PenCast in action on a desktop monitor and S Pen" class="hero-img-main" fetchpriority="high" />
+        <img src="images/hero_monitor_tablet.png" alt="Illustration of an S Pen tablet connected to a desktop monitor" class="hero-img-main" fetchpriority="high" />
       </div>
     </header>
 
@@ -1250,57 +1278,23 @@
         <div class="csp-text"><span class="csp-small">CLIP STUDIO</span><span class="csp-large">PAINT</span></div>
       </div>
     </nav>
+    <p style="text-align:center; color: var(--text-muted); font-size: 0.8rem; margin-top: -24px;">Designed for pen-aware apps like these. Compatibility varies by app and OS. All names and logos belong to their owners; PenCast is not affiliated with them.</p>
 
     <div class="bento-section">
       <div class="bento-grid">
         <div class="bc bc-latency">
-          <div class="big-num">5<span>ms</span></div>
-          <div class="card-label">USB Latency</div>
-          <div class="graph-wrap">
-            <svg viewBox="0 0 260 150" preserveAspectRatio="none" aria-hidden="true">
-              <defs>
-                <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#818CF8" /><stop offset="100%" stop-color="#C084FC" /></linearGradient>
-                <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#22D3EE" /><stop offset="100%" stop-color="#60A5FA" /></linearGradient>
-                <linearGradient id="gfill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="rgba(192,132,252,0.18)" /><stop offset="100%" stop-color="rgba(192,132,252,0)" /></linearGradient>
-              </defs>
-              <line x1="8" y1="10" x2="220" y2="10" stroke="rgba(255,255,255,.055)" stroke-width="1" />
-              <line x1="8" y1="28" x2="220" y2="28" stroke="rgba(255,255,255,.055)" stroke-width="1" />
-              <line x1="8" y1="46" x2="220" y2="46" stroke="rgba(255,255,255,.055)" stroke-width="1" />
-              <line x1="8" y1="64" x2="220" y2="64" stroke="rgba(255,255,255,.055)" stroke-width="1" />
-              <line x1="8" y1="82" x2="220" y2="82" stroke="rgba(255,255,255,.055)" stroke-width="1" />
-              <line x1="8" y1="100" x2="220" y2="100" stroke="rgba(255,255,255,.055)" stroke-width="1" />
-              <line x1="8" y1="118" x2="220" y2="118" stroke="rgba(255,255,255,.055)" stroke-width="1" />
-              <text x="225" y="13" fill="rgba(200,195,255,.58)" font-size="8" text-anchor="start">2000</text>
-              <text x="225" y="31" fill="rgba(200,195,255,.58)" font-size="8" text-anchor="start">1750</text>
-              <text x="225" y="49" fill="rgba(200,195,255,.58)" font-size="8" text-anchor="start">1500</text>
-              <text x="225" y="67" fill="rgba(200,195,255,.58)" font-size="8" text-anchor="start">1250</text>
-              <text x="225" y="85" fill="rgba(200,195,255,.58)" font-size="8" text-anchor="start">1000</text>
-              <text x="225" y="103" fill="rgba(200,195,255,.58)" font-size="8" text-anchor="start">750</text>
-              <text x="225" y="121" fill="rgba(200,195,255,.58)" font-size="8" text-anchor="start">500</text>
-              <text x="8" y="138" fill="rgba(200,195,255,.5)" font-size="8" text-anchor="middle">0</text>
-              <text x="51" y="138" fill="rgba(200,195,255,.5)" font-size="8" text-anchor="middle">200</text>
-              <text x="95" y="138" fill="rgba(200,195,255,.5)" font-size="8" text-anchor="middle">400</text>
-              <text x="138" y="138" fill="rgba(200,195,255,.5)" font-size="8" text-anchor="middle">600</text>
-              <text x="181" y="138" fill="rgba(200,195,255,.5)" font-size="8" text-anchor="middle">800</text>
-              <text x="220" y="138" fill="rgba(200,195,255,.5)" font-size="8" text-anchor="middle">1000</text>
-              <path d="M8,118 C40,116 80,110 110,90 C140,68 175,40 220,14 L220,118 L8,118 Z" fill="url(#gfill)" />
-              <path d="M8,118 C40,116 80,110 110,90 C140,68 175,40 220,14" stroke="url(#g1)" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" />
-              <path d="M8,120 C35,117 70,113 100,102 C132,90 165,68 220,38" stroke="url(#g2)" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" />
-              <circle cx="130" cy="82" r="3.5" fill="#C084FC" opacity=".9" />
-              <circle cx="130" cy="82" r="6" fill="rgba(192,132,252,0.18)" />
-              <rect x="100" y="62" width="60" height="17" rx="5" fill="rgba(20,14,55,.94)" stroke="rgba(192,132,252,.5)" stroke-width="1" />
-              <text x="130" y="74" fill="#C084FC" font-size="8" font-weight="700" text-anchor="middle">USB 5ms</text>
-              <circle cx="172" cy="60" r="3.5" fill="#22D3EE" opacity=".9" />
-              <circle cx="172" cy="60" r="6" fill="rgba(34,211,238,0.18)" />
-              <rect x="142" y="40" width="64" height="17" rx="5" fill="rgba(8,18,38,.94)" stroke="rgba(34,211,238,.45)" stroke-width="1" />
-              <text x="174" y="52" fill="#22D3EE" font-size="8" font-weight="700" text-anchor="middle">WiFi 18ms</text>
-            </svg>
-          </div>
+          <div class="big-num" style="font-size: clamp(2.2rem, 3.4vw, 3.4rem); line-height: 1.1;">Low<br>latency</div>
+          <div class="card-label">Raw pen data, not a video stream</div>
+          <ul class="pro-feats" style="margin-top: 22px; gap: 12px;">
+            <li><strong style="color:#fff;">USB</strong>&nbsp;&mdash; lowest latency</li>
+            <li><strong style="color:#fff;">WiFi</strong>&nbsp;&mdash; cable-free, depends on your network</li>
+            <li><strong style="color:#fff;">Live ping</strong>&nbsp;&mdash; the app shows round-trip ms</li>
+          </ul>
         </div>
 
         <div class="bc bc-pressure">
-          <div class="big-num">4096</div>
-          <div class="card-label">Pressure Levels</div>
+          <div class="big-num">Pressure</div>
+          <div class="card-label">From your S Pen</div>
           <div class="pen-draw-wrap">
             <svg viewBox="0 0 130 100" aria-hidden="true">
               <defs>
@@ -1335,7 +1329,7 @@
         </div>
 
         <div class="bc bc-tilt">
-          <div class="big-num">Tilt &amp;<br />Orientation</div>
+          <div class="big-num">Tilt<br />(Pro)</div>
           <div class="tilt-wrap">
             <svg viewBox="0 0 120 96" aria-hidden="true">
               <defs>
@@ -1407,8 +1401,8 @@
         <div class="bc bc-zero">
           <div style="display:flex; align-items:center; gap:10px; flex:1;">
             <div>
-              <div class="big-label">Zero<br />Latency</div>
-              <div class="card-label" style="margin-top:4px;">Instant response</div>
+              <div class="big-label">No screen<br />mirroring</div>
+              <div class="card-label" style="margin-top:4px;">Raw pen data only</div>
             </div>
             <div class="zero-icon-wrap">
               <svg viewBox="0 0 68 68" aria-hidden="true">
@@ -1428,19 +1422,20 @@
 
         <div class="bc bc-pro">
           <div class="pro-title">⭐ Golden Pro</div>
-          <div class="pro-sub">PenCast Masterwork Edition.<br />Lifetime Access.</div>
+          <div class="pro-sub">One-time purchase.<br />No subscription.</div>
           <div class="pro-price">$7.99</div>
-          <div class="pro-note">Includes all future updates.</div>
+          <div class="pro-note">Paid once through Google Play.</div>
           <ul class="pro-feats">
             <li>Bluetooth connection</li>
             <li>Hover mode + FPS control</li>
-            <li>Pressure curve customization</li>
+            <li>Pressure curve</li>
             <li>Tilt data (brush angle)</li>
             <li>Palm rejection</li>
-            <li>Multi-monitor selection</li>
-            <li>Custom hotkeys</li>
+            <li>Laser pointer + highlighter</li>
+            <li>Transparent overlay</li>
+            <li>Multi-monitor + global hotkey</li>
           </ul>
-          <a href="https://play.google.com/store/apps/details?id=com.pencast.app" class="pro-btn" target="_blank">Get Started Now</a>
+          <a href="https://play.google.com/store/apps/details?id=com.pencast.app" class="pro-btn" target="_blank" rel="noopener">Get PenCast on Google Play</a>
         </div>
 
       </div>
@@ -1449,7 +1444,7 @@
     <section id="features" class="pro-features-section">
       <div class="section-header">
         <h2>Features</h2>
-        <p>Everything a pro needs</p>
+        <p>What PenCast does, and what needs Pro</p>
       </div>
 
       <div class="pro-features-grid">
@@ -1457,32 +1452,23 @@
           <div class="bento-content">
             <h3>Connection modes</h3>
             <h4>WiFi, USB, or Bluetooth</h4>
-            <p>Three ways to connect. WiFi auto-discovers your Mac. USB for studio-grade 5ms latency. Bluetooth for cable-free use.</p>
-          </div>
-          <div class="bento-image">
-            <img src="images/zero_lag_connection.png" alt="Different Connection modes for PenCast" loading="lazy" style="width:100%; height:100%; object-fit:contain; object-position:center;" />
+            <p>WiFi and USB are free. WiFi finds your computer automatically or by QR code. USB (via an ADB tunnel, USB debugging required) is the lowest-latency option. Bluetooth LE without WiFi is Pro.</p>
           </div>
         </div>
 
         <div class="feature-bento-card bento-vertical feat-blue">
           <div class="bento-content">
             <h3>Pressure & Tilt</h3>
-            <h4>Full Pressure & Tilt</h4>
-            <p>4096 pressure levels with customizable response curve. Tilt data lets brushes respond to how you hold the pen.</p>
-          </div>
-          <div class="bento-image">
-            <img src="images/pressure_tilt.png" alt="PenCast Pressure and Tilt visual settings" loading="lazy" style="width:100%; height:100%; object-fit:contain; object-position:center;" />
+            <h4>Pressure, plus tilt with Pro</h4>
+            <p>S Pen pressure is passed through for free. Pro adds a customizable pressure curve and tilt data, so brushes can respond to how you hold the pen.</p>
           </div>
         </div>
 
         <div class="feature-bento-card bento-vertical feat-gold">
           <div class="bento-content">
             <h3>Hover & Precision</h3>
-            <h4>Hover, Hotkeys & Multi-Monitor</h4>
-            <p>See where your pen lands before it touches. Set global hotkeys. Choose which monitor to draw on.</p>
-          </div>
-          <div class="bento-image">
-            <img src="images/hover_capabilities.png" alt="Hover and Multi-Monitor support" loading="lazy" style="width:100%; height:100%; object-fit:contain; object-position:center;" />
+            <h4>Hover, Hotkey &amp; Multi-Monitor (Pro)</h4>
+            <p>See where your pen lands before it touches. Toggle PenCast with a global hotkey. Choose which monitor to draw on.</p>
           </div>
         </div>
 
@@ -1490,10 +1476,7 @@
           <div class="bento-content">
             <h3>Canvas mode</h3>
             <h4>Tablet Mode + Standalone Canvas</h4>
-            <p>Use your phone as a Wacom tablet in any pro app — or draw directly with shapes, colors, and transparent overlay.</p>
-          </div>
-          <div class="bento-image">
-            <img src="images/canvas_mode.png" alt="Standalone canvas mode feature" loading="lazy" style="width:100%; height:100%; object-fit:contain; object-position:center;" />
+            <p>Use your S Pen device as a pen tablet in your drawing apps &mdash; or draw directly in the standalone canvas with shapes, colors and undo. Transparent overlay is Pro.</p>
           </div>
         </div>
       </div>
@@ -1510,25 +1493,25 @@
             <h3>🎨 For Designers & Artists</h3>
           </div>
           <div class="feature-block">
-            <h4>S Pen as a Wacom Tablet</h4>
-            <p>Open Photoshop, Clip Studio, or Figma on your Mac. PenCast injects your S Pen strokes — full pressure, tilt, hover — exactly like a $200 Wacom.</p>
+            <h4>S Pen as a Pen Tablet</h4>
+            <p>Open Photoshop, Clip Studio or Krita on your Mac or PC. PenCast sends your S Pen as native pen input, with pressure for free and tilt and hover with Pro &mdash; using hardware you already own.</p>
             <ul class="feature-list">
-              <li>Works in Photoshop, Clip Studio, Figma & more</li>
-              <li>Pressure + tilt for realistic brush strokes</li>
-              <li>Hover mode for precise positioning</li>
-              <li>Palm rejection for long sessions</li>
+              <li>Made for pen-aware apps like Photoshop, Clip Studio and Krita</li>
+              <li>Pressure free; tilt for brush angle with Pro</li>
+              <li>Hover mode for precise positioning (Pro)</li>
+              <li>Palm rejection for long sessions (Pro)</li>
               <li>S Pen button → right-click</li>
             </ul>
           </div>
           <div class="feature-block">
             <h4>Drawing on the Go</h4>
-            <p>PenCast also gives you a full standalone drawing canvas — shapes, colors, highlighter — all on your phone.</p>
+            <p>PenCast also has a standalone drawing canvas &mdash; pen, shapes, colors and undo are free; highlighter and multi-page are Pro.</p>
             <ul class="feature-list">
-              <li>Standalone canvas with shapes & colors</li>
-              <li>Transparent overlay on any window</li>
-              <li>Screenshot → saves to Desktop instantly</li>
-              <li>Scroll & zoom control in cursor mode</li>
-              <li>Multi-monitor — choose your display</li>
+              <li>Standalone canvas with shapes &amp; colors</li>
+              <li>Transparent overlay on any window (Pro)</li>
+              <li>Canvas screenshot → saves to Desktop</li>
+              <li>Scroll &amp; zoom control in cursor mode (Pro)</li>
+              <li>Multi-monitor — choose your display (Pro)</li>
             </ul>
           </div>
         </div>
@@ -1540,22 +1523,22 @@
             <h4>Annotate Directly on Your Screen</h4>
             <p>Draw on top of slides, browser, or any app — completely transparent. Highlight and annotate during live presentations.</p>
             <ul class="feature-list">
-              <li>Transparent overlay — draw on any window</li>
-              <li>Laser pointer for live presentations</li>
-              <li>Highlighter tool</li>
+              <li>Transparent overlay &mdash; draw on any window (Pro)</li>
+              <li>Laser pointer for live presentations (Pro)</li>
+              <li>Highlighter tool (Pro)</li>
               <li>Instant clear between slides</li>
-              <li>Screenshot to Desktop</li>
+              <li>Canvas screenshot to Desktop</li>
             </ul>
           </div>
           <div class="feature-block">
-            <h4>Free for Educators</h4>
-            <p>Every tool a teacher needs is in the free version — no Pro upgrade required.</p>
+            <h4>Try it free, then decide</h4>
+            <p>The free version has the drawing canvas, cursor mode and screenshot. Overlay, laser pointer and highlighter are in Pro &mdash; $7.99 once, not per month.</p>
             <ul class="feature-list">
-              <li>No Pro required for teaching features</li>
-              <li>Works over WiFi — no cables</li>
-              <li>Works with Zoom, Teams, Google Meet</li>
-              <li>Works with any presentation software</li>
-              <li>Easy QR code setup in class</li>
+              <li>No ads, no subscription</li>
+              <li>Works over WiFi &mdash; no cables</li>
+              <li>Share your screen or the PenCast window in Zoom, Teams or Meet</li>
+              <li>Draw over slides in any presentation software</li>
+              <li>QR code setup, no typing IPs</li>
             </ul>
           </div>
         </div>
@@ -1565,61 +1548,60 @@
     <section id="how-it-works" class="how-it-works">
       <div class="section-header">
         <h2>How it works</h2>
-        <p>Three steps to your drawing tablet<br>No drivers. No complex setup. Just install and draw.</p>
+        <p>Three steps to your pen tablet<br>Install two apps, scan a QR code, draw.</p>
       </div>
       <div class="steps-grid">
         <div class="step-card">
           <div class="step-number text-glow-purple">1</div>
           <h3>Install both apps</h3>
-          <p>Get PenCast on your Samsung from Google Play. Download the Mac or Windows receiver from this page.</p>
+          <p>Get PenCast on your Samsung from Google Play. Download the Mac or Windows receiver from this page (both are free).</p>
         </div>
         <div class="step-card">
           <div class="step-number text-glow-blue">2</div>
           <h3>Connect in seconds</h3>
-          <p>Scan the QR code with your phone or plug in USB for ultra-low latency. WiFi auto-discovers your Mac automatically.</p>
+          <p>Scan the QR code shown by the receiver, or let WiFi auto-discover your computer. Prefer a cable? USB gives the lowest latency (needs USB debugging).</p>
         </div>
         <div class="step-card">
           <div class="step-number text-glow-cyan">3</div>
           <h3>Draw in any app</h3>
-          <p>Open Photoshop, Clip Studio, or Figma. Your S Pen works as a real Wacom tablet — pressure, tilt, hover included.</p>
+          <p>Open Photoshop, Clip Studio or Krita and draw. Your S Pen sends pressure, and with Pro also tilt and hover.</p>
         </div>
       </div>
     </section>
 
     <section id="pricing-section" class="pricing-section">
       <div class="section-header">
-        <h2>Free to try. $7.99 to own forever.</h2>
-        <p>No subscriptions. No recurring fees. Pay once, use everywhere.</p>
+        <h2>Free to start. $7.99 once for Pro.</h2>
+        <p>No subscription, no ads. Pay once on Android; the Mac and Windows receivers unlock when your Pro device connects.</p>
       </div>
       <div class="pricing-grid">
         <div class="pricing-tier">
           <h3>Free</h3>
           <div class="price-display">
             <span class="price-amount">$0</span>
-            <span class="price-interval">forever</span>
+            <span class="price-interval">free to use</span>
           </div>
-          <p class="pricing-desc">Everything you need to get started over WiFi and USB.</p>
+          <p class="pricing-desc">Enough to try PenCast over WiFi and USB.</p>
           <ul class="tier-features">
             <li><span class="feat-icon included">✦</span> WiFi + USB connection</li>
-            <li><span class="feat-icon included">✦</span> Canvas mode — full drawing tools</li>
-            <li><span class="feat-icon included">✦</span> Cursor / tablet mode</li>
-            <li><span class="feat-icon included">✦</span> Laser pointer</li>
-            <li><span class="feat-icon included">✦</span> Transparent overlay</li>
-            <li><span class="feat-icon included">✦</span> Shapes, colors, undo, clear</li>
-            <li><span class="feat-icon included">✦</span> Screenshot to Desktop</li>
-            <li><span class="feat-icon included">✦</span> QR code pairing</li>
+            <li><span class="feat-icon included">✦</span> QR code pairing + auto-discovery</li>
+            <li><span class="feat-icon included">✦</span> Cursor mode with S Pen pressure</li>
+            <li><span class="feat-icon included">✦</span> Canvas mode: pen, shapes, eraser</li>
+            <li><span class="feat-icon included">✦</span> Colors, undo / redo, clear</li>
+            <li><span class="feat-icon included">✦</span> Canvas screenshot to Desktop</li>
+            <li><span class="feat-icon included">✦</span> No ads</li>
           </ul>
           <a href="#download" style="text-decoration: none;" aria-label="Download Free version of PenCast"><button class="btn-primary">Download Free</button></a>
         </div>
 
         <div class="pricing-tier pro-tier">
-          <div class="badge">Best for Designers</div>
+          <div class="badge">One-time purchase</div>
           <h3>Pro</h3>
           <div class="price-display">
             <span class="price-amount">$7.99</span>
             <span class="price-interval">one-time</span>
           </div>
-          <p class="pricing-desc">Professional precision for designers and illustrators.</p>
+          <p class="pricing-desc">Precision tools for illustrators, plus presenter extras.</p>
           <ul class="tier-features">
             <li><span class="feat-icon included">✦</span> <strong>Everything in Free</strong></li>
             <li><span class="feat-icon locked">🔒</span> Bluetooth connection</li>
@@ -1627,8 +1609,9 @@
             <li><span class="feat-icon locked">🔒</span> Pressure curve customization</li>
             <li><span class="feat-icon locked">🔒</span> Tilt data (brush angle)</li>
             <li><span class="feat-icon locked">🔒</span> Palm rejection</li>
-            <li><span class="feat-icon locked">🔒</span> Multi-monitor selection</li>
-            <li><span class="feat-icon locked">🔒</span> Custom global hotkeys</li>
+            <li><span class="feat-icon locked">🔒</span> Laser pointer + highlighter</li>
+            <li><span class="feat-icon locked">🔒</span> Transparent overlay + multi-page canvas</li>
+            <li><span class="feat-icon locked">🔒</span> Multi-monitor selection + global hotkey</li>
           </ul>
           <a href="https://play.google.com/store/apps/details?id=com.pencast.app" target="_blank" style="text-decoration: none;" aria-label="Unlock Pro version of PenCast"><button class="btn-primary btn-gold">Unlock Pro — $7.99</button></a>
         </div>
@@ -1638,7 +1621,7 @@
     <section id="download" class="download-section">
       <div class="section-header">
         <h2>Download</h2>
-        <p>Get started in minutes. Install the Android app and the desktop receiver. That's it.</p>
+        <p>Install the Android app and the free desktop receiver for your computer.</p>
       </div>
       <div class="download-grid">
         <div class="download-card">
@@ -1660,8 +1643,8 @@
           </div>
           <h3>Mac Receiver</h3>
           <h4>macOS 12+</h4>
-          <p>Apple Silicon & Intel universal</p>
-          <span class="btn-outline disabled">Coming Soon</span>
+          <p>Not notarized yet: on first launch, right-click the app and choose Open.</p>
+          <a href="https://github.com/ahmedesa/pencast-app/releases/latest/download/PenCast.dmg" class="btn-outline" target="_blank" rel="noopener" aria-label="Download PenCast for Mac (DMG)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" /></svg> Download DMG</a>
         </div>
         <div class="download-card">
           <div class="icon-container">
@@ -1671,7 +1654,7 @@
           </div>
           <h3>Windows Receiver</h3>
           <h4>Windows Installer</h4>
-          <p>Windows 10/11 (64-bit)</p>
+          <p>Windows 10/11 (64-bit). Unsigned installer: SmartScreen may warn, choose More info &rarr; Run anyway.</p>
           <a href="https://github.com/ahmedesa/pencast-app/releases/latest/download/PenCast-Setup.exe" class="btn-outline" target="_blank" aria-label="Download Windows Installer EXE"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" /></svg> Download Installer</a>
         </div>
       </div>
@@ -1685,27 +1668,31 @@
       <div class="faq-container">
         <details class="faq-item">
           <summary>Does PenCast work with Photoshop and Clip Studio?</summary>
-          <p>Yes. PenCast injects stylus events directly into macOS and Windows so Photoshop, Clip Studio Paint, Figma, and any drawing app see the S Pen as a real Wacom tablet with full pressure and tilt.</p>
+          <p>PenCast sends your S Pen as native pen input (tablet events on macOS, pen input on Windows), so pen-aware apps such as Photoshop, Clip Studio Paint and Krita can read pressure. Compatibility varies by app and OS settings (for example, some apps on Windows need Windows Ink enabled). Try the free version first.</p>
         </details>
         <details class="faq-item">
           <summary>Which Samsung devices work?</summary>
-          <p>Any Samsung Galaxy with a built-in S Pen — Galaxy S Ultra series, Galaxy Note series, Galaxy Z Fold series, and Galaxy Tab S series.</p>
+          <p>PenCast is built for Samsung Galaxy devices with a built-in S Pen: Galaxy Tab S series, Galaxy S Ultra series, Galaxy Note series and Galaxy Z Fold series. It needs Android 8.0 or newer.</p>
         </details>
         <details class="faq-item">
           <summary>What is the latency?</summary>
-          <p>USB: ~5ms. WiFi on a good local network: under 20ms — comparable to professional wired drawing tablets.</p>
+          <p>PenCast sends raw pen data instead of streaming video, which keeps it low-latency. USB is the lowest-latency mode; WiFi depends on your network and works best on a good local connection. The app shows a live round-trip time so you can check your own setup.</p>
         </details>
         <details class="faq-item">
-          <summary>Can teachers use PenCast for presentations?</summary>
-          <p>Yes. The transparent overlay lets you draw on top of any open window. Laser pointer and highlighter are free — no Pro needed.</p>
+          <summary>Which features are free and which are Pro?</summary>
+          <p>Free: WiFi and USB connection, QR pairing, cursor mode with pressure, and a drawing canvas with shapes, undo and screenshot. Pro ($7.99 one-time, no subscription) adds Bluetooth, hover, tilt, pressure curve, palm rejection, laser pointer, highlighter, transparent overlay, multi-page canvas, multi-monitor selection and a global hotkey.</p>
         </details>
         <details class="faq-item">
-          <summary>Is PenCast better than a Wacom?</summary>
-          <p>PenCast turns a device you already own into a drawing tablet — saving you $80–$200. Full pressure, tilt, hover, and palm rejection at a fraction of the cost.</p>
+          <summary>Does PenCast have ads or subscriptions?</summary>
+          <p>No ads and no subscription. Pro is a single one-time purchase through Google Play. The app uses Firebase for crash reports and basic analytics; details are in the <a href="privacy.html" style="color: var(--neon-cyan);">privacy policy</a>.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How does PenCast compare to a Wacom tablet?</summary>
+          <p>PenCast turns a device you already own into a pen tablet, which can save you the cost of dedicated hardware. A dedicated tablet still has its own drivers and a wired connection, so expect some differences, especially over WiFi.</p>
         </details>
         <details class="faq-item">
           <summary>How does the connection work?</summary>
-          <p>Three modes: WiFi with auto-discovery via QR code, USB via ADB for ultra-low latency, and Bluetooth BLE (Pro) for wireless use without WiFi.</p>
+          <p>WiFi with auto-discovery or QR code pairing, USB through an ADB tunnel (requires USB debugging) for the lowest latency, and Bluetooth LE (Pro) for use without WiFi.</p>
         </details>
       </div>
     </section>
