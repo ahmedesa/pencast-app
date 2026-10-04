@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Use an S Pen as a drawing tablet on Windows | PenCast</title>
+  <meta name="description" content="Use a Samsung Galaxy S Pen as a pen tablet on Windows 10/11: setup, Windows pen settings, free vs Pro, honest limits. No ads, Pro is $7.99 once." />
+  <link rel="canonical" href="https://pencastapp.com/s-pen-as-drawing-tablet-windows/" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="theme-color" content="#f5f0e6" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0f0d16" media="(prefers-color-scheme: dark)" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="PenCast" />
+  <meta property="og:title" content="Use an S Pen as a drawing tablet on Windows | PenCast" />
+  <meta property="og:description" content="Use a Samsung Galaxy S Pen as a pen tablet on Windows 10/11: setup, Windows pen settings, free vs Pro, honest limits. No ads, Pro is $7.99 once." />
+  <meta property="og:url" content="https://pencastapp.com/s-pen-as-drawing-tablet-windows/" />
+  <meta property="og:image" content="https://pencastapp.com/images/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Use an S Pen as a drawing tablet on Windows | PenCast" />
+  <meta name="twitter:description" content="Use a Samsung Galaxy S Pen as a pen tablet on Windows 10/11: setup, Windows pen settings, free vs Pro, honest limits. No ads, Pro is $7.99 once." />
+  <meta name="twitter:image" content="https://pencastapp.com/images/og-image.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png" />
+  <link rel="apple-touch-icon" href="/images/app_logo_192.png" />
+  <link rel="preload" href="/assets/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="/assets/style.css" />
+  <script>(function(){var d=document.documentElement;d.className=d.className.replace('no-js','js');try{var t=localStorage.getItem('pc-theme');var m=/[?&]theme=(light|dark)/.exec(location.search);if(m)t=m[1];if(t==='light'||t==='dark')d.setAttribute('data-theme',t);}catch(e){}})();</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Use an S Pen as a drawing tablet on Windows | PenCast", "url": "https://pencastapp.com/s-pen-as-drawing-tablet-windows/", "description": "Use a Samsung Galaxy S Pen as a pen tablet on Windows 10/11: setup, Windows pen settings, free vs Pro, honest limits. No ads, Pro is $7.99 once.", "inLanguage": "en", "dateModified": "2026-10-04", "isPartOf": {"@type": "WebSite", "name": "PenCast", "url": "https://pencastapp.com/"}, "about": {"@type": "SoftwareApplication", "name": "PenCast", "url": "https://pencastapp.com/"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://pencastapp.com/"}, {"@type": "ListItem", "position": 2, "name": "S Pen as a drawing tablet on Windows", "item": "https://pencastapp.com/s-pen-as-drawing-tablet-windows/"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do I need to install anything on the PC?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — the free PenCast desktop installer. It receives pen data from your Galaxy and creates a virtual pen device in Windows, so apps see pen input with pressure."}}, {"@type": "Question", "name": "Will my PC show the canvas on the tablet?", "acceptedAnswer": {"@type": "Answer", "text": "No. PenCast sends the pen, not the picture. If you want the Windows desktop on the tablet, use a screen-mirroring app such as SuperDisplay or Samsung Second Screen."}}, {"@type": "Question", "name": "Pressure isn't working in my app. What should I check?", "acceptedAnswer": {"@type": "Answer", "text": "Make sure the app is set to use Windows pen input (Windows Ink) rather than an older driver mode — many drawing apps have a tablet-input setting for this. Menu names vary by app and version, so check the app's own documentation."}}, {"@type": "Question", "name": "Why does SmartScreen warn me?", "acceptedAnswer": {"@type": "Answer", "text": "The Windows installer isn't code-signed yet. Choose More info, then Run anyway. Signing is on the to-do list."}}, {"@type": "Question", "name": "Which Windows versions are supported?", "acceptedAnswer": {"@type": "Answer", "text": "The receiver is built for 64-bit Windows 10 (version 1809 or newer) and Windows 11, because it relies on Windows' synthetic pen API. I haven't tested every build."}}]}</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="/" aria-label="PenCast home"><img src="/images/app_logo_64.png" width="32" height="32" alt="" />PenCast</a>
+      <nav class="nav" id="nav" aria-label="Main">
+        <a class="link" href="/s-pen-as-drawing-tablet-mac/">Mac</a><a class="link" href="/s-pen-as-drawing-tablet-windows/">Windows</a><a class="link" href="/use-galaxy-tab-as-drawing-tablet/">Galaxy Tab</a><a class="link" href="/compare/superdisplay-alternative-mac/">SuperDisplay alt.</a><a class="link" href="/#faq">FAQ</a>
+        <button class="icon-btn theme-btn" id="themeBtn" type="button" aria-label="Toggle light and dark theme">
+          <svg class="sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+        <a class="btn btn-primary btn-sm hdr-cta" href="/#download" data-cta="header-download">Get PenCast</a>
+      </nav>
+      <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </header>
+  <main id="main" class="doc">
+    <div class="wrap doc-wrap">
+      <p class="crumbs"><a href="/">Home</a> / <span aria-current="page">S Pen as a drawing tablet on Windows</span></p>
+      <header class="doc-head">
+        <div class="kicker">Windows guide</div>
+        <h1>Use your S Pen as a drawing tablet on <em>Windows.</em></h1>
+        <p class="lede">PenCast sends the pen from your Galaxy to your PC as native Windows pen input &mdash; pressure included, even in the free tier. Not the picture, just the pen. No ads.</p>
+        <div class="cta-row"><a class="btn btn-primary" href="https://github.com/ahmedesa/pencast-app/releases/latest/download/PenCast-Setup.exe" rel="noopener" data-cta="win-guide-win">Download for Windows (.exe)</a><!--play:begin win-guide-play--><span class="btn btn-soon" role="note" aria-label="Coming soon to Google Play" data-cta="win-guide-play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 3.5v17a1 1 0 0 0 1.5.86l14-8.5a1 1 0 0 0 0-1.72l-14-8.5A1 1 0 0 0 5 3.5z"/></svg>Coming soon to Google Play</span><!--play:end--></div><p class="fine soon-note">The Android app is on its way to Google Play; the desktop app pairs with it. <a href="mailto:ahmedesa1997@gmail.com?subject=Tell%20me%20when%20PenCast%20is%20on%20Google%20Play">Email me</a> for a heads-up.</p>
+      </header>
+      <section class="doc-sec">
+        <h2>What you need</h2>
+        <ul class="plain">
+          <li>A Samsung Galaxy with an S Pen (see the <a href="/use-galaxy-tab-as-drawing-tablet/">Galaxy Tab guide</a>), Android 7.0 or newer.</li>
+          <li>A 64-bit Windows 10 (1809 or newer) or Windows 11 PC, on the same WiFi network &mdash; or a USB cable.</li>
+          <li>The free PenCast desktop app on the PC and the PenCast Android app on the Galaxy (coming to Google Play).</li>
+        </ul>
+      </section>
+      <section class="doc-sec">
+        <h2>Set it up in five steps</h2>
+        <ol class="steps">
+          <li><strong>Download the installer.</strong> Get <a href="https://github.com/ahmedesa/pencast-app/releases/latest/download/PenCast-Setup.exe" rel="noopener">PenCast-Setup.exe</a> and run it.</li>
+          <li><strong>If SmartScreen warns you</strong>, choose <b>More info</b>, then <b>Run anyway</b> (the installer isn't code-signed yet). If Windows asks about network access, allow it on private networks so your Galaxy can find the PC over WiFi.</li>
+          <li><strong>Install the Android app</strong> on your Galaxy (coming soon to Google Play).</li>
+          <li><strong>Connect.</strong> Scan the QR code shown on the PC, or let auto-discovery find it. Prefer a cable? Turn on USB debugging and pick USB.</li>
+          <li><strong>Draw.</strong> Open a pen-aware app and draw on the Galaxy. If pressure doesn't register, set the app to Windows pen input (Windows Ink) in its tablet settings.</li>
+        </ol>
+      </section>
+      <section class="doc-sec">
+        <h2>What's free and what's Pro</h2>
+        <div class="two">
+          <div class="card-sm"><h3>Free &mdash; $0</h3><ul class="ticks-list"><li>WiFi and USB connection</li><li>QR pairing and auto-discovery</li><li>Cursor mode with S Pen pressure</li><li>Drawing canvas: pen, shapes, eraser, undo/redo, screenshot</li><li>No ads, no time limit</li></ul></div>
+          <div class="card-sm pro"><h3>Pro &mdash; $7.99 once</h3><ul class="ticks-list"><li>Tilt and hover</li><li>Pressure curve and palm rejection</li><li>Bluetooth connection</li><li>Laser pointer, highlighter, transparent overlay</li><li>Multi-page canvas, multi-monitor selection, global hotkey</li></ul><p class="fine">One-time Google Play purchase, no subscription. The desktop app unlocks when your Pro device connects.</p></div>
+        </div>
+      </section>
+      <section class="doc-sec">
+        <h2>Honest limits</h2>
+        <ul class="plain">
+          <li><strong>Your tablet won't show your canvas.</strong> PenCast is a pen tablet, not a screen mirror: you look at your computer and draw on your Galaxy.</li>
+          <li><strong>WiFi mode isn't encrypted yet.</strong> Use USB, Bluetooth (Pro) or a network you trust.</li>
+          <li><strong>Installers aren't signed yet.</strong> The Windows installer isn't code-signed, so SmartScreen asks for one extra click (step 2).</li>
+          <li><strong>Apps differ.</strong> Compatibility depends on your drawing app and its pen settings. I haven't published a tested-apps list yet &mdash; try the free version first and tell me what works.</li>
+          <li><strong>The Android app is coming to Google Play.</strong> The desktop app pairs with it; until it's live there's nothing to pair with.</li>
+        </ul>
+      </section>
+      <section class="doc-sec">
+        <h2>When something else fits better</h2>
+        <p>On Windows you have strong alternatives. If you want the Windows desktop on your tablet screen &mdash; a second monitor you can draw on &mdash; SuperDisplay and Samsung Second Screen do that; PenCast does not. If you want a pen tablet with no screen mirroring, no ads and a pay-once Pro, PenCast is built for that.</p>
+      </section>
+<section class="doc-sec"><h2>Questions</h2><div class="faq"><details><summary>Do I need to install anything on the PC?</summary><div><p>Yes &mdash; the free PenCast desktop installer. It receives pen data from your Galaxy and creates a virtual pen device in Windows, so apps see pen input with pressure.</p></div></details><details><summary>Will my PC show the canvas on the tablet?</summary><div><p>No. PenCast sends the pen, not the picture. If you want the Windows desktop on the tablet, use a screen-mirroring app such as SuperDisplay or Samsung Second Screen.</p></div></details><details><summary>Pressure isn&#x27;t working in my app. What should I check?</summary><div><p>Make sure the app is set to use Windows pen input (Windows Ink) rather than an older driver mode &mdash; many drawing apps have a tablet-input setting for this. Menu names vary by app and version, so check the app's own documentation.</p></div></details><details><summary>Why does SmartScreen warn me?</summary><div><p>The Windows installer isn't code-signed yet. Choose More info, then Run anyway. Signing is on the to-do list.</p></div></details><details><summary>Which Windows versions are supported?</summary><div><p>The receiver is built for 64-bit Windows 10 (version 1809 or newer) and Windows 11, because it relies on Windows' synthetic pen API. I haven't tested every build.</p></div></details></div></section>
+      <section class="doc-sec related"><h2>More guides</h2><ul><li><a href="/s-pen-as-drawing-tablet-mac/">Use an S Pen as a drawing tablet on Mac</a></li><li><a href="/use-galaxy-tab-as-drawing-tablet/">Use a Galaxy Tab as a drawing tablet</a></li><li><a href="/compare/superdisplay-alternative-mac/">SuperDisplay alternative for Mac</a></li></ul></section>
+      <p class="note">Last reviewed 4 Oct 2026. Product names are trademarks of their owners and are used only to describe compatibility or comparison; PenCast is not affiliated with or endorsed by them. Something out of date? <a href="mailto:ahmedesa1997@gmail.com?subject=PenCast%20page%20correction">Tell me</a> and I'll fix it.</p>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="foot">
+        <a class="brand" href="/" style="font-size:1.2rem"><img src="/images/app_logo_64.png" width="28" height="28" alt="" />PenCast</a>
+        <ul>
+          <li><a href="/s-pen-as-drawing-tablet-mac/">Mac guide</a></li>
+          <li><a href="/s-pen-as-drawing-tablet-windows/">Windows guide</a></li>
+          <li><a href="/use-galaxy-tab-as-drawing-tablet/">Galaxy Tab guide</a></li>
+          <li><a href="/compare/superdisplay-alternative-mac/">SuperDisplay alternative</a></li>
+          <li><a href="/privacy.html">Privacy Policy</a></li>
+          <li><a href="/terms.html">Terms of Use</a></li>
+          <li><a href="https://github.com/ahmedesa/pencast-app/releases" rel="noopener">Releases</a></li>
+          <li><a href="mailto:ahmedesa1997@gmail.com">Contact</a></li>
+        </ul>
+      </div>
+      <p class="legal">&copy; 2026 PenCast. Photoshop, Illustrator, Krita, Clip Studio Paint, Samsung, Galaxy, S Pen, Wacom, SuperDisplay and other product names are trademarks of their owners and are used only to describe compatibility or comparison. PenCast is not affiliated with or endorsed by them.</p>
+    </div>
+  </footer>
+  <script src="/assets/page.js" defer></script>
+</body>
+</html>

@@ -371,3 +371,47 @@ td.me,thead th.me{background:color-mix(in srgb,var(--violet) 9%,var(--card));fon
   .scene .draw{stroke-dashoffset:0}
 }
 @media print{.site-header,.stage-wrap{display:none}}
+
+/* ---- Play "coming soon" state + guides ---- */
+.btn-soon{background:transparent;color:var(--ink-2);border:2px dashed var(--line-strong,var(--ink-2));box-shadow:none;cursor:default;opacity:.85;pointer-events:none}
+.btn-soon svg{opacity:.6}
+.soon-note{margin-top:12px}
+.soon-note a{color:var(--violet);font-weight:600}
+.guides{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:28px}
+.guides a{display:block;padding:18px 20px;border:2px solid var(--ink);border-radius:var(--r,16px);background:var(--card);box-shadow:5px 5px 0 var(--violet);text-decoration:none;color:var(--ink)}
+.guides a b{display:block;font-family:var(--serif);font-size:1.12rem;margin-bottom:6px}
+.guides a span{color:var(--ink-2);font-size:.92rem}
+.guides a:hover,.guides a:focus-visible{transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--coral)}
+.maker .who div b+span{display:block}
+.maker .who{display:flex;gap:12px;align-items:center}
+
+/* ---- guide / comparison pages ---- */
+.doc{padding:clamp(28px,5vw,56px) 0 clamp(56px,8vw,96px)}
+.doc-wrap{max-width:820px}
+.crumbs{font-size:.88rem;color:var(--ink-2);margin:0 0 18px}
+.crumbs a{color:var(--ink-2)}
+.doc-head h1{font-family:var(--serif);font-weight:800;font-size:clamp(2.1rem,5.6vw,3.5rem);line-height:1.05;letter-spacing:-.02em;margin:6px 0 18px}
+.doc-head h1 em{color:var(--violet);font-weight:600}
+.doc-sec{margin-top:clamp(34px,5vw,54px)}
+.doc-sec h2{font-family:var(--serif);font-size:clamp(1.5rem,3vw,2rem);line-height:1.15;margin:0 0 14px}
+.doc-sec p,.doc-sec li{color:var(--ink-2);font-size:1.04rem}
+.doc-sec strong{color:var(--ink)}
+.doc-sec a{color:var(--violet)}
+.plain{padding-left:1.2em;display:grid;gap:10px}
+.steps{padding-left:0;list-style:none;counter-reset:s;display:grid;gap:12px}
+.steps li{counter-increment:s;position:relative;padding:14px 16px 14px 60px;border:1.5px solid var(--line);border-radius:14px;background:var(--card)}
+.steps li::before{content:counter(s);position:absolute;left:14px;top:12px;width:34px;height:34px;border-radius:50%;background:var(--ink);color:var(--paper);display:grid;place-items:center;font:700 1rem var(--serif)}
+.callout{border:2px solid var(--ink);border-radius:var(--r);background:var(--card);box-shadow:6px 6px 0 var(--violet);padding:6px 22px;margin-bottom:22px}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.card-sm{border:1.5px solid var(--ink);border-radius:var(--r);background:var(--card);padding:18px 20px}
+.card-sm.pro{box-shadow:5px 5px 0 var(--violet)}
+.card-sm h3{font-family:var(--serif);margin:0 0 8px;font-size:1.25rem}
+.ticks-list{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.ticks-list li{padding-left:24px;position:relative;font-size:.98rem}
+.ticks-list li::before{content:"\2713";position:absolute;left:0;color:var(--ok);font-weight:700}
+.card-sm.pro .ticks-list li::before{color:var(--violet)}
+.related ul{padding-left:1.2em;display:grid;gap:8px}
+.doc .faq{margin-top:12px}
+.doc .table-scroll{margin-top:14px}
+.doc table{min-width:620px}
+.doc-wrap .cta-row{margin-top:22px}

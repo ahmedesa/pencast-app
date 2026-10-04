@@ -55,7 +55,7 @@
           "@id": "https://pencastapp.com/#app",
           "name": "PenCast",
           "alternateName": "PenCast – S Pen Drawing Tablet",
-          "operatingSystem": "Android 8.0+ (sender app); macOS and Windows 10/11 (receiver)",
+          "operatingSystem": "Android 7.0+ (sender app); macOS 10.15+ and Windows 10/11 (receiver)",
           "applicationCategory": "DesignApplication",
           "description": "Android app that sends S Pen pressure, tilt and hover to a free PenCast receiver on Mac and Windows over WiFi, USB or Bluetooth, so the S Pen works as a pen tablet. Free to start; Pro is a one-time in-app purchase. No ads.",
           "image": "https://pencastapp.com/images/app_logo.png",
@@ -66,8 +66,7 @@
             "description": "Free to download. Optional PenCast Pro in-app purchase: $7.99 one-time, no subscription."
           },
           "url": "https://pencastapp.com/",
-          "downloadUrl": "https://play.google.com/store/apps/details?id=com.pencast.app",
-          "installUrl": "https://play.google.com/store/apps/details?id=com.pencast.app",
+          "downloadUrl": "https://github.com/ahmedesa/pencast-app/releases/latest",
           "author": { "@type": "Person", "name": "Ahmed Essa" }
         },
         {
@@ -75,7 +74,7 @@
           "mainEntity": [
             { "@type": "Question", "name": "Do I see my canvas on the tablet?", "acceptedAnswer": { "@type": "Answer", "text": "No. PenCast is a pen tablet, not a screen mirror: you look at your computer and draw on your Galaxy. It sends pen data (position, pressure, tilt, hover), not a video of your screen. If you want the picture on the tablet, a mirroring app is the right tool." } },
             { "@type": "Question", "name": "Does PenCast work with Photoshop and Clip Studio?", "acceptedAnswer": { "@type": "Answer", "text": "PenCast sends your S Pen as native pen input (tablet events on macOS, pen input on Windows), so pen-aware apps such as Photoshop, Clip Studio Paint and Krita can read pressure. Compatibility varies by app and OS settings. Try the free version first." } },
-            { "@type": "Question", "name": "Which Samsung devices work?", "acceptedAnswer": { "@type": "Answer", "text": "PenCast is built for Samsung Galaxy devices with a built-in S Pen: Galaxy Tab S series, Galaxy S Ultra series, Galaxy Note series and Galaxy Z Fold series. It needs Android 8.0 or newer. Other Android stylus devices may work but are untested." } },
+            { "@type": "Question", "name": "Which Samsung devices work?", "acceptedAnswer": { "@type": "Answer", "text": "PenCast is built around Samsung Galaxy devices that support an S Pen, for example Galaxy Tab S tablets, Galaxy S Ultra phones and Galaxy Note phones, on Android 7.0 or newer. The app has no device list: it reads whatever Android reports as a stylus. Other styluses may work but are not officially supported, so try the free version first." } },
             { "@type": "Question", "name": "What is the latency?", "acceptedAnswer": { "@type": "Answer", "text": "PenCast sends small pen packets instead of streaming video. USB is the most consistent mode, WiFi depends on your network. The app shows a live round-trip time so you can check your own setup." } },
             { "@type": "Question", "name": "Which features are free and which are Pro?", "acceptedAnswer": { "@type": "Answer", "text": "Free: WiFi and USB connection, QR pairing, cursor mode, pressure, and a drawing canvas with shapes, undo and screenshot. Pro ($7.99 one-time, no subscription) adds Bluetooth, hover, tilt, pressure curve, palm rejection, laser pointer, highlighter, transparent overlay, multi-page canvas, multi-monitor selection and a global hotkey." } },
             { "@type": "Question", "name": "Does PenCast have ads or subscriptions?", "acceptedAnswer": { "@type": "Answer", "text": "No ads and no subscription. Pro is a single one-time purchase through Google Play. The app uses Firebase for crash reports and basic analytics; see the privacy policy." } },
@@ -97,10 +96,10 @@
       <nav class="nav" id="nav" aria-label="Main">
         <a class="link" href="#pen-not-pixels">Pen, not pixels</a>
         <a class="link" href="#how">How it works</a>
-        <a class="link" href="#for">Who it's for</a>
         <a class="link" href="#compare">Compare</a>
         <a class="link" href="#pricing">Pricing</a>
         <a class="link" href="#faq">FAQ</a>
+        <a class="link" href="#guides">Guides</a>
         <button class="icon-btn theme-btn" id="themeBtn" type="button" aria-label="Toggle light and dark theme">
           <svg class="sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
           <svg class="moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
@@ -125,19 +124,17 @@
           </div>
           <div>
             <div class="cta-row">
-              <a class="btn btn-primary" id="ctaPlay" href="https://play.google.com/store/apps/details?id=com.pencast.app" rel="noopener" data-cta="hero-play">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 3.5v17a1 1 0 0 0 1.5.86l14-8.5a1 1 0 0 0 0-1.72l-14-8.5A1 1 0 0 0 5 3.5z"/></svg>
-                Get it on Google Play
-              </a>
-              <a class="btn btn-ghost" id="ctaDesk" href="#download" data-cta="hero-desktop">Mac &amp; Windows receiver</a>
+              <a class="btn btn-primary" id="ctaDesk" href="#download" data-cta="hero-desktop">Download the Mac &amp; Windows app</a>
+              <!--play:begin hero-play--><span class="btn btn-soon" role="note" aria-label="Coming soon to Google Play" data-cta="hero-play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 3.5v17a1 1 0 0 0 1.5.86l14-8.5a1 1 0 0 0 0-1.72l-14-8.5A1 1 0 0 0 5 3.5z"/></svg>Coming soon to Google Play</span><!--play:end-->
             </div>
+            <p class="fine soon-note">The Android app is on its way to Google Play. Want a heads-up when it lands? <a href="mailto:ahmedesa1997@gmail.com?subject=Tell%20me%20when%20PenCast%20is%20on%20Google%20Play">Email me</a> or watch the <a href="https://github.com/ahmedesa/pencast-app/releases" rel="noopener">releases</a>.</p>
             <ul class="ticks" aria-label="Key facts">
               <li>Free tier with pressure</li>
               <li>No ads</li>
               <li>No subscription</li>
               <li>No account</li>
             </ul>
-            <p class="fine" style="margin-top:14px"><b>A pen tablet, not a screen mirror:</b> you look at your computer and draw on your Galaxy. For Samsung S Pen devices, Android 8+.</p>
+            <p class="fine" style="margin-top:14px"><b>A pen tablet, not a screen mirror:</b> you look at your computer and draw on your Galaxy. Built around Samsung S Pen devices, Android 7.0+.</p>
           </div>
         </div>
 
@@ -232,7 +229,7 @@
           <ul class="pt-list">
             <li><strong>No video to encode, send or decode.</strong>Pen data is a trickle compared to a video stream, so there's less to go wrong on the way.</li>
             <li><strong>Your screen is still your canvas.</strong>Full-size, full-colour, on the monitor you already trust. The tablet is just the pen surface.</li>
-            <li><strong>Works from a phone, too.</strong>If your Galaxy Ultra or Fold has an S Pen, it can be the tablet.</li>
+            <li><strong>Works from a phone, too.</strong>If your Galaxy phone has an S Pen (for example a Galaxy S Ultra or Note), it can be the tablet.</li>
           </ul>
           <div>
             <div class="tradeoff">
@@ -431,7 +428,7 @@
               <li>Multi-page canvas, multi-monitor selection, global hotkey</li>
               <li>Scroll &amp; zoom control, match aspect ratio, high-refresh canvas</li>
             </ul>
-            <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.pencast.app" rel="noopener" data-cta="pricing-pro">Unlock Pro in the app &mdash; $7.99</a>
+            <!--play:begin pricing-pro--><span class="btn btn-soon" role="note" aria-label="Pro unlocks in the app, 7.99 dollars" data-cta="pricing-pro"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 3.5v17a1 1 0 0 0 1.5.86l14-8.5a1 1 0 0 0 0-1.72l-14-8.5A1 1 0 0 0 5 3.5z"/></svg>Pro unlocks in the app &mdash; $7.99</span><!--play:end-->
           </article>
         </div>
         <p class="note rv">Pro is a one-time Google Play purchase tied to your Google account. Try the free version first &mdash; it takes minutes to know whether PenCast works with your setup.</p>
@@ -449,14 +446,14 @@
             <span class="you-tag">You're on this</span>
             <svg class="os" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 1H7a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm0 18H7V5h10zm-5 1.2a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/></svg>
             <h3>Android app</h3>
-            <p>For Samsung S Pen devices. Android 8.0 or newer.</p>
-            <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.pencast.app" rel="noopener" data-cta="dl-play">Google Play</a>
+            <p>Built around Samsung S Pen devices. Android 7.0 or newer.</p>
+            <!--play:begin dl-play--><span class="btn btn-soon" role="note" aria-label="Coming soon to Google Play" data-cta="dl-play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 3.5v17a1 1 0 0 0 1.5.86l14-8.5a1 1 0 0 0 0-1.72l-14-8.5A1 1 0 0 0 5 3.5z"/></svg>Coming soon to Google Play</span><!--play:end-->
           </article>
           <article class="dl rv" data-os="mac">
             <span class="you-tag">Your computer</span>
             <svg class="os" viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 14.1c0-2.3 1.9-3.5 2-3.5-1.1-1.6-2.7-1.8-3.3-1.8-1.4-.1-2.8.8-3.5.8s-1.8-.8-3-.8c-1.5 0-2.9.9-3.7 2.2-1.6 2.8-.4 6.8 1.1 9.1.8 1.1 1.7 2.3 2.8 2.3 1.1 0 1.6-.7 2.9-.7s1.8.7 3 .7 2-1.1 2.7-2.2c.9-1.2 1.2-2.5 1.2-2.6-.1 0-2.2-.9-2.2-4.1zM14.7 6.6c.6-.8 1-1.8.9-2.8-.9 0-2 .6-2.8 1.4-.5.7-1 1.7-.9 2.7 1.1.1 2.1-.5 2.8-1.3z"/></svg>
             <h3>Mac receiver</h3>
-            <p>macOS 12 or newer.</p>
+            <p>macOS 10.15 or newer.</p>
             <a class="btn btn-primary" href="https://github.com/ahmedesa/pencast-app/releases/latest/download/PenCast.dmg" rel="noopener" data-cta="dl-mac">Download .dmg</a>
             <details><summary>First launch on a Mac</summary><p>The app isn't notarized yet, so macOS may say it can't verify it. Right-click the app, choose <b>Open</b>, then confirm.</p></details>
           </article>
@@ -464,7 +461,7 @@
             <span class="you-tag">Your computer</span>
             <svg class="os" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5.4 10.3 4.2v7H2zm8.3 8.3v7L2 19.6v-5.9zM11.7 4 22 2.4v8.8H11.7zm0 9.9H22v8.7l-10.3-1.5z"/></svg>
             <h3>Windows receiver</h3>
-            <p>Windows 10 or 11, 64-bit.</p>
+            <p>Windows 10 (1809 or newer) or 11, 64-bit.</p>
             <a class="btn btn-primary" href="https://github.com/ahmedesa/pencast-app/releases/latest/download/PenCast-Setup.exe" rel="noopener" data-cta="dl-win">Download installer</a>
             <details><summary>If SmartScreen warns you</summary><p>The installer isn't code-signed yet. Choose <b>More info</b>, then <b>Run anyway</b>.</p></details>
           </article>
@@ -483,14 +480,14 @@
             <li><strong>It's a pen tablet, not a mirror.</strong> Your tablet won't show your canvas.</li>
             <li><strong>Installers aren't signed yet.</strong> The Mac app isn't notarized and the Windows installer isn't code-signed, so both ask for one extra click.</li>
             <li><strong>WiFi mode isn't encrypted yet.</strong> Use USB, Bluetooth or a network you trust.</li>
-            <li><strong>Built for Samsung S Pen devices.</strong> Other Android styluses may work; I haven't tested them.</li>
+            <li><strong>Built around Samsung S Pen devices.</strong> The app reads whatever Android reports as a stylus, so other styluses may work, but they aren't officially supported.</li>
             <li><strong>Apps differ.</strong> Compatibility depends on your drawing app and OS pen settings. Try the free version first.</li>
           </ol>
           <aside class="maker rv">
-            <div class="who"><img src="images/app_logo_64.png" width="46" height="46" alt="" /><div><b>Hi, I'm Ahmed.</b><span>Solo developer, Turkey</span></div></div>
-            <p>PenCast is built and supported by one person. If something doesn't work with your device or app, email me &mdash; I read every message, and compatibility reports are how the app gets better.</p>
+            <div class="who"><div><b>From the developer</b><span>Why PenCast exists</span></div></div>
+            <p>I used VirtualTablet. It kept disconnecting and I ran into a lot of problems, so I built my own alternative &mdash; one that sends just the pen and tells you plainly where it falls short.</p>
+            <p>PenCast is built and supported by one developer. If something doesn't work with your device or drawing app, email me &mdash; compatibility reports are how the app gets better.</p>
             <p><a href="mailto:ahmedesa1997@gmail.com" style="color:var(--violet);font-weight:600">ahmedesa1997@gmail.com</a></p>
-            <div class="sig">&mdash; Ahmed</div>
           </aside>
         </div>
       </div>
@@ -504,7 +501,7 @@
         <div class="faq rv">
           <details><summary>Do I see my canvas on the tablet?</summary><div><p>No. PenCast is a pen tablet, not a screen mirror: you look at your computer and draw on your Galaxy. It sends pen data (position, pressure, tilt, hover), not a video of your screen. If you want the picture on the tablet, a mirroring app is the right tool.</p></div></details>
           <details><summary>Does it work with Photoshop, Clip Studio and Krita?</summary><div><p>PenCast sends your S Pen as native pen input (tablet events on macOS, pen input on Windows), so pen-aware apps such as Photoshop, Clip Studio Paint and Krita can read pressure. Compatibility varies by app and OS settings &mdash; for example, some Windows apps need Windows Ink enabled. Try the free version first.</p></div></details>
-          <details><summary>Which Samsung devices work?</summary><div><p>PenCast is built for Galaxy devices with a built-in S Pen: Galaxy Tab S series, Galaxy S Ultra series, Galaxy Note series and Galaxy Z Fold series, on Android 8.0 or newer. Other Android stylus devices may work but are untested.</p></div></details>
+          <details><summary>Which Samsung devices work?</summary><div><p>PenCast is built around Samsung Galaxy devices that support an S Pen, for example Galaxy Tab S tablets, Galaxy S Ultra phones and Galaxy Note phones, on Android 7.0 or newer. The app has no device list: it reads whatever Android reports as a stylus. Other styluses may work but are not officially supported, so try the free version first.</p></div></details>
           <details><summary>What about latency?</summary><div><p>PenCast sends small pen packets instead of streaming video. USB is the most consistent mode; WiFi depends on your network. The app shows a live round-trip time so you can check your own setup.</p></div></details>
           <details><summary>What's free and what's Pro?</summary><div><p>Free: WiFi and USB, QR pairing, cursor mode with pressure, and a drawing canvas with shapes, undo and screenshot. Pro ($7.99 one-time, no subscription) adds Bluetooth, hover, tilt, pressure curve, palm rejection, laser pointer, highlighter, transparent overlay, multi-page canvas, multi-monitor selection and a global hotkey.</p></div></details>
           <details><summary>Are there ads or subscriptions?</summary><div><p>No ads and no subscription. Pro is a single one-time purchase through Google Play. The app uses Firebase for crash reports and basic analytics &mdash; details in the <a href="privacy.html">privacy policy</a>.</p></div></details>
@@ -514,13 +511,27 @@
       </div>
     </section>
 
+    <!-- ================= GUIDES ================= -->
+    <section class="sec" id="guides">
+      <div class="wrap">
+        <div class="kicker rv">Guides</div>
+        <h2 class="rv">Straight answers, <em>step by step.</em></h2>
+        <div class="guides rv">
+          <a href="/s-pen-as-drawing-tablet-mac/"><b>Use an S Pen as a drawing tablet on Mac</b><span>Setup, permissions and what to expect.</span></a>
+          <a href="/s-pen-as-drawing-tablet-windows/"><b>Use an S Pen as a drawing tablet on Windows</b><span>Setup, Windows pen settings and what to expect.</span></a>
+          <a href="/use-galaxy-tab-as-drawing-tablet/"><b>Use a Galaxy Tab as a drawing tablet</b><span>Which devices, what you need, what it can't do.</span></a>
+          <a href="/compare/superdisplay-alternative-mac/"><b>SuperDisplay alternative for Mac</b><span>A fair comparison, with sources and a date.</span></a>
+        </div>
+      </div>
+    </section>
+
     <!-- ================= FINAL CTA ================= -->
     <section class="final">
       <div class="wrap">
         <h2 class="rv">Wake up the pen in your drawer.</h2>
         <div class="cta-row rv">
-          <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.pencast.app" rel="noopener" data-cta="final-play">Get it on Google Play</a>
-          <a class="btn btn-ghost" href="#download" data-cta="final-desktop">Get the Mac or Windows receiver</a>
+          <a class="btn btn-primary" href="#download" data-cta="final-desktop">Download the Mac &amp; Windows app</a>
+          <!--play:begin final-play--><span class="btn btn-soon" role="note" aria-label="Coming soon to Google Play" data-cta="final-play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 3.5v17a1 1 0 0 0 1.5.86l14-8.5a1 1 0 0 0 0-1.72l-14-8.5A1 1 0 0 0 5 3.5z"/></svg>Coming soon to Google Play</span><!--play:end-->
         </div>
         <p class="fine" style="margin:0 auto">Free to start. No ads. Pro is $7.99, once.</p>
       </div>
@@ -532,6 +543,10 @@
       <div class="foot">
         <a class="brand" href="#top" style="font-size:1.2rem"><img src="images/app_logo_64.png" width="28" height="28" alt="" />PenCast</a>
         <ul>
+          <li><a href="/s-pen-as-drawing-tablet-mac/">Mac guide</a></li>
+          <li><a href="/s-pen-as-drawing-tablet-windows/">Windows guide</a></li>
+          <li><a href="/use-galaxy-tab-as-drawing-tablet/">Galaxy Tab guide</a></li>
+          <li><a href="/compare/superdisplay-alternative-mac/">SuperDisplay alternative</a></li>
           <li><a href="privacy.html">Privacy Policy</a></li>
           <li><a href="terms.html">Terms of Use</a></li>
           <li><a href="https://github.com/ahmedesa/pencast-app/releases" rel="noopener">Releases</a></li>
