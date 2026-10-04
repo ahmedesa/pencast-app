@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — PenCast</title>
+  <meta name="description" content="PenCast privacy policy: no accounts, no ads. Firebase Analytics and Crashlytics, Google Play Billing, and how to request data deletion." />
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://pencastapp.com/privacy.html" />
+  <link rel="icon" type="image/png" href="images/app_logo.png" />
+  <style>
+    :root {
+      --text-main: #ffffff;
+      --text-muted: #a098b6;
+      --neon-purple: #b05cf8;
+      --neon-blue: #4f8bf9;
+      --neon-cyan: #22d3ee;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      scroll-behavior: smooth;
+    }
+    body {
+      background: radial-gradient(circle at 50% 0%, #2a1050 0%, #0a0216 80%) fixed;
+      color: var(--text-main);
+      min-height: 100vh;
+      padding: 20px 20px 40px 20px;
+      line-height: 1.65;
+    }
+    .wrap { max-width: 860px; margin: 0 auto; }
+    .topbar {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 10px 0 24px 0;
+    }
+    .brand {
+      display: flex; align-items: center; gap: 10px;
+      color: #fff; text-decoration: none; font-weight: 700; font-size: 1.15rem;
+    }
+    .brand img { width: 28px; height: 28px; border-radius: 6px; }
+    .topbar a.back { color: var(--text-muted); text-decoration: none; font-size: 0.95rem; }
+    .topbar a.back:hover { color: #fff; }
+    .card {
+      background: rgba(26, 11, 46, 0.72);
+      border: 1px solid rgba(176, 92, 248, 0.25);
+      border-radius: 18px;
+      padding: 36px 40px;
+      box-shadow: 0 0 40px rgba(106, 67, 255, 0.12);
+    }
+    h1 {
+      font-size: 2rem; margin-bottom: 6px;
+      background: linear-gradient(90deg, var(--neon-purple), var(--neon-blue));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .updated { color: var(--text-muted); font-size: 0.92rem; margin-bottom: 26px; }
+    h2 { font-size: 1.25rem; margin: 28px 0 8px 0; color: #fff; }
+    p, li { color: #d9d3e8; font-size: 1rem; }
+    p { margin: 8px 0; }
+    ul { margin: 8px 0 8px 22px; }
+    li { margin: 4px 0; }
+    a { color: var(--neon-cyan); }
+    a:hover { color: #fff; }
+    strong { color: #fff; }
+    table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.95rem; }
+    th, td { text-align: left; padding: 9px 10px; border-bottom: 1px solid rgba(255,255,255,0.1); vertical-align: top; color: #d9d3e8; }
+    th { color: #fff; }
+    .note {
+      border-left: 3px solid var(--neon-purple);
+      background: rgba(176, 92, 248, 0.08);
+      padding: 10px 14px; border-radius: 6px; margin: 14px 0;
+    }
+    .toc { margin: 0 0 8px 22px; }
+    .main-footer {
+      margin-top: 28px; text-align: center; color: var(--text-muted); font-size: 0.9rem;
+    }
+    .footer-links { list-style: none; display: flex; gap: 22px; justify-content: center; margin: 0 0 10px 0; flex-wrap: wrap; }
+    .footer-links a { color: var(--text-muted); text-decoration: none; }
+    .footer-links a:hover { color: #fff; }
+    @media (max-width: 600px) { .card { padding: 24px 18px; } h1 { font-size: 1.6rem; } }
+  </style>
+</head>
+
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <a class="brand" href="/"><img src="images/app_logo.png" alt="PenCast logo" />PenCast</a>
+    <a class="back" href="/">&larr; Back to pencastapp.com</a>
+  </div>
+  <main class="card">
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: October 4, 2026</p>
+
+    <p>This Privacy Policy explains what information the <strong>PenCast</strong> apps collect and how it is used.
+    PenCast consists of an Android app (package <code>com.pencast.app</code>, "the Android app") that turns your stylus into a
+    wireless drawing tablet, and free companion receiver apps for macOS and Windows ("the desktop apps").
+    PenCast is developed and operated by Ahmed Esa ("we", "us"), an individual developer.</p>
+
+    <div class="note"><strong>In short:</strong> there are no accounts and no ads. Your pen/stylus data goes only to your own
+    computer, never to our servers. We use Google Firebase (Analytics and Crashlytics) to learn how the app is used and to fix
+    crashes. Purchases are handled by Google Play. We do not sell your data.</div>
+
+    <h2>Contents</h2>
+    <ul class="toc">
+      <li><a href="#what-we-collect">Information we collect</a></li>
+      <li><a href="#what-we-dont">Information we do not collect</a></li>
+      <li><a href="#stylus-data">Stylus data and local connections</a></li>
+      <li><a href="#permissions">Permissions</a></li>
+      <li><a href="#purchases">Purchases</a></li>
+      <li><a href="#sharing">Sharing and service providers</a></li>
+      <li><a href="#retention">Retention</a></li>
+      <li><a href="#data-deletion">Data deletion and your rights</a></li>
+      <li><a href="#children">Children</a></li>
+      <li><a href="#security">Security</a></li>
+      <li><a href="#changes">Changes</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <h2 id="what-we-collect">Information we collect</h2>
+    <p>PenCast does not ask you to create an account or enter personal details. The only data sent off your device is the
+    technical data below, collected automatically by Google Firebase SDKs that are built into the apps.</p>
+    <table>
+      <tr><th>Data</th><th>Used for</th></tr>
+      <tr>
+        <td><strong>Crash logs and diagnostics</strong> (Firebase Crashlytics): stack traces, error type, app version, device
+        model, Android/OS version, and device state at the time of a crash (for example memory and orientation).</td>
+        <td>Finding and fixing bugs; app stability (app functionality, analytics).</td>
+      </tr>
+      <tr>
+        <td><strong>App interactions</strong> (Firebase Analytics): anonymous usage events such as
+        "connection to computer succeeded/failed", "Bluetooth connection started", sessions, plus the
+        approximate country/region derived by Google, app version, device model and language.</td>
+        <td>Understanding which features work and are used so we can improve PenCast (analytics).</td>
+      </tr>
+      <tr>
+        <td><strong>Device or other IDs</strong>: the Firebase app-instance ID generated by Google's SDK, and a random install
+        identifier (a UUID created on first launch and stored only on your device) that is attached to crash reports so we can
+        tell whether many crashes come from one installation or from many.</td>
+        <td>Counting unique installations and crashes. These identifiers are random; they are not linked to your name, email,
+        phone number or Google account by us.</td>
+      </tr>
+    </table>
+    <p>We have disabled the collection of the Android Advertising ID and the Android SSAID by Firebase Analytics, and the
+    Android app does not request the advertising-ID permission. Analytics events and crash reports do <strong>not</strong>
+    include your computer's name, Bluetooth device names or IDs, or your IP addresses; connection error details are reduced to
+    a generic error type before they are sent.</p>
+    <p>The desktop apps use the same Firebase services: Firebase Analytics on macOS and Windows, and Firebase Crashlytics on macOS
+    (Crashlytics is not available on Windows).</p>
+
+    <h2 id="what-we-dont">Information we do not collect</h2>
+    <ul>
+      <li>No name, email address, phone number, postal address, or account information (the apps have no sign-in).</li>
+      <li>No precise or approximate location from device sensors. (Google derives only a coarse country/region from the
+      network connection for Analytics.)</li>
+      <li>No contacts, messages, photos, videos, audio, files, or calendar data.</li>
+      <li>No payment card or bank details &mdash; payments are processed by Google Play.</li>
+      <li>No advertising profiles. PenCast shows <strong>no ads</strong> and contains no advertising SDK.</li>
+    </ul>
+
+    <h2 id="stylus-data">Stylus data and local connections</h2>
+    <p>The core function of PenCast is sending your pen position, pressure, tilt and hover data from your Android device to
+    <strong>your own computer</strong> running the PenCast desktop app. This travels directly over your local WiFi network, a USB
+    cable (ADB tunnel) or Bluetooth Low Energy. It is <strong>not sent to us or to any server operated by us</strong> and is not
+    stored by the app beyond what is held in memory while you draw. Please note that the WiFi connection is not encrypted, so use
+    PenCast on networks you trust.</p>
+    <p>The app remembers settings on your device, including the last computer IP address you used. It also keeps a small local log
+    file for troubleshooting (up to about 500 KB) in the app's private storage. These stay on your device and are not uploaded
+    automatically. The Android app disables Android's automatic backup, so these local settings are not copied to Google Drive.</p>
+
+    <h2 id="permissions">Permissions</h2>
+    <ul>
+      <li><strong>Camera</strong> &mdash; used only to scan the QR code shown by the desktop app so your devices can pair. Images are
+      analysed on your device in real time; nothing is recorded, stored or transmitted.</li>
+      <li><strong>Internet, network state, WiFi state, multicast</strong> &mdash; to find and connect to your computer on the local
+      network (mDNS discovery) and for Firebase and Google Play to work.</li>
+      <li><strong>Bluetooth (scan, connect, advertise)</strong> &mdash; for the optional Bluetooth connection to your computer. On
+      Android 11 and lower, Android requires location permission for Bluetooth scanning; PenCast declares it only for those versions
+      and does not read your location.</li>
+      <li><strong>Wake lock</strong> &mdash; keeps the screen/CPU awake while you are connected.</li>
+      <li><strong>Google Play Billing</strong> &mdash; to offer and verify the Pro purchase.</li>
+    </ul>
+
+    <h2 id="purchases">Purchases</h2>
+    <p>PenCast Pro is a one-time, non-subscription in-app purchase handled entirely by Google Play. We never see your card or
+    payment details. On launch the app asks Google Play whether your Google account owns PenCast Pro and keeps a local on/off flag;
+    no purchase information is sent to our servers (we do not run any). When you connect to a desktop app, the app tells it whether
+    Pro is active for that session only.</p>
+
+    <h2 id="sharing">Sharing and service providers</h2>
+    <p>We do <strong>not sell</strong> your data and do not share it with advertisers or data brokers. The data described above is
+    processed by <strong>Google LLC</strong> (and its affiliates) as our service provider through Firebase Analytics, Firebase
+    Crashlytics and Google Play, under Google's own terms and privacy policy (see
+    <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a> and
+    <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>). Google may process
+    data in the United States and other countries. We may disclose information if required by law.</p>
+
+    <h2 id="retention">Retention</h2>
+    <p>Analytics and crash data are kept by Google Firebase according to the retention settings of our Firebase project and
+    Firebase's standard policies (crash data is typically kept for about 90 days; analytics event data for a limited period of up to
+    14 months). Local data on your device remains until you clear the app's data or uninstall it.</p>
+
+    <h2 id="data-deletion">Data deletion and your rights</h2>
+    <p><strong>How to delete your data:</strong></p>
+    <ul>
+      <li><strong>On your device:</strong> clear the app's storage or uninstall PenCast. This deletes local settings, the log file and
+      the random install identifier; reinstalling creates new identifiers, so earlier analytics/crash data can no longer be connected
+      to you.</li>
+      <li><strong>Data held by Firebase:</strong> email <a href="mailto:ahmedesa1997@gmail.com?subject=PenCast%20data%20deletion%20request">ahmedesa1997@gmail.com</a>
+      with the subject "PenCast data deletion request" and, if you can, the approximate dates you used the app and your device model. Because the
+      data is not linked to your name or email, we may not be able to locate it without an identifier, but we will delete what we reasonably
+      can and respond within 30 days.</li>
+      <li>Purchase records are held by Google; manage or request their deletion through your Google account.</li>
+    </ul>
+    <p>Depending on where you live (for example the EU/EEA, UK, Turkey under KVKK, or California), you may have the right to access,
+    correct or delete personal data, to object to or restrict processing, and to lodge a complaint with your local data-protection
+    authority. Contact us at the address below to exercise these rights. There is currently no in-app switch to turn off Analytics or
+    Crashlytics; uninstalling the app stops all collection.</p>
+
+    <h2 id="children">Children</h2>
+    <p>PenCast is not directed to children under 13 and we do not knowingly collect personal information from children. If you believe
+    a child has provided personal information, contact us and we will delete it.</p>
+
+    <h2 id="security">Security</h2>
+    <p>Communication with Firebase and Google Play uses HTTPS. Stylus data on your local network is sent without encryption, so we
+    recommend a trusted network or a USB connection. Only people on the same local network could intercept it; no data is routed
+    through the internet by PenCast.</p>
+
+    <h2 id="changes">Changes</h2>
+    <p>We may update this policy, for example when the apps change. The date at the top shows the latest revision; material changes
+    will also be reflected in the Play Store listing's data-safety section.</p>
+
+    <h2 id="contact">Contact</h2>
+    <p>Ahmed Esa &mdash; <a href="mailto:ahmedesa1997@gmail.com">ahmedesa1997@gmail.com</a></p>
+    <p>See also our <a href="terms.html">Terms of Use</a>.</p>
+
+  </main>
+  <footer class="main-footer">
+    <ul class="footer-links">
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms of Use</a></li>
+      <li><a href="mailto:ahmedesa1997@gmail.com">Contact</a></li>
+    </ul>
+    <div>&copy; 2026 PenCast. All rights reserved.</div>
+  </footer>
+</div>
+</body>
+
+</html>
